@@ -1,0 +1,20 @@
+{
+  "name": "cactus-sdk-js",
+  "version": "1.0.0",
+  "description": "Javascript sdk for cactus API",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc && tsc-alias"
+  },
+  "dependencies": {
+    "axios": "^1.2.3"
+  },
+  "devDependencies": {
+    "tsc-alias": "^1.8.2",
+    "typescript": "*"
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix"
+  }
+}
