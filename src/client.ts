@@ -1,6 +1,6 @@
-import axios from "axios";
-import { LoginRessource } from "@ressources";
-import { BASE_API_URL } from "./constants";
+import axios from 'axios';
+import { LoginRessource } from '@ressources';
+import { BASE_API_URL } from './constants';
 
 class CactusClient {
     private token: string | undefined = undefined;
@@ -9,16 +9,16 @@ class CactusClient {
         baseURL: BASE_API_URL,
         timeout: 10000,
         headers: {
-            ...this.token ? { 'Authorization': this.token } : {}
-        }
-    })
+            ...(this.token != null ? { Authorization: this.token } : {}),
+        },
+    });
 
     setToken(newToken: string) {
-        this.token = newToken
+        this.token = newToken;
     }
 
     removeToken() {
-        this.token = undefined
+        this.token = undefined;
     }
 
     login = new LoginRessource();
