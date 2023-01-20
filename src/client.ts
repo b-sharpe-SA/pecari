@@ -1,24 +1,22 @@
 import axios from 'axios';
 import { LoginRessource, MyselfRessource } from '@ressources';
-import { BASE_API_URL } from './constants';
+import { AUTH_HEADER_KEY, BASE_API_URL } from './constants';
 
 class CactusClient {
-    private token: string | undefined = undefined;
-
     instance = axios.create({
         baseURL: BASE_API_URL,
         timeout: 10000,
-        headers: {
-            ...(this.token != null ? { Authorization: this.token } : {}),
-        },
     });
 
-    setToken(newToken: string) {
-        this.token = newToken;
+    setToken(token: string) {
+        this.instance.defaults.headers.common[
+            AUTH_HEADER_KEY
+        ] = `Bearer ${token}`;
     }
 
     removeToken() {
-        this.token = undefined;
+        // eslint-disable-next-line @typescript-eslint/no-dynamic-delete
+        delete this.instance.defaults.headers.common[AUTH_HEADER_KEY];
     }
 
     login = new LoginRessource();
