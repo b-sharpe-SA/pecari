@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { LoginRessource } from '@ressources';
+import { LoginRessource, MyselfRessource } from '@ressources';
 import { BASE_API_URL } from './constants';
 
 class CactusClient {
@@ -22,6 +22,8 @@ class CactusClient {
     }
 
     login = new LoginRessource();
+
+    myself = new MyselfRessource();
 }
 
 export const cactusClient = new CactusClient();

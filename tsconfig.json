@@ -1,19 +1,19 @@
 {
     "compilerOptions": {
-      "module": "commonjs",
-      "strict": true,
-      "target": "ES2022",
-      "declaration": true,
-      "esModuleInterop": true,
-      "outDir": "./dist",
-      "useDefineForClassFields": false,
-      "baseUrl": "src",
-      "paths": {
-        "@helpers": ["helpers"],
-        "@ressources": ["ressources"],
-        "@client": ["client"]
-      }
+        "module": "commonjs",
+        "strict": true,
+        "target": "ES2022",
+        "declaration": true,
+        "esModuleInterop": true,
+        "outDir": "./dist",
+        "useDefineForClassFields": false,
+        "baseUrl": "src",
+        "paths": {
+            "@helpers": ["helpers"],
+            "@ressources": ["ressources"],
+            "@client": ["client"]
+        }
     },
     "include": ["src/**/*"],
-    "exclude": ["dist/*"]
+    "exclude": ["dist/**/*"]
 }
