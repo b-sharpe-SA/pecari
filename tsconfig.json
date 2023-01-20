@@ -11,7 +11,8 @@
         "paths": {
             "@helpers": ["helpers"],
             "@ressources": ["ressources"],
-            "@client": ["client"]
+            "@client": ["client"],
+            "@types": ["types"]
         }
     },
     "include": ["src/**/*"],
