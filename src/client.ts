@@ -3,6 +3,7 @@ import {
     LoginRessource,
     MyselfRessource,
     CustomerRessource,
+    AdvancedAuthRessource,
 } from '@ressources';
 import { AUTH_HEADER_KEY, BASE_API_URL } from './constants';
 
@@ -28,6 +29,8 @@ class CactusClient {
     myself = new MyselfRessource();
 
     customer = new CustomerRessource();
+
+    advancedAuth = new AdvancedAuthRessource();
 }
 
 export const cactusClient = new CactusClient();
