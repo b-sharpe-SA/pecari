@@ -1,5 +1,9 @@
 import axios from 'axios';
-import { LoginRessource, MyselfRessource } from '@ressources';
+import {
+    LoginRessource,
+    MyselfRessource,
+    CustomerRessource,
+} from '@ressources';
 import { AUTH_HEADER_KEY, BASE_API_URL } from './constants';
 
 class CactusClient {
@@ -22,6 +26,8 @@ class CactusClient {
     login = new LoginRessource();
 
     myself = new MyselfRessource();
+
+    customer = new CustomerRessource();
 }
 
 export const cactusClient = new CactusClient();
