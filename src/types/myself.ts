@@ -9,3 +9,9 @@ export interface Myself {
     external_user_id_auth_hash: string;
     external_user_email_hash: string;
 }
+
+export interface UpdateMyselfPayload {
+    email?: string;
+    mobile_phone_number?: string;
+    language?: string;
+}
