@@ -1,13 +1,12 @@
-import { cactusClient } from '@client';
-import { handleError } from '@helpers';
+import { handleError, InstanceRessource } from '@helpers';
 import { PasswordResetValidationPayload } from '@types';
 
 const BASE_URL = '/password/reset/';
 
-export class PasswordResetRessource {
+export class PasswordResetRessource extends InstanceRessource {
     async reset(email: string) {
         try {
-            const { data } = await cactusClient.instance.post(BASE_URL, {
+            const { data } = await this.instance.post(BASE_URL, {
                 email,
             });
             return data;
@@ -18,7 +17,7 @@ export class PasswordResetRessource {
 
     async validation(payload: PasswordResetValidationPayload) {
         try {
-            const { data } = await cactusClient.instance.post(
+            const { data } = await this.instance.post(
                 `${BASE_URL}validation/`,
                 payload
             );

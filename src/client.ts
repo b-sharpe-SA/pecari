@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios, { AxiosInstance } from 'axios';
 import {
     LoginRessource,
     MyselfRessource,
@@ -6,13 +6,28 @@ import {
     AdvancedAuthRessource,
     PasswordResetRessource,
 } from '@ressources';
-import { AUTH_HEADER_KEY, BASE_API_URL } from './constants';
+import { AUTH_HEADER_KEY } from './constants';
 
-class CactusClient {
-    instance = axios.create({
-        baseURL: BASE_API_URL,
-        timeout: 10000,
+export class CactusClient {
+    private readonly baseUrl: string;
+    private readonly token?: string;
+
+    readonly instance: AxiosInstance = axios.create({
+        timeout: 1000,
     });
+
+    constructor(baseUrl: string, token?: string) {
+        this.baseUrl = baseUrl;
+        this.token = token;
+
+        if (baseUrl.length > 0) {
+            this.instance.defaults.baseURL = this.baseUrl;
+        }
+
+        if (this.token != null && typeof this.token === 'string') {
+            this.setToken(this.token);
+        }
+    }
 
     setToken(token: string) {
         this.instance.defaults.headers.common[
@@ -25,15 +40,19 @@ class CactusClient {
         delete this.instance.defaults.headers.common[AUTH_HEADER_KEY];
     }
 
-    login = new LoginRessource();
+    instanceParams = {
+        instance: this.instance,
+        setToken: this.setToken,
+        removeToken: this.removeToken,
+    };
 
-    myself = new MyselfRessource();
+    login = new LoginRessource(this.instanceParams);
 
-    customer = new CustomerRessource();
+    myself = new MyselfRessource(this.instanceParams);
 
-    advancedAuth = new AdvancedAuthRessource();
+    customer = new CustomerRessource(this.instanceParams);
 
-    passwordReset = new PasswordResetRessource();
+    advancedAuth = new AdvancedAuthRessource(this.instanceParams);
+
+    passwordReset = new PasswordResetRessource(this.instanceParams);
 }
-
-export const cactusClient = new CactusClient();

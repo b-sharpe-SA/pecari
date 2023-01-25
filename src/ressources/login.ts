@@ -1,16 +1,14 @@
-import { cactusClient } from '@client';
-import { handleError } from '@helpers';
+import { handleError, InstanceRessource } from '@helpers';
 import { LoginPayload, LoginTokenResponse } from '@types';
 
-export class LoginRessource {
+export class LoginRessource extends InstanceRessource {
     async token({ email, password }: LoginPayload) {
         try {
-            const { data } =
-                await cactusClient.instance.post<LoginTokenResponse>(
-                    'login/token/',
-                    { email, password }
-                );
-            cactusClient.setToken(data.access);
+            const { data } = await this.instance.post<LoginTokenResponse>(
+                '/login/token/',
+                { email, password }
+            );
+            this.setToken(data.access);
             return data;
         } catch (error) {
             throw handleError(error);

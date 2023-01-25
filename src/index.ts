@@ -1,5 +1,5 @@
-import { cactusClient } from '@client';
+import { CactusClient } from '@client';
 
 export * from '@types';
 
-export default cactusClient;
+export default CactusClient;

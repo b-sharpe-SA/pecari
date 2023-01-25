@@ -1,3 +1,5 @@
+import { AxiosInstance } from 'axios';
+
 export interface WithPagination<T> {
     count: number;
     next: string;
@@ -27,4 +29,10 @@ export interface Utm {
     utm_term: string;
     utm_content: string;
     utm_timestamp: string;
+}
+
+export interface InstanceRessourceParams {
+    instance: AxiosInstance;
+    setToken: (token: string) => void;
+    removeToken: () => void;
 }
