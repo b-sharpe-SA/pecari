@@ -13,7 +13,7 @@ export class CactusClient {
     private readonly token?: string;
 
     readonly instance: AxiosInstance = axios.create({
-        timeout: 1000,
+        timeout: 10000,
     });
 
     constructor(baseUrl: string, token?: string) {
