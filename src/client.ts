@@ -5,9 +5,15 @@ import {
     CustomerRessource,
     AdvancedAuthRessource,
     PasswordResetRessource,
+    TicketRessource,
 } from '@ressources';
 import { AUTH_HEADER_KEY } from './constants';
 
+/**
+ * Client definition
+ * @property {string} baseUrl - base url to fetch cactus api
+ * @property {string} token - set default authorization token
+ */
 export class CactusClient {
     private readonly baseUrl: string;
     private readonly token?: string;
@@ -29,12 +35,19 @@ export class CactusClient {
         }
     }
 
+    /**
+     * Add authorization token to global instance
+     * @param token
+     */
     setToken(token: string) {
         this.instance.defaults.headers.common[
             AUTH_HEADER_KEY
         ] = `Bearer ${token}`;
     }
 
+    /**
+     * Remove authorization token to global instance
+     */
     removeToken() {
         // eslint-disable-next-line @typescript-eslint/no-dynamic-delete
         delete this.instance.defaults.headers.common[AUTH_HEADER_KEY];
@@ -55,4 +68,6 @@ export class CactusClient {
     advancedAuth = new AdvancedAuthRessource(this.instanceParams);
 
     passwordReset = new PasswordResetRessource(this.instanceParams);
+
+    ticket = new TicketRessource(this.instanceParams);
 }

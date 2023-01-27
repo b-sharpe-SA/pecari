@@ -22,3 +22,21 @@ export class InstanceRessource {
         this.removeToken = removeToken;
     }
 }
+
+/**
+ * Concatenate query params and url
+ * @param baseUrl
+ * @param queryParams
+ * @returns
+ */
+export function concatenateQueryParams(
+    baseUrl: string,
+    queryParams: Record<string, string | number | boolean>
+) {
+    let url = baseUrl;
+    Object.keys(queryParams).forEach((key, index) => {
+        // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
+        url += `${index === 0 ? '?' : '&'}${key}=${queryParams[key]}`;
+    });
+    return url;
+}

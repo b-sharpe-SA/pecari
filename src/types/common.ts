@@ -36,3 +36,25 @@ export interface InstanceRessourceParams {
     setToken: (token: string) => void;
     removeToken: () => void;
 }
+
+export type TransactionType = 'sell' | 'buy';
+
+export enum SourceOfFundsType {
+    Employer = 'employer',
+    Lamal = 'lamal',
+    Taxes = 'taxes',
+    Allowances = 'allowances',
+    Pentions = 'pensions ahv iv',
+}
+
+export interface Bank extends Address {
+    name: string;
+    country: string;
+    bic: string;
+}
+
+export interface Fees {
+    processing: string;
+    transfer: string;
+    all: string;
+}
