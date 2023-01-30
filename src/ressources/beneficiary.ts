@@ -1,0 +1,111 @@
+/* eslint-disable @typescript-eslint/strict-boolean-expressions */
+import {
+    concatenateQueryParams,
+    handleError,
+    InstanceRessource,
+} from '@helpers';
+import {
+    BankAccount,
+    Beneficiary,
+    CreateBankAccountPayload,
+    CreateBeneficiaryPayload,
+    ListBeneficiaryQueryParams,
+    WithPagination,
+} from '@types';
+
+export class BeneficiaryRessource extends InstanceRessource {
+    private readonly getUrl = (customer: string, reference?: string) => {
+        return `/users/customer/${customer}/beneficiary/${
+            reference ? `${reference}/` : ''
+        }`;
+    };
+
+    /**
+     * List beneficiaries for specific customer
+     * @param customer Customer reference
+     * @param queryParams
+     * @returns
+     */
+    async list(customer: string, queryParams?: ListBeneficiaryQueryParams) {
+        try {
+            const url = concatenateQueryParams(
+                this.getUrl(customer),
+                queryParams ?? {}
+            );
+            const { data } = await this.instance.get<
+                WithPagination<Beneficiary>
+            >(url);
+            return data;
+        } catch (error) {
+            throw handleError(error);
+        }
+    }
+
+    /**
+     * Create beneficiary for specific customer
+     * @param customer Customer reference
+     * @param payload Beneficiary payload
+     * @returns
+     */
+    async create(customer: string, payload: CreateBeneficiaryPayload) {
+        try {
+            const url = this.getUrl(customer);
+            const { data } = await this.instance.post<Beneficiary>(
+                url,
+                payload
+            );
+            return data;
+        } catch (error) {
+            throw handleError(error);
+        }
+    }
+
+    /**
+     * Delete beneficiary
+     * @param customer Customer reference
+     * @param reference Beneficiary reference
+     * @returns
+     */
+    async delete(customer: string, reference: string) {
+        try {
+            const url = this.getUrl(customer, reference);
+            const { data } = await this.instance.delete<Beneficiary>(url);
+            return data;
+        } catch (error) {
+            throw handleError(error);
+        }
+    }
+
+    async createBankAccount(
+        customer: string,
+        reference: string,
+        payload: CreateBankAccountPayload
+    ) {
+        try {
+            const url = this.getUrl(customer, reference);
+            const { data } = await this.instance.post<BankAccount>(
+                `${url}bank_account/`,
+                payload
+            );
+            return data;
+        } catch (error) {
+            throw handleError(error);
+        }
+    }
+
+    async deleteBankAccount(
+        customer: string,
+        beneficiaryReference: string,
+        bankAccountReference: string
+    ) {
+        try {
+            const url = this.getUrl(customer, beneficiaryReference);
+            const { data } = await this.instance.delete<BankAccount>(
+                `${url}bank_account/${bankAccountReference}/`
+            );
+            return data;
+        } catch (error) {
+            throw handleError(error);
+        }
+    }
+}

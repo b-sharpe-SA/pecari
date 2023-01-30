@@ -35,8 +35,10 @@ export function concatenateQueryParams(
 ) {
     let url = baseUrl;
     Object.keys(queryParams).forEach((key, index) => {
-        // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
-        url += `${index === 0 ? '?' : '&'}${key}=${queryParams[key]}`;
+        if (queryParams[key] !== undefined) {
+            // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
+            url += `${index === 0 ? '?' : '&'}${key}=${queryParams[key]}`;
+        }
     });
     return url;
 }

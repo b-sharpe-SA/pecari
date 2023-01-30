@@ -1,6 +1,6 @@
 import {
     Address,
-    Bank,
+    BankAccount,
     ClientType,
     Fees,
     SourceOfFundsType,
@@ -34,17 +34,8 @@ export interface Owner extends Address {
     reason_description: string;
 }
 
-export interface PspBankAccountIncoming extends Address {
-    id: number;
+export interface PspBankAccountIncoming extends BankAccount {
     iban: string;
-    display_iban: string;
-    name: string;
-    bank: Bank;
-    currencies: string[];
-    owners: Owner[];
-    enabled: boolean;
-    number: string;
-    verified: boolean;
 }
 
 export interface Creditor {

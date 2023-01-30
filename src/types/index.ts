@@ -7,3 +7,4 @@ export * from './password-reset';
 export * from './ticket';
 export * from './psp-price';
 export * from './beneficial_owner';
+export * from './beneficiary';

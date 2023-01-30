@@ -53,6 +53,18 @@ export interface Bank extends Address {
     bic: string;
 }
 
+export interface BankAccount extends Address {
+    id: number;
+    iban: string;
+    name: string;
+    bank: Bank;
+    currencies: string[];
+    owners: number[];
+    enabled: boolean;
+    number: string;
+    verified: boolean;
+}
+
 export interface Fees {
     processing: string;
     transfer: string;
