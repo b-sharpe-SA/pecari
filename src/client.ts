@@ -7,6 +7,7 @@ import {
     PasswordResetRessource,
     TicketRessource,
     PspPriceRessource,
+    BeneficialOwnerRessource,
 } from '@ressources';
 import { AUTH_HEADER_KEY } from './constants';
 
@@ -73,4 +74,6 @@ export class CactusClient {
     ticket = new TicketRessource(this.instanceParams);
 
     pspPrice = new PspPriceRessource(this.instanceParams);
+
+    beneficialOwner = new BeneficialOwnerRessource(this.instanceParams);
 }
