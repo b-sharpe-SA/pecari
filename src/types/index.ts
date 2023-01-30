@@ -5,3 +5,4 @@ export * from './customer';
 export * from './common';
 export * from './password-reset';
 export * from './ticket';
+export * from './psp-price';

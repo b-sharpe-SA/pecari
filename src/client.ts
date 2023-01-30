@@ -6,6 +6,7 @@ import {
     AdvancedAuthRessource,
     PasswordResetRessource,
     TicketRessource,
+    PspPriceRessource,
 } from '@ressources';
 import { AUTH_HEADER_KEY } from './constants';
 
@@ -70,4 +71,6 @@ export class CactusClient {
     passwordReset = new PasswordResetRessource(this.instanceParams);
 
     ticket = new TicketRessource(this.instanceParams);
+
+    pspPrice = new PspPriceRessource(this.instanceParams);
 }
