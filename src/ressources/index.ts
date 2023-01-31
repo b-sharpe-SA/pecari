@@ -9,3 +9,4 @@ export * from './beneficial-owner';
 export * from './beneficiary';
 export * from './mapbox';
 export * from './email';
+export * from './onfido';

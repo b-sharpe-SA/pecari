@@ -8,3 +8,4 @@ export * from './ticket';
 export * from './psp-price';
 export * from './beneficial_owner';
 export * from './beneficiary';
+export * from './onfido';
