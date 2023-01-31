@@ -10,6 +10,7 @@ import {
     BeneficialOwnerRessource,
     BeneficiaryRessource,
     MapboxRessource,
+    EmailRessource,
 } from '@ressources';
 import { AUTH_HEADER_KEY } from './constants';
 
@@ -82,4 +83,6 @@ export class CactusClient {
     beneficiary = new BeneficiaryRessource(this.instanceParams);
 
     mapbox = new MapboxRessource(this.instanceParams);
+
+    email = new EmailRessource(this.instanceParams);
 }

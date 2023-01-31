@@ -76,6 +76,13 @@ export class BeneficiaryRessource extends InstanceRessource {
         }
     }
 
+    /**
+     * Create bank account for customer and beneficiary
+     * @param customer Customer reference
+     * @param reference Beneficiary reference
+     * @param payload Bank account payload
+     * @returns
+     */
     async createBankAccount(
         customer: string,
         reference: string,
@@ -93,6 +100,13 @@ export class BeneficiaryRessource extends InstanceRessource {
         }
     }
 
+    /**
+     * Delete bank account
+     * @param customer Customer reference
+     * @param beneficiaryReference Beneficiary reference
+     * @param bankAccountReference Bank account reference
+     * @returns
+     */
     async deleteBankAccount(
         customer: string,
         beneficiaryReference: string,
