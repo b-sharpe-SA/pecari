@@ -9,6 +9,7 @@ import {
     PspPriceRessource,
     BeneficialOwnerRessource,
     BeneficiaryRessource,
+    MapboxRessource,
 } from '@ressources';
 import { AUTH_HEADER_KEY } from './constants';
 
@@ -79,4 +80,6 @@ export class CactusClient {
     beneficialOwner = new BeneficialOwnerRessource(this.instanceParams);
 
     beneficiary = new BeneficiaryRessource(this.instanceParams);
+
+    mapbox = new MapboxRessource(this.instanceParams);
 }
