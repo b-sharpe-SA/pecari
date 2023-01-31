@@ -10,3 +10,4 @@ export * from './beneficiary';
 export * from './mapbox';
 export * from './email';
 export * from './onfido';
+export * from './message';

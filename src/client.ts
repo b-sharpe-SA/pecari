@@ -12,6 +12,7 @@ import {
     MapboxRessource,
     EmailRessource,
     OnfidoRessource,
+    MessageRessource,
 } from '@ressources';
 import { AUTH_HEADER_KEY } from './constants';
 
@@ -88,4 +89,6 @@ export class CactusClient {
     email = new EmailRessource(this.instanceParams);
 
     onfido = new OnfidoRessource(this.instanceParams);
+
+    message = new MessageRessource(this.instanceParams);
 }
