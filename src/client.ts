@@ -13,6 +13,7 @@ import {
     EmailRessource,
     OnfidoRessource,
     MessageRessource,
+    ContractRessource,
 } from '@ressources';
 import { AUTH_HEADER_KEY } from './constants';
 
@@ -91,4 +92,6 @@ export class CactusClient {
     onfido = new OnfidoRessource(this.instanceParams);
 
     message = new MessageRessource(this.instanceParams);
+
+    contract = new ContractRessource(this.instanceParams);
 }
