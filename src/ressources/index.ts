@@ -14,3 +14,4 @@ export * from './message';
 export * from './contract';
 export * from './update-password';
 export * from './upload';
+export * from './psp-bank-account';
