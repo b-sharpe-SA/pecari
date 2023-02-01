@@ -13,3 +13,4 @@ export * from './onfido';
 export * from './message';
 export * from './contract';
 export * from './update-password';
+export * from './upload';

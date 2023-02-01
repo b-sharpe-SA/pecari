@@ -15,6 +15,7 @@ import {
     MessageRessource,
     ContractRessource,
     UpdatePasswordRessource,
+    UploadRessource,
 } from '@ressources';
 import { AUTH_HEADER_KEY } from './constants';
 
@@ -97,4 +98,6 @@ export class CactusClient {
     contract = new ContractRessource(this.instanceParams);
 
     updatePassword = new UpdatePasswordRessource(this.instanceParams);
+
+    upload = new UploadRessource(this.instanceParams);
 }
