@@ -9,7 +9,10 @@ export interface WithPagination<T> {
 
 export type Title = 'mr' | 'ms';
 
-export type ClientType = 'n' | 'l';
+export enum ClientType {
+    Private = 'n',
+    Legal = 'l',
+}
 
 export interface Address {
     address_line_1: string;

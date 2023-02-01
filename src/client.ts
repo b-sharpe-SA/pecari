@@ -17,6 +17,7 @@ import {
     UpdatePasswordRessource,
     UploadRessource,
     PspBankAccountRessource,
+    SignupRessource,
 } from '@ressources';
 import { AUTH_HEADER_KEY } from './constants';
 
@@ -103,4 +104,6 @@ export class CactusClient {
     upload = new UploadRessource(this.instanceParams);
 
     pspBankAccount = new PspBankAccountRessource(this.instanceParams);
+
+    signup = new SignupRessource(this.instanceParams);
 }
