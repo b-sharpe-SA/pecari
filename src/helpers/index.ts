@@ -30,7 +30,7 @@ export class InstanceRessource {
  * @returns
  */
 export function concatenateQueryParams(
-    baseUrl: string,
+    baseUrl: number,
     queryParams: Record<string, string | number | boolean>
 ) {
     let url = baseUrl;
