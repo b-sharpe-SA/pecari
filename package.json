@@ -7,6 +7,8 @@
     "scripts": {
         "build": "tsc && tsc-alias",
         "build:watch": "tsc && (concurrently \"tsc -w\" \"tsc-alias -w\")",
+        "code:check": "tsc --skipLibCheck --noEmit && yarn run lint",
+        "lint": "eslint ./src --ext=.js,.jsx,.ts,.tsx",
         "prepare": "husky install"
     },
     "dependencies": {
