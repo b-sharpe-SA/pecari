@@ -77,7 +77,7 @@ export interface Ticket {
     qr_bill: string;
     employer_name: string;
     employer_references: string;
-    source_of_funds_type: string;
+    source_of_funds_type: SourceOfFundsType;
     source_of_funds_reference: string;
     emitter_country: string;
     canceled: boolean;

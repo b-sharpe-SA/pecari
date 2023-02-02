@@ -31,7 +31,7 @@ export enum ErrorCodes {
     UNEXPECTED_ERROR = 'UNEXPECTED_ERROR',
 }
 
-export interface CactusError {
+export interface CactusError extends Record<string, any> {
     code: ErrorCodes;
     detail: string | string[];
 }
