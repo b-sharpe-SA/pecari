@@ -1,0 +1,59 @@
+name: 'Release'
+
+on: # yamllint disable-line rule:truthy
+    push:
+        branches:
+            - 'release-v**'
+
+jobs:
+    release:
+        name: 'Release'
+
+        runs-on: 'ubuntu-latest'
+
+        steps:
+            - uses: actions/checkout@v3
+            - uses: actions/setup-node@v3
+              with:
+                  node-version: 18
+                  cache: 'yarn'
+            - run: yarn
+            - run: yarn build # Create dist folder
+            - run: sed -i '/dist/d' ./.gitignore # Remove dist from gitignore -> Otherwise dist is ignored when installing package
+            # Create new commit and push changes to current branch
+            - run: |
+                  git config --global user.email "github-action@b-sharpe.com"
+                  git config --global user.name "Github action"
+                  git add .
+                  git commit -m "chore: dist folder for release" --no-verify
+                  git push -u origin ${GITHUB_REF##*/}
+
+            - name: 'Determine tag'
+              run: 'echo "RELEASE_TAG=${GITHUB_REF#refs/tags/}" >> $GITHUB_ENV'
+
+            # Create release
+            - name: 'Create release'
+              uses: 'actions/github-script@v6'
+              with:
+                  github-token: '${{ secrets.GITHUB_TOKEN }}'
+                  script: |
+                      try {
+                        const splittedRef = process.env.RELEASE_TAG.split('/')
+                        const branchName = splittedRef[splittedRef.length - 1]
+                        const tag = branchName.split('-')[1]
+                        const response = await github.rest.repos.createRelease({
+                          draft: false,
+                          generate_release_notes: true,
+                          name: tag,
+                          owner: context.repo.owner,
+                          prerelease: false,
+                          repo: context.repo.repo,
+                          tag_name: tag,
+                          target_commitish: branchName
+                        });
+
+                        core.exportVariable('RELEASE_ID', response.data.id);
+                        core.exportVariable('RELEASE_UPLOAD_URL', response.data.upload_url);
+                      } catch (error) {
+                        core.setFailed(error.message);
+                      }
