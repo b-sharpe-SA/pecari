@@ -7,14 +7,13 @@
         "esModuleInterop": true,
         "outDir": "./dist",
         "useDefineForClassFields": false,
-        "baseUrl": "src",
+        "baseUrl": ".",
         "paths": {
-            "@helpers": ["helpers"],
-            "@ressources": ["ressources"],
-            "@client": ["client"],
-            "@types": ["types"]
+            "@helpers": ["src/helpers"],
+            "@ressources": ["src/ressources"],
+            "@client": ["src/client"],
+            "@types": ["src/types"]
         }
     },
-    "include": ["src/**/*"],
-    "exclude": ["dist/**/*"]
+    "include": ["src/**/*"]
 }
