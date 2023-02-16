@@ -31,6 +31,9 @@ export interface Customer extends Address, Utm {
     frontend_data: CustomerFrontEndData;
     newsletter_optin: boolean;
     sponsor_code: string;
+    sponsoring_key: string;
+    sponsoring_url: string;
+    sponsoring_url_qrcode: string;
 }
 
 export enum CustomerNextStep {
