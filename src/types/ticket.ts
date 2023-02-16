@@ -81,6 +81,7 @@ export interface Ticket {
     source_of_funds_reference: string;
     emitter_country: string;
     canceled: boolean;
+    deletable: boolean;
     fees: Fees;
     feesdiscount_set: string[];
     margindiscount_set: string[];
