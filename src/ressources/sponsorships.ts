@@ -1,5 +1,5 @@
 import { handleError, InstanceRessource } from '@helpers';
-import { Sponsorship, WithPagination } from '@types';
+import { Sponsorship, SponsorshipInfoByCode, WithPagination } from '@types';
 
 export class SponsorshipRessource extends InstanceRessource {
     private getUrl(customerRef: string) {
@@ -12,6 +12,17 @@ export class SponsorshipRessource extends InstanceRessource {
             const { data } = await this.instance.get<
                 WithPagination<Sponsorship>
             >(url);
+            return data;
+        } catch (error) {
+            throw handleError(error);
+        }
+    }
+
+    async get({ code }: { code: string }) {
+        try {
+            const { data } = await this.instance.get<SponsorshipInfoByCode>(
+                `users/customer/sponsorships/${code}`
+            );
             return data;
         } catch (error) {
             throw handleError(error);
