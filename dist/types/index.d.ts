@@ -15,3 +15,4 @@ export * from './update-password';
 export * from './psp-bank-account';
 export * from './signup';
 export * from './rate-alert';
+export * from './sponsorships';

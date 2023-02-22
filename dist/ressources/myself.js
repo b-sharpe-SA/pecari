@@ -1,74 +1,50 @@
-'use strict';
-var __awaiter =
-    (this && this.__awaiter) ||
-    function (thisArg, _arguments, P, generator) {
-        function adopt(value) {
-            return value instanceof P
-                ? value
-                : new P(function (resolve) {
-                      resolve(value);
-                  });
-        }
-        return new (P || (P = Promise))(function (resolve, reject) {
-            function fulfilled(value) {
-                try {
-                    step(generator.next(value));
-                } catch (e) {
-                    reject(e);
-                }
-            }
-            function rejected(value) {
-                try {
-                    step(generator['throw'](value));
-                } catch (e) {
-                    reject(e);
-                }
-            }
-            function step(result) {
-                result.done
-                    ? resolve(result.value)
-                    : adopt(result.value).then(fulfilled, rejected);
-            }
-            step(
-                (generator = generator.apply(thisArg, _arguments || [])).next()
-            );
-        });
-    };
-Object.defineProperty(exports, '__esModule', { value: true });
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.MyselfRessource = void 0;
-const _helpers_1 = require('../helpers');
+const _helpers_1 = require("../helpers");
 class MyselfRessource extends _helpers_1.InstanceRessource {
     /**
      * Fetch myself
      * @returns
      */
-    get() {
-        return __awaiter(this, void 0, void 0, function* () {
-            try {
-                const { data } = yield this.instance.get('users/user/myself');
-                return data;
-            } catch (error) {
-                throw (0, _helpers_1.handleError)(error);
-            }
-        });
+    async get() {
+        try {
+            const { data } = await this.instance.get('users/user/myself');
+            return data;
+        }
+        catch (error) {
+            throw (0, _helpers_1.handleError)(error);
+        }
     }
     /**
      * Update myself
      * @param payload
      * @returns
      */
-    update(payload) {
-        return __awaiter(this, void 0, void 0, function* () {
-            try {
-                const { data } = yield this.instance.patch(
-                    'users/user/myself',
-                    payload
-                );
-                return data;
-            } catch (error) {
-                throw (0, _helpers_1.handleError)(error);
-            }
-        });
+    async update(payload) {
+        try {
+            const { data } = await this.instance.patch('users/user/myself', payload);
+            return data;
+        }
+        catch (error) {
+            throw (0, _helpers_1.handleError)(error);
+        }
+    }
+    /**
+     * User wants to delete it's account
+     * Can't login after this
+     * Send email to customer care notifying user want to delete it's account
+     * @param payload
+     * @returns
+     */
+    async delete() {
+        try {
+            const { data } = await this.instance.delete('users/user/myself');
+            return data;
+        }
+        catch (error) {
+            throw (0, _helpers_1.handleError)(error);
+        }
     }
 }
 exports.MyselfRessource = MyselfRessource;

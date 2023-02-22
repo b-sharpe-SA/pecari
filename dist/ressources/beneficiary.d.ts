@@ -1,12 +1,5 @@
 import { InstanceRessource } from '../helpers';
-import {
-    BankAccount,
-    Beneficiary,
-    CreateBankAccountPayload,
-    CreateBeneficiaryPayload,
-    ListBeneficiaryQueryParams,
-    WithPagination,
-} from '../types';
+import { BankAccount, Beneficiary, CreateBankAccountPayload, CreateBeneficiaryPayload, ListBeneficiaryQueryParams, WithPagination } from '../types';
 export declare class BeneficiaryRessource extends InstanceRessource {
     private readonly getUrl;
     /**
@@ -15,20 +8,14 @@ export declare class BeneficiaryRessource extends InstanceRessource {
      * @param queryParams
      * @returns
      */
-    list(
-        customer: string,
-        queryParams?: ListBeneficiaryQueryParams
-    ): Promise<WithPagination<Beneficiary>>;
+    list(customer: string, queryParams?: ListBeneficiaryQueryParams): Promise<WithPagination<Beneficiary>>;
     /**
      * Create beneficiary for specific customer
      * @param customer Customer reference
      * @param payload Beneficiary payload
      * @returns
      */
-    create(
-        customer: string,
-        payload: CreateBeneficiaryPayload
-    ): Promise<Beneficiary>;
+    create(customer: string, payload: CreateBeneficiaryPayload): Promise<Beneficiary>;
     /**
      * Delete beneficiary
      * @param customer Customer reference
@@ -43,11 +30,7 @@ export declare class BeneficiaryRessource extends InstanceRessource {
      * @param payload Bank account payload
      * @returns
      */
-    createBankAccount(
-        customer: string,
-        reference: string,
-        payload: CreateBankAccountPayload
-    ): Promise<BankAccount>;
+    createBankAccount(customer: string, reference: string, payload: CreateBankAccountPayload): Promise<BankAccount>;
     /**
      * Delete bank account
      * @param customer Customer reference
@@ -55,9 +38,5 @@ export declare class BeneficiaryRessource extends InstanceRessource {
      * @param bankAccountReference Bank account reference
      * @returns
      */
-    deleteBankAccount(
-        customer: string,
-        beneficiaryReference: string,
-        bankAccountReference: string
-    ): Promise<BankAccount>;
+    deleteBankAccount(customer: string, beneficiaryReference: string, bankAccountReference: string): Promise<BankAccount>;
 }

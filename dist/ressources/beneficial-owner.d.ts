@@ -1,10 +1,5 @@
 import { InstanceRessource } from '../helpers';
-import {
-    BeneficialOwner,
-    CreateBeneficialOwnerPayload,
-    UpdateBeneficialOwnerPayload,
-    WithPagination,
-} from '../types';
+import { BeneficialOwner, CreateBeneficialOwnerPayload, UpdateBeneficialOwnerPayload, WithPagination } from '../types';
 export declare class BeneficialOwnerRessource extends InstanceRessource {
     private getUrl;
     /**
@@ -19,10 +14,7 @@ export declare class BeneficialOwnerRessource extends InstanceRessource {
      * @param payload Beneficial owner payload
      * @returns
      */
-    create(
-        customer: string,
-        payload: CreateBeneficialOwnerPayload
-    ): Promise<BeneficialOwner>;
+    create(customer: string, payload: CreateBeneficialOwnerPayload): Promise<BeneficialOwner>;
     /**
      * Update beneficial owner for specific customer
      * @param customer Customer reference
@@ -30,11 +22,7 @@ export declare class BeneficialOwnerRessource extends InstanceRessource {
      * @param payload Beneficial owner payload
      * @returns
      */
-    update(
-        customer: string,
-        reference: string,
-        payload: UpdateBeneficialOwnerPayload
-    ): Promise<BeneficialOwner>;
+    update(customer: string, reference: string, payload: UpdateBeneficialOwnerPayload): Promise<BeneficialOwner>;
     /**
      * Delete beneficial owner
      * @param customer Customer reference

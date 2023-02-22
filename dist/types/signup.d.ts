@@ -1,4 +1,10 @@
 import { ClientType, Myself } from '.';
+export declare enum SignupDevice {
+    Web = "web",
+    Android = "android",
+    Ios = "ios",
+    Unknown = "unknown"
+}
 export type SignupPayload = Partial<{
     first_name: string;
     last_name: string;
@@ -23,6 +29,7 @@ export type SignupPayload = Partial<{
     utm_timestamp: string;
     how_did_you_hear_about_us: string;
     sponsoring_key: string;
+    signup_device: SignupDevice;
 }>;
 export interface SignupResponse extends Myself {
     access: string;

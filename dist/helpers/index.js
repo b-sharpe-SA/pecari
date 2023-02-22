@@ -1,17 +1,14 @@
-'use strict';
-Object.defineProperty(exports, '__esModule', { value: true });
-exports.concatenateQueryParams =
-    exports.InstanceRessource =
-    exports.handleError =
-        void 0;
-const axios_1 = require('axios');
-const _types_1 = require('../types');
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.concatenateQueryParams = exports.InstanceRessource = exports.handleError = void 0;
+const axios_1 = __importDefault(require("axios"));
+const _types_1 = require("../types");
 function handleError(error) {
-    var _a;
     if (axios_1.default.isAxiosError(error)) {
-        return (_a = error.response) === null || _a === void 0
-            ? void 0
-            : _a.data;
+        return error.response?.data;
     }
     return {
         code: _types_1.ErrorCodes.UNEXPECTED_ERROR,

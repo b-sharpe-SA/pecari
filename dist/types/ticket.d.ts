@@ -1,12 +1,4 @@
-import {
-    Address,
-    BankAccount,
-    ClientType,
-    Fees,
-    SourceOfFundsType,
-    Title,
-    TransactionType,
-} from '.';
+import { Address, BankAccount, ClientType, Fees, SourceOfFundsType, Title, TransactionType } from '.';
 export interface ListTicketsParams {
     limit?: number;
     canceled?: boolean;
@@ -76,6 +68,7 @@ export interface Ticket {
     source_of_funds_reference: string;
     emitter_country: string;
     canceled: boolean;
+    deletable: boolean;
     fees: Fees;
     feesdiscount_set: string[];
     margindiscount_set: string[];

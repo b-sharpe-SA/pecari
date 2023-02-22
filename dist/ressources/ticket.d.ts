@@ -1,10 +1,5 @@
 import { InstanceRessource } from '../helpers';
-import {
-    CreateTicketPayload,
-    ListTicketsParams,
-    Ticket,
-    WithPagination,
-} from '../types';
+import { CreateTicketPayload, ListTicketsParams, Ticket, WithPagination } from '../types';
 export declare class TicketRessource extends InstanceRessource {
     private getUrl;
     /**
@@ -16,12 +11,7 @@ export declare class TicketRessource extends InstanceRessource {
      * @param payload.next url for next request. If provided it will fetch this url
      * @returns
      */
-    list({
-        limit,
-        canceled,
-        customer,
-        next,
-    }: ListTicketsParams): Promise<WithPagination<Ticket>>;
+    list({ limit, canceled, customer, next, }: ListTicketsParams): Promise<WithPagination<Ticket>>;
     /**
      * Create ticket for specific customer
      * @param customer Customer reference

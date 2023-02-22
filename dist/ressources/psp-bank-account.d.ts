@@ -15,11 +15,7 @@ export declare class PspBankAccountRessource extends InstanceRessource {
      * @param iban iban
      * @returns
      */
-    ibanPdf(
-        customer: string,
-        currency: string,
-        iban: string
-    ): Promise<{
+    ibanPdf(customer: string, currency: string, iban: string): Promise<{
         pdf: string;
     }>;
     /**
@@ -29,11 +25,7 @@ export declare class PspBankAccountRessource extends InstanceRessource {
      * @param iban iban
      * @returns
      */
-    employerPdf(
-        customer: string,
-        currency: string,
-        iban: string
-    ): Promise<{
+    employerPdf(customer: string, currency: string, iban: string): Promise<{
         pdf: string;
     }>;
 }

@@ -18,8 +18,5 @@ export declare class CustomerRessource extends InstanceRessource {
      * @param payload
      * @returns Customer
      */
-    update(
-        reference: string,
-        payload: UpdateCustomerPayload
-    ): Promise<Customer>;
+    update(reference: string, payload: UpdateCustomerPayload): Promise<Customer>;
 }

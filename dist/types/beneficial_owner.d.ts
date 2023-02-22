@@ -10,9 +10,5 @@ export interface BeneficialOwner extends Address {
     nationality: string;
     customer: string;
 }
-export type CreateBeneficialOwnerPayload = Partial<
-    Omit<BeneficialOwner, 'id' | 'customer'>
->;
-export type UpdateBeneficialOwnerPayload = Partial<
-    Omit<BeneficialOwner, 'id' | 'customer'>
->;
+export type CreateBeneficialOwnerPayload = Partial<Omit<BeneficialOwner, 'id' | 'customer'>>;
+export type UpdateBeneficialOwnerPayload = Partial<Omit<BeneficialOwner, 'id' | 'customer'>>;
