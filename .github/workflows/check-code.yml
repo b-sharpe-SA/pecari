@@ -3,7 +3,6 @@ on:
     push:
         branches-ignore:
             - main
-            - release-v**
 
 jobs:
     check-code:
