@@ -3,8 +3,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.BankAccountRessource = void 0;
 const _helpers_1 = require("../helpers");
 class BankAccountRessource extends _helpers_1.InstanceRessource {
-    getUrl(customer) {
-        return `/users/customer/${customer}/bank_account/`;
+    getUrl(customer, bankAccount) {
+        return `/users/customer/${customer}/bank_account/${bankAccount != null ? `${bankAccount}/` : ''}`;
     }
     /**
      * List bank accounts for specific customer
@@ -29,7 +29,7 @@ class BankAccountRessource extends _helpers_1.InstanceRessource {
      */
     async get(customer, bankAccount) {
         try {
-            const url = this.getUrl(customer);
+            const url = this.getUrl(customer, bankAccount);
             const { data } = await this.instance.get(url);
             return data;
         }

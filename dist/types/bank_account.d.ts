@@ -1,3 +1,4 @@
+import { BankAccount } from './common';
 export interface BankAccountListParameters extends Partial<{
     verified: boolean;
     search: string;
@@ -12,4 +13,10 @@ export interface BankAccountListParameters extends Partial<{
     currency: string;
     bank_name: string;
 }> {
+}
+export interface BankAccountRessourceResponse extends Omit<BankAccount, 'owners'> {
+    owners: Array<{
+        id: number;
+        name: string;
+    }>;
 }
