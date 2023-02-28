@@ -1,0 +1,18 @@
+import { InstanceRessource } from '../helpers';
+import { BankAccount, BankAccountListParameters, WithPagination } from '../types';
+export declare class BankAccountRessource extends InstanceRessource {
+    private getUrl;
+    /**
+     * List bank accounts for specific customer
+     * @param customer Customer reference
+     * @returns
+     */
+    list(customer: string, parameters?: BankAccountListParameters): Promise<WithPagination<BankAccount>>;
+    /**
+     * Get single bank account by id
+     * @param customer Customer reference
+     * @param bankAccount Bank account id
+     * @returns
+     */
+    get(customer: string, bankAccount: number): Promise<BankAccount>;
+}

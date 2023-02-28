@@ -34,3 +34,4 @@ __exportStar(require("./psp-bank-account"), exports);
 __exportStar(require("./signup"), exports);
 __exportStar(require("./rate-alert"), exports);
 __exportStar(require("./sponsorships"), exports);
+__exportStar(require("./bank_account"), exports);

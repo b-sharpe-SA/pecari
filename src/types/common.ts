@@ -59,6 +59,7 @@ export interface Bank extends Address {
 export interface BankAccount extends Address {
     id: number;
     iban: string;
+    display_iban: string;
     name: string;
     bank: Bank;
     currencies: string[];

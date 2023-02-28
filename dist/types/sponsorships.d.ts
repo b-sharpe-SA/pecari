@@ -5,7 +5,7 @@ export interface Sponsorship {
     creation_datetime: string;
     name: string;
     next_step: CustomerNextStep;
-    pending: true;
+    pending: boolean;
     rewards: [
         {
             creation_datetime: string;
