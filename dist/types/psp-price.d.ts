@@ -26,4 +26,34 @@ export interface PspPrice {
         };
         all: string;
     };
+    additional_data: {
+        savings: string;
+        margin: string;
+        fee_express_no_discount: boolean;
+        fee_transfer_no_discount: string;
+        fee_processing_no_discount: string;
+        fee_currency_no_discount: string;
+        psp_price_no_discount: string;
+        margin_no_discount: string;
+        savings_no_discount: string;
+        amount_buy_no_discount: string;
+        amount_sell_no_discount: string;
+    };
+    amount_discounts: [
+        {
+            id: number;
+            name: string;
+            value: string;
+            perpetual: boolean;
+        }
+    ];
+    fee_discounts: [
+        {
+            id: number;
+            name: string;
+            value_processing_fees: string;
+            value_currency_fees: boolean;
+            perpetual: boolean;
+        }
+    ];
 }
