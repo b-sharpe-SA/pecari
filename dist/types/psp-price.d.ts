@@ -56,4 +56,12 @@ export interface PspPrice {
             perpetual: boolean;
         }
     ];
+    margin_discounts: [
+        {
+            id: number;
+            name: string;
+            value: number;
+            perpetual: boolean;
+        }
+    ];
 }
