@@ -12,6 +12,7 @@ export interface BankAccountListParameters extends Partial<{
     enabled: boolean;
     currency: string;
     bank_name: string;
+    next: string;
 }> {
 }
 export interface BankAccountRessourceResponse extends Omit<BankAccount, 'owners'> {

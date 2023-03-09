@@ -13,7 +13,8 @@ class BankAccountRessource extends _helpers_1.InstanceRessource {
      */
     async list(customer, parameters) {
         try {
-            const url = (0, _helpers_1.concatenateQueryParams)(this.getUrl(customer), parameters);
+            const url = parameters?.next ??
+                (0, _helpers_1.concatenateQueryParams)(this.getUrl(customer), parameters);
             const { data } = await this.instance.get(url);
             return data;
         }
