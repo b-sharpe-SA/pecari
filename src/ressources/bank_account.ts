@@ -23,10 +23,9 @@ export class BankAccountRessource extends InstanceRessource {
      */
     async list(customer: string, parameters?: BankAccountListParameters) {
         try {
-            const url = concatenateQueryParams(
-                this.getUrl(customer),
-                parameters
-            );
+            const url =
+                parameters?.next ??
+                concatenateQueryParams(this.getUrl(customer), parameters);
 
             const { data } = await this.instance.get<
                 WithPagination<BankAccountRessourceResponse>

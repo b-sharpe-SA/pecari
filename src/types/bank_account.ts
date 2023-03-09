@@ -14,6 +14,7 @@ export interface BankAccountListParameters
         enabled: boolean;
         currency: string;
         bank_name: string;
+        next: string;
     }> {}
 
 export interface BankAccountRessourceResponse
