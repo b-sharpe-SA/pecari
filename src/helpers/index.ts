@@ -37,10 +37,16 @@ export function concatenateQueryParams(
     if (queryParams == null) {
         return url;
     }
-    Object.keys(queryParams).forEach((key, index) => {
-        if (queryParams[key] !== undefined) {
-            // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
-            url += `${index === 0 ? '?' : '&'}${key}=${queryParams[key]}`;
+    const cleanedQueryParams = Object.fromEntries(
+        Object.entries(queryParams).filter(([_, v]) => v != null)
+    );
+
+    Object.keys(cleanedQueryParams).forEach((key, index) => {
+        if (cleanedQueryParams[key] !== undefined) {
+            url += `${index === 0 ? '?' : '&'}${key}=${
+                // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
+                cleanedQueryParams[key]
+            }`;
         }
     });
     return url;
