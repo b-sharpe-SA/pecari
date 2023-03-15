@@ -17,5 +17,6 @@ export interface Sponsorship {
 export interface SponsorshipInfoByCode {
     first_name: string;
     total_amount: string;
-    amount_discount: string;
+    sponsor_amount_discount: string;
+    sponsored_amount_discount: string;
 }
