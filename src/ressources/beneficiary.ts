@@ -60,6 +60,21 @@ export class BeneficiaryRessource extends InstanceRessource {
         }
     }
 
+    async upload(customer: string, reference: string, file: File) {
+        try {
+            const url = `${this.getUrl(customer, reference)}upload/`;
+            const { data } = await this.instance.post(url, file, {
+                headers: {
+                    'Content-Type': file.type,
+                    'Content-Disposition': `attachment; filename=${file.name}`,
+                },
+            });
+            return data;
+        } catch (error) {
+            throw handleError(error);
+        }
+    }
+
     /**
      * Delete beneficiary
      * @param customer Customer reference
