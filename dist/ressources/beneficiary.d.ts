@@ -16,6 +16,7 @@ export declare class BeneficiaryRessource extends InstanceRessource {
      * @returns
      */
     create(customer: string, payload: CreateBeneficiaryPayload): Promise<Beneficiary>;
+    upload(customer: string, reference: string, file: File): Promise<any>;
     /**
      * Delete beneficiary
      * @param customer Customer reference

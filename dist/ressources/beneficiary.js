@@ -42,6 +42,21 @@ class BeneficiaryRessource extends _helpers_1.InstanceRessource {
             throw (0, _helpers_1.handleError)(error);
         }
     }
+    async upload(customer, reference, file) {
+        try {
+            const url = `${this.getUrl(customer, reference)}upload/`;
+            const { data } = await this.instance.post(url, file, {
+                headers: {
+                    'Content-Type': file.type,
+                    'Content-Disposition': `attachment; filename=${file.name}`,
+                },
+            });
+            return data;
+        }
+        catch (error) {
+            throw (0, _helpers_1.handleError)(error);
+        }
+    }
     /**
      * Delete beneficiary
      * @param customer Customer reference
