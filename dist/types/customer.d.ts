@@ -33,6 +33,11 @@ export interface Customer extends Address, Utm {
     sponsoring_key: string;
     sponsoring_url: string;
     sponsoring_url_qrcode: string;
+    rewards: Array<{
+        creation_datetime: string;
+        amount: string;
+        fees_processing: string;
+    }>;
 }
 export declare enum CustomerNextStep {
     BaseInfo = "base_info_completed",
