@@ -9,6 +9,7 @@ export interface ListBeneficiaryQueryParams extends Record<string, any> {
     myself?: boolean;
     exclude_currency?: string;
     bankname_beneficiary_currency?: string;
+    type?: ClientType;
 }
 
 export type CreateBeneficiaryPayload = Partial<Omit<Beneficiary, 'id'>>;
