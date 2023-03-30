@@ -63,3 +63,9 @@ export interface Fees {
     transfer: string;
     all: string;
 }
+export interface Reward {
+    creation_datetime: string;
+    amount: string;
+    fees_processing: string;
+    consummed: boolean;
+}

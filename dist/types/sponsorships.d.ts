@@ -1,3 +1,4 @@
+import { Reward } from './common';
 import { CustomerNextStep } from './customer';
 export interface Sponsorship {
     first_activation_date: string;
@@ -6,13 +7,7 @@ export interface Sponsorship {
     name: string;
     next_step: CustomerNextStep;
     pending: boolean;
-    rewards: [
-        {
-            creation_datetime: string;
-            amount: string;
-            fees_processing: string;
-        }
-    ];
+    rewards: Reward[];
 }
 export interface SponsorshipInfoByCode {
     first_name: string;

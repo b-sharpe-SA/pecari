@@ -1,4 +1,4 @@
-import { Address, ClientType, Title, Utm } from '.';
+import { Address, ClientType, Reward, Title, Utm } from '.';
 export interface Customer extends Address, Utm {
     reference: string;
     title: Title;
@@ -33,11 +33,7 @@ export interface Customer extends Address, Utm {
     sponsoring_key: string;
     sponsoring_url: string;
     sponsoring_url_qrcode: string;
-    rewards: Array<{
-        creation_datetime: string;
-        amount: string;
-        fees_processing: string;
-    }>;
+    rewards: Reward[];
 }
 export declare enum CustomerNextStep {
     BaseInfo = "base_info_completed",
