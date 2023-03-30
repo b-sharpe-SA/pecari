@@ -1,4 +1,4 @@
-import { Address, ClientType, Title, Utm } from '@types';
+import { Address, ClientType, Reward, Title, Utm } from '@types';
 
 export interface Customer extends Address, Utm {
     reference: string;
@@ -34,11 +34,7 @@ export interface Customer extends Address, Utm {
     sponsoring_key: string;
     sponsoring_url: string;
     sponsoring_url_qrcode: string;
-    rewards: Array<{
-        creation_datetime: string;
-        amount: string;
-        fees_processing: string;
-    }>;
+    rewards: Reward[];
 }
 
 export enum CustomerNextStep {
