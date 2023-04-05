@@ -79,5 +79,5 @@ export interface Reward {
     creation_datetime: string;
     amount: string;
     fees_processing: string;
-    consummed: boolean;
+    consumed: boolean;
 }
