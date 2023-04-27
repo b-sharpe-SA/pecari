@@ -3,6 +3,7 @@ import {
     BankAccount,
     ClientType,
     Fees,
+    Platform,
     SourceOfFundsType,
     Title,
     TransactionType,
@@ -107,4 +108,5 @@ export interface CreateTicketPayload {
     source_of_funds_reference?: string;
     emitter_country?: string;
     canceled?: boolean;
+    ticket_device?: Platform;
 }

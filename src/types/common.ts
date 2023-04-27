@@ -81,3 +81,5 @@ export interface Reward {
     fees_processing: string;
     consummed: boolean;
 }
+
+export type Platform = 'ios' | 'android' | 'windows' | 'macos' | 'web';
