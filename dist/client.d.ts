@@ -1,5 +1,28 @@
 import { AxiosInstance } from 'axios';
-import { LoginRessource, MyselfRessource, CustomerRessource, AdvancedAuthRessource, PasswordResetRessource, TicketRessource, PspPriceRessource, BeneficialOwnerRessource, BeneficiaryRessource, MapboxRessource, EmailRessource, OnfidoRessource, MessageRessource, ContractRessource, UpdatePasswordRessource, UploadRessource, PspBankAccountRessource, SignupRessource, RateAlertRessource, SponsorshipRessource, BankAccountRessource } from './ressources';
+import {
+    LoginRessource,
+    MyselfRessource,
+    CustomerRessource,
+    AdvancedAuthRessource,
+    PasswordResetRessource,
+    TicketRessource,
+    PspPriceRessource,
+    BeneficialOwnerRessource,
+    BeneficiaryRessource,
+    MapboxRessource,
+    EmailRessource,
+    OnfidoRessource,
+    MessageRessource,
+    ContractRessource,
+    UpdatePasswordRessource,
+    UploadRessource,
+    PspBankAccountRessource,
+    SignupRessource,
+    RateAlertRessource,
+    SponsorshipRessource,
+    BankAccountRessource,
+    AppCompatibilityResource,
+} from './ressources';
 /**
  * Client definition
  * @property {string} baseUrl - base url to fetch cactus api
@@ -45,4 +68,5 @@ export declare class CactusClient {
     rateAlert: RateAlertRessource;
     sponsorship: SponsorshipRessource;
     bankAccount: BankAccountRessource;
+    appCompatibility: AppCompatibilityResource;
 }

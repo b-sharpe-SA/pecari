@@ -1,5 +1,10 @@
 import { handleError, InstanceRessource } from '@helpers';
-import { CreateRateAlertPayload, RateAlert, WithPagination } from '@types';
+import {
+    CreateRateAlertPayload,
+    RateAlert,
+    UpdateRateAlertPayload,
+    WithPagination,
+} from '@types';
 
 const BASE_URL = 'ratealert/';
 
@@ -26,6 +31,24 @@ export class RateAlertRessource extends InstanceRessource {
     async create(payload: CreateRateAlertPayload) {
         try {
             const { data } = await this.instance.post(BASE_URL, payload);
+            return data;
+        } catch (error) {
+            throw handleError(error);
+        }
+    }
+
+    /**
+     * Update a rate alert based on id
+     * @param id Id of the rate alert
+     * @param payload Rate alert payload
+     */
+    async update(id: string, payload: UpdateRateAlertPayload) {
+        try {
+            const { data } = await this.instance.patch(
+                `${BASE_URL}${id}/`,
+                payload
+            );
+
             return data;
         } catch (error) {
             throw handleError(error);

@@ -21,6 +21,7 @@ import {
     RateAlertRessource,
     SponsorshipRessource,
     BankAccountRessource,
+    AppCompatibilityResource,
 } from '@ressources';
 import { AUTH_HEADER_KEY } from './constants';
 
@@ -115,4 +116,6 @@ export class CactusClient {
     sponsorship = new SponsorshipRessource(this.instanceParams);
 
     bankAccount = new BankAccountRessource(this.instanceParams);
+
+    appCompatibility = new AppCompatibilityResource(this.instanceParams);
 }

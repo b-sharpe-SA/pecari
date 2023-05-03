@@ -1,7 +1,7 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
 exports.UploadRessource = void 0;
-const _helpers_1 = require("../helpers");
+const _helpers_1 = require('../helpers');
 class UploadRessource extends _helpers_1.InstanceRessource {
     getUrl(customer) {
         return `users/customer/${customer}/upload/`;
@@ -9,7 +9,7 @@ class UploadRessource extends _helpers_1.InstanceRessource {
     /**
      * Upload document
      * @param customer Customer reference
-     * @param file File
+     * @param file File | MobileFile
      * @returns
      */
     async post(customer, file) {
@@ -22,8 +22,7 @@ class UploadRessource extends _helpers_1.InstanceRessource {
                 },
             });
             return data;
-        }
-        catch (error) {
+        } catch (error) {
             throw (0, _helpers_1.handleError)(error);
         }
     }
