@@ -1,7 +1,7 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
 exports.MapboxRessource = void 0;
-const _helpers_1 = require("../helpers");
+const _helpers_1 = require('../helpers');
 class MapboxRessource extends _helpers_1.InstanceRessource {
     /**
      * Get mapbox token
@@ -9,10 +9,9 @@ class MapboxRessource extends _helpers_1.InstanceRessource {
      */
     async get() {
         try {
-            const { data } = await this.instance.get('mapbox');
+            const { data } = await this.instance.get('mapbox/');
             return data;
-        }
-        catch (error) {
+        } catch (error) {
             throw (0, _helpers_1.handleError)(error);
         }
     }

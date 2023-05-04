@@ -9,7 +9,7 @@ export class MyselfRessource extends InstanceRessource {
     async get() {
         try {
             const { data } = await this.instance.get<Myself>(
-                'users/user/myself'
+                'users/user/myself/'
             );
             return data;
         } catch (error) {
@@ -25,7 +25,7 @@ export class MyselfRessource extends InstanceRessource {
     async update(payload: UpdateMyselfPayload) {
         try {
             const { data } = await this.instance.patch<Myself>(
-                'users/user/myself',
+                'users/user/myself/',
                 payload
             );
             return data;
@@ -43,7 +43,7 @@ export class MyselfRessource extends InstanceRessource {
      */
     async delete() {
         try {
-            const { data } = await this.instance.delete('users/user/myself');
+            const { data } = await this.instance.delete('users/user/myself/');
             return data;
         } catch (error) {
             throw handleError(error);

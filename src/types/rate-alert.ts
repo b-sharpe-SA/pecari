@@ -16,3 +16,8 @@ export type CreateRateAlertPayload = Omit<
     RateAlert,
     'id' | 'creation_datetime'
 >;
+
+export type UpdateRateAlertPayload = Omit<
+    RateAlert,
+    'id' | 'creation_datetime'
+>;

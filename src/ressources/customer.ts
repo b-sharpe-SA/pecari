@@ -9,7 +9,7 @@ export class CustomerRessource extends InstanceRessource {
     async list() {
         try {
             const { data } = await this.instance.get<WithPagination<Customer>>(
-                'users/customer'
+                'users/customer/'
             );
             return data;
         } catch (error) {
@@ -25,7 +25,7 @@ export class CustomerRessource extends InstanceRessource {
     async get(reference: string) {
         try {
             const { data } = await this.instance.get<Customer>(
-                `users/customer/${reference}`
+                `users/customer/${reference}/`
             );
             return data;
         } catch (error) {
@@ -42,7 +42,7 @@ export class CustomerRessource extends InstanceRessource {
     async update(reference: string, payload: UpdateCustomerPayload) {
         try {
             const { data } = await this.instance.patch<Customer>(
-                `users/customer/${reference}`,
+                `users/customer/${reference}/`,
                 { ...payload }
             );
             return data;

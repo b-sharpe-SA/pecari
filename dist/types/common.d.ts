@@ -7,8 +7,8 @@ export interface WithPagination<T> {
 }
 export type Title = 'mr' | 'ms';
 export declare enum ClientType {
-    Private = "n",
-    Legal = "l"
+    Private = 'n',
+    Legal = 'l',
 }
 export interface Address {
     address_line_1: string;
@@ -35,11 +35,11 @@ export interface InstanceRessourceParams {
 }
 export type TransactionType = 'sell' | 'buy';
 export declare enum SourceOfFundsType {
-    Employer = "employer",
-    Lamal = "lamal",
-    Taxes = "taxes",
-    Allowances = "allowances",
-    Pentions = "pensions ahv iv"
+    Employer = 'employer',
+    Lamal = 'lamal',
+    Taxes = 'taxes',
+    Allowances = 'allowances',
+    Pentions = 'pensions ahv iv',
 }
 export interface Bank extends Address {
     name: string;
@@ -69,3 +69,4 @@ export interface Reward {
     fees_processing: string;
     consumed: boolean;
 }
+export type Platform = 'ios' | 'android' | 'windows' | 'macos' | 'web';

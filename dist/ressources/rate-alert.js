@@ -1,7 +1,7 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
 exports.RateAlertRessource = void 0;
-const _helpers_1 = require("../helpers");
+const _helpers_1 = require('../helpers');
 const BASE_URL = 'ratealert/';
 class RateAlertRessource extends _helpers_1.InstanceRessource {
     /**
@@ -12,8 +12,7 @@ class RateAlertRessource extends _helpers_1.InstanceRessource {
         try {
             const { data } = await this.instance.get(BASE_URL);
             return data;
-        }
-        catch (error) {
+        } catch (error) {
             throw (0, _helpers_1.handleError)(error);
         }
     }
@@ -25,8 +24,23 @@ class RateAlertRessource extends _helpers_1.InstanceRessource {
         try {
             const { data } = await this.instance.post(BASE_URL, payload);
             return data;
+        } catch (error) {
+            throw (0, _helpers_1.handleError)(error);
         }
-        catch (error) {
+    }
+    /**
+     * Update a rate alert based on id
+     * @param id Id of the rate alert
+     * @param payload Rate alert payload
+     */
+    async update(id, payload) {
+        try {
+            const { data } = await this.instance.patch(
+                `${BASE_URL}${id}/`,
+                payload
+            );
+            return data;
+        } catch (error) {
             throw (0, _helpers_1.handleError)(error);
         }
     }
@@ -39,8 +53,7 @@ class RateAlertRessource extends _helpers_1.InstanceRessource {
         try {
             const { data } = await this.instance.delete(`${BASE_URL}${id}/`);
             return data;
-        }
-        catch (error) {
+        } catch (error) {
             throw (0, _helpers_1.handleError)(error);
         }
     }

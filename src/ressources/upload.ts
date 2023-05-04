@@ -1,4 +1,5 @@
 import { handleError, InstanceRessource } from '@helpers';
+import { MobileFile } from 'src/types/upload';
 
 export class UploadRessource extends InstanceRessource {
     private getUrl(customer: string) {
@@ -8,10 +9,10 @@ export class UploadRessource extends InstanceRessource {
     /**
      * Upload document
      * @param customer Customer reference
-     * @param file File
+     * @param file File | MobileFile
      * @returns
      */
-    async post(customer: string, file: File) {
+    async post(customer: string, file: File | MobileFile) {
         try {
             const url = this.getUrl(customer);
             const { data } = await this.instance.post(url, file, {
