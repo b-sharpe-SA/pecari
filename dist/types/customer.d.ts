@@ -37,16 +37,16 @@ export interface Customer extends Address, Utm {
     rewards: Reward[];
 }
 export declare enum CustomerNextStep {
-    BaseInfo = 'base_info_completed',
-    IdentityNotSubmitted = 'identity-not_submitted',
-    IdentityPending = 'identity-pending',
-    IdentityClear = 'identity-clear',
-    IdentityError = 'identity-error',
-    IdentityRetry = 'identity-retry',
-    IdentityConsider = 'identity-consider',
-    ESign = 'esign',
-    ProofResidence = 'proof_of_residence',
-    AdminWait = 'admin_wait',
+    BaseInfo = "base_info_completed",
+    IdentityNotSubmitted = "identity-not_submitted",
+    IdentityPending = "identity-pending",
+    IdentityClear = "identity-clear",
+    IdentityError = "identity-error",
+    IdentityRetry = "identity-retry",
+    IdentityConsider = "identity-consider",
+    ESign = "esign",
+    ProofResidence = "proof_of_residence",
+    AdminWait = "admin_wait"
 }
 export interface CustomerFrontEndData extends Record<string, any> {
     accountType: 'own' | 'salary';

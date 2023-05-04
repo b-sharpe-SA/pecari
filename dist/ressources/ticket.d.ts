@@ -26,4 +26,12 @@ export declare class TicketRessource extends InstanceRessource {
      * @returns
      */
     delete(customer: string, reference: string): Promise<Ticket>;
+    /**
+     * Upload document for specific ticket
+     * @param customer Customer reference
+     * @param reference Reference for ticket
+     * @param file File
+     * @returns
+     */
+    uploadDocument(customer: string, reference: string, file: File): Promise<any>;
 }

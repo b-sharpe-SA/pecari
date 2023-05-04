@@ -77,4 +77,26 @@ export class TicketRessource extends InstanceRessource {
             throw handleError(error);
         }
     }
+
+    /**
+     * Upload document for specific ticket
+     * @param customer Customer reference
+     * @param reference Reference for ticket
+     * @param file File
+     * @returns
+     */
+    async uploadDocument(customer: string, reference: string, file: File) {
+        try {
+            const url = `${this.getUrl(customer, reference)}/upload/`;
+            const { data } = await this.instance.post(url, file, {
+                headers: {
+                    'Content-Type': file.type,
+                    'Content-Disposition': `attachment; filename=${file.name}`,
+                },
+            });
+            return data;
+        } catch (error) {
+            throw handleError(error);
+        }
+    }
 }
