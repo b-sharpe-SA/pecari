@@ -19,5 +19,6 @@ export interface BankAccountRessourceResponse extends Omit<BankAccount, 'owners'
     owners: Array<{
         id: number;
         name: string;
+        myself: boolean;
     }>;
 }

@@ -22,5 +22,6 @@ export interface BankAccountRessourceResponse
     owners: Array<{
         id: number;
         name: string;
+        myself: boolean;
     }>;
 }
