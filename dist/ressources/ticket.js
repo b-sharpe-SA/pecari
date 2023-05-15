@@ -15,12 +15,13 @@ class TicketRessource extends _helpers_1.InstanceRessource {
      * @param payload.next url for next request. If provided it will fetch this url
      * @returns
      */
-    async list({ limit = 5, canceled = false, customer, next, }) {
+    async list({ limit = 5, offset = 0, canceled = false, customer, next, }) {
         try {
             const url = next ??
                 (0, _helpers_1.concatenateQueryParams)(this.getUrl(customer), {
                     limit,
                     canceled,
+                    offset
                 });
             const { data } = await this.instance.get(url);
             return data;

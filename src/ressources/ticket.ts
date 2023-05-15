@@ -26,6 +26,7 @@ export class TicketRessource extends InstanceRessource {
      */
     async list({
         limit = 5,
+        offset = 0,
         canceled = false,
         customer,
         next,
@@ -36,6 +37,7 @@ export class TicketRessource extends InstanceRessource {
                 concatenateQueryParams(this.getUrl(customer), {
                     limit,
                     canceled,
+                    offset,
                 });
             const { data } = await this.instance.get<WithPagination<Ticket>>(
                 url
