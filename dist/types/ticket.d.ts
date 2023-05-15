@@ -1,15 +1,7 @@
-import {
-    Address,
-    BankAccount,
-    ClientType,
-    Fees,
-    Platform,
-    SourceOfFundsType,
-    Title,
-    TransactionType,
-} from '.';
+import { Address, BankAccount, ClientType, Fees, Platform, SourceOfFundsType, Title, TransactionType } from '.';
 export interface ListTicketsParams {
     limit?: number;
+    offset?: number;
     canceled?: boolean;
     customer: string;
     next?: string;

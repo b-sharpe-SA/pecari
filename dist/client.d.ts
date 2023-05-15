@@ -1,28 +1,5 @@
 import { AxiosInstance } from 'axios';
-import {
-    LoginRessource,
-    MyselfRessource,
-    CustomerRessource,
-    AdvancedAuthRessource,
-    PasswordResetRessource,
-    TicketRessource,
-    PspPriceRessource,
-    BeneficialOwnerRessource,
-    BeneficiaryRessource,
-    MapboxRessource,
-    EmailRessource,
-    OnfidoRessource,
-    MessageRessource,
-    ContractRessource,
-    UpdatePasswordRessource,
-    UploadRessource,
-    PspBankAccountRessource,
-    SignupRessource,
-    RateAlertRessource,
-    SponsorshipRessource,
-    BankAccountRessource,
-    AppCompatibilityResource,
-} from './ressources';
+import { LoginRessource, MyselfRessource, CustomerRessource, AdvancedAuthRessource, PasswordResetRessource, TicketRessource, PspPriceRessource, BeneficialOwnerRessource, BeneficiaryRessource, MapboxRessource, EmailRessource, OnfidoRessource, MessageRessource, ContractRessource, UpdatePasswordRessource, UploadRessource, PspBankAccountRessource, SignupRessource, RateAlertRessource, SponsorshipRessource, BankAccountRessource, AppCompatibilityResource } from './ressources';
 /**
  * Client definition
  * @property {string} baseUrl - base url to fetch cactus api

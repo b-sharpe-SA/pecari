@@ -1,7 +1,7 @@
-'use strict';
-Object.defineProperty(exports, '__esModule', { value: true });
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.AppCompatibilityResource = void 0;
-const _helpers_1 = require('../helpers');
+const _helpers_1 = require("../helpers");
 const BASE_URL = 'app_check/';
 class AppCompatibilityResource extends _helpers_1.InstanceRessource {
     /**
@@ -12,7 +12,8 @@ class AppCompatibilityResource extends _helpers_1.InstanceRessource {
         try {
             const { data } = await this.instance.get(BASE_URL);
             return data;
-        } catch (error) {
+        }
+        catch (error) {
             throw (0, _helpers_1.handleError)(error);
         }
     }

@@ -11,6 +11,7 @@ import {
 
 export interface ListTicketsParams {
     limit?: number;
+    offset?: number;
     canceled?: boolean;
     customer: string;
     next?: string;
