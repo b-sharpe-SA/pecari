@@ -11,4 +11,4 @@ export interface RateAlert {
     currency_pair: string;
 }
 export type CreateRateAlertPayload = Omit<RateAlert, 'id' | 'creation_datetime' | 'rate_targets'>;
-export type UpdateRateAlertPayload = Omit<RateAlert, 'id' | 'creation_datetime'>;
+export type UpdateRateAlertPayload = Pick<RateAlert, 'rate_targets'>;
