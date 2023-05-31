@@ -6,7 +6,7 @@ export enum AlertStatus {
 
 export interface RateAlert {
     id: number;
-    rate_target: string;
+    rate_targets: string[];
     status: AlertStatus;
     creation_datetime: string;
     currency_pair: string;
@@ -14,7 +14,7 @@ export interface RateAlert {
 
 export type CreateRateAlertPayload = Omit<
     RateAlert,
-    'id' | 'creation_datetime'
+    'id' | 'creation_datetime' | 'rate_targets'
 >;
 
 export type UpdateRateAlertPayload = Omit<
