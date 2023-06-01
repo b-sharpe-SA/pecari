@@ -25,6 +25,22 @@ export class RateAlertRessource extends InstanceRessource {
     }
 
     /**
+     * Get specific rate alert by id
+     * @param id Id of rate alert
+     * @returns
+     */
+    async get(id: string | number) {
+        try {
+            const { data } = await this.instance.get<RateAlert>(
+                `${BASE_URL}${id}/`
+            );
+            return data;
+        } catch (error) {
+            throw handleError(error);
+        }
+    }
+
+    /**
      * Create a rate alert
      * @param payload Rate alert payload
      */
