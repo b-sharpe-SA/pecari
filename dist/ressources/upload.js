@@ -9,16 +9,18 @@ class UploadRessource extends _helpers_1.InstanceRessource {
     /**
      * Upload document
      * @param customer Customer reference
-     * @param file File | MobileFile
+     * @param file File | FormData
      * @returns
      */
     async post(customer, file) {
         try {
             const url = this.getUrl(customer);
             const { data } = await this.instance.post(url, file, {
-                headers: {
+                headers: file instanceof File ? {
                     'Content-Type': file.type,
                     'Content-Disposition': `attachment; filename=${file.name}`,
+                } : {
+                    'Content-Type': 'multipart/form-data',
                 },
             });
             return data;

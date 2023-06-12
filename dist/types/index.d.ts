@@ -17,5 +17,4 @@ export * from './signup';
 export * from './rate-alert';
 export * from './sponsorships';
 export * from './bank_account';
-export * from './upload';
 export * from './app-compatibility';

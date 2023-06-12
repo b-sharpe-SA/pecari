@@ -60,14 +60,19 @@ export class BeneficiaryRessource extends InstanceRessource {
         }
     }
 
-    async upload(customer: string, reference: string, file: File) {
+    async upload(customer: string, reference: string, file: File | FormData) {
         try {
             const url = `${this.getUrl(customer, reference)}upload/`;
             const { data } = await this.instance.post(url, file, {
-                headers: {
-                    'Content-Type': file.type,
-                    'Content-Disposition': `attachment; filename=${file.name}`,
-                },
+                headers:
+                    file instanceof File
+                        ? {
+                              'Content-Type': file.type,
+                              'Content-Disposition': `attachment; filename=${file.name}`,
+                          }
+                        : {
+                              'Content-Type': 'multipart/form-data',
+                          },
             });
             return data;
         } catch (error) {
