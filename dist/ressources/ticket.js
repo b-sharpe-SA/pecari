@@ -21,7 +21,7 @@ class TicketRessource extends _helpers_1.InstanceRessource {
                 (0, _helpers_1.concatenateQueryParams)(this.getUrl(customer), {
                     limit,
                     canceled,
-                    offset
+                    offset,
                 });
             const { data } = await this.instance.get(url);
             return data;

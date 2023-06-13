@@ -7,6 +7,12 @@ export declare class RateAlertRessource extends InstanceRessource {
      */
     list(): Promise<WithPagination<RateAlert>>;
     /**
+     * Get specific rate alert by id
+     * @param id Id of rate alert
+     * @returns
+     */
+    get(id: string | number): Promise<RateAlert>;
+    /**
      * Create a rate alert
      * @param payload Rate alert payload
      */

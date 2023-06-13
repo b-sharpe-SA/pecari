@@ -18,6 +18,20 @@ class RateAlertRessource extends _helpers_1.InstanceRessource {
         }
     }
     /**
+     * Get specific rate alert by id
+     * @param id Id of rate alert
+     * @returns
+     */
+    async get(id) {
+        try {
+            const { data } = await this.instance.get(`${BASE_URL}${id}/`);
+            return data;
+        }
+        catch (error) {
+            throw (0, _helpers_1.handleError)(error);
+        }
+    }
+    /**
      * Create a rate alert
      * @param payload Rate alert payload
      */

@@ -5,10 +5,10 @@ export declare enum AlertStatus {
 }
 export interface RateAlert {
     id: number;
-    rate_target: string;
+    rate_targets: string[];
     status: AlertStatus;
     creation_datetime: string;
     currency_pair: string;
 }
-export type CreateRateAlertPayload = Omit<RateAlert, 'id' | 'creation_datetime'>;
-export type UpdateRateAlertPayload = Omit<RateAlert, 'id' | 'creation_datetime'>;
+export type CreateRateAlertPayload = Omit<RateAlert, 'id' | 'creation_datetime' | 'rate_targets'>;
+export type UpdateRateAlertPayload = Pick<RateAlert, 'rate_targets'>;
