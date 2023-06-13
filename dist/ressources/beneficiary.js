@@ -46,9 +46,11 @@ class BeneficiaryRessource extends _helpers_1.InstanceRessource {
         try {
             const url = `${this.getUrl(customer, reference)}upload/`;
             const { data } = await this.instance.post(url, file, {
-                headers: {
+                headers: file instanceof File ? {
                     'Content-Type': file.type,
                     'Content-Disposition': `attachment; filename=${file.name}`,
+                } : {
+                    'Content-Type': 'multipart/form-data',
                 },
             });
             return data;
