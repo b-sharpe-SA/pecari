@@ -1,5 +1,5 @@
 import { handleError, InstanceRessource } from '@helpers';
-import { type Message } from '@types';
+import { Message } from '@types';
 
 export class MessageRessource extends InstanceRessource {
     /**

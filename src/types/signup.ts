@@ -1,4 +1,4 @@
-import { type ClientType, type Myself } from '@types';
+import { ClientType, Myself } from '@types';
 
 export enum SignupDevice {
     Web = 'web',

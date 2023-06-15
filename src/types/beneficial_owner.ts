@@ -1,4 +1,4 @@
-import { type Address, type Title } from '@types';
+import { Address, Title } from '@types';
 
 export interface BeneficialOwner extends Address {
     id: number;

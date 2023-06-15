@@ -1,4 +1,4 @@
-import { type BankAccount } from './common';
+import { BankAccount } from './common';
 export interface BankAccountListParameters extends Partial<{
     verified: boolean;
     search: string;

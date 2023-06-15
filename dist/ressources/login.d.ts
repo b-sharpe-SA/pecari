@@ -1,5 +1,5 @@
 import { InstanceRessource } from '../helpers';
-import { type LoginPayload, type LoginTokenResponse } from '../types';
+import { LoginPayload, LoginTokenResponse } from '../types';
 export declare class LoginRessource extends InstanceRessource {
     /**
      * Log user and set token to global instance

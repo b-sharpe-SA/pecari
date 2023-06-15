@@ -1,4 +1,4 @@
-import { type Address, type ClientType, type Reward, type Title, type Utm } from '.';
+import { Address, ClientType, Reward, Title, Utm } from '.';
 export interface Customer extends Address, Utm {
     reference: string;
     title: Title;

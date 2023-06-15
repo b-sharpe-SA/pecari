@@ -4,10 +4,10 @@ import {
     InstanceRessource,
 } from '@helpers';
 import {
-    type CreateTicketPayload,
-    type ListTicketsParams,
-    type Ticket,
-    type WithPagination,
+    CreateTicketPayload,
+    ListTicketsParams,
+    Ticket,
+    WithPagination,
 } from '@types';
 
 export class TicketRessource extends InstanceRessource {

@@ -1,5 +1,5 @@
 import { handleError, InstanceRessource } from '@helpers';
-import { type UpdatePasswordPayload } from '@types';
+import { UpdatePasswordPayload } from '@types';
 
 const BASE_URL = 'users/user/update_password/';
 

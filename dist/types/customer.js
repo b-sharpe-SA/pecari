@@ -13,4 +13,4 @@ var CustomerNextStep;
     CustomerNextStep["ESign"] = "esign";
     CustomerNextStep["ProofResidence"] = "proof_of_residence";
     CustomerNextStep["AdminWait"] = "admin_wait";
-})(CustomerNextStep || (exports.CustomerNextStep = CustomerNextStep = {}));
+})(CustomerNextStep = exports.CustomerNextStep || (exports.CustomerNextStep = {}));

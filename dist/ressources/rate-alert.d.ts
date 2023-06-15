@@ -1,5 +1,5 @@
 import { InstanceRessource } from '../helpers';
-import { type CreateRateAlertPayload, type RateAlert, type UpdateRateAlertPayload, type WithPagination } from '../types';
+import { CreateRateAlertPayload, RateAlert, UpdateRateAlertPayload, WithPagination } from '../types';
 export declare class RateAlertRessource extends InstanceRessource {
     /**
      * List rate alerts

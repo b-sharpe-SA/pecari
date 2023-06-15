@@ -4,9 +4,9 @@ import {
     InstanceRessource,
 } from '@helpers';
 import {
-    type BankAccountListParameters,
-    type BankAccountRessourceResponse,
-    type WithPagination,
+    BankAccountListParameters,
+    BankAccountRessourceResponse,
+    WithPagination,
 } from '@types';
 
 export class BankAccountRessource extends InstanceRessource {

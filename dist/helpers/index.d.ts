@@ -1,5 +1,5 @@
-import { type AxiosInstance } from 'axios';
-import { type CactusError, type InstanceRessourceParams } from '../types';
+import { AxiosInstance } from 'axios';
+import { CactusError, InstanceRessourceParams } from '../types';
 export declare function handleError(error: any): CactusError;
 export declare class InstanceRessource {
     readonly instance: AxiosInstance;

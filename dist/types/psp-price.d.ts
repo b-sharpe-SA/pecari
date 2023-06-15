@@ -1,4 +1,4 @@
-import { type TransactionType } from '.';
+import { TransactionType } from '.';
 export interface CreatePspPricePayload {
     currency_buy: string;
     currency_sell: string;

@@ -1,9 +1,5 @@
 import { handleError, InstanceRessource } from '@helpers';
-import {
-    type Sponsorship,
-    type SponsorshipInfoByCode,
-    type WithPagination,
-} from '@types';
+import { Sponsorship, SponsorshipInfoByCode, WithPagination } from '@types';
 
 export class SponsorshipRessource extends InstanceRessource {
     private getUrl(customerRef: string) {

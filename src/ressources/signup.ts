@@ -1,5 +1,5 @@
 import { handleError, InstanceRessource } from '@helpers';
-import { type SignupPayload, type SignupResponse } from '@types';
+import { SignupPayload, SignupResponse } from '@types';
 
 export class SignupRessource extends InstanceRessource {
     async post(payload: SignupPayload) {
