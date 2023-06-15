@@ -1,5 +1,5 @@
 import { handleError, InstanceRessource } from '@helpers';
-import { CreatePspPricePayload, PspPrice } from '@types';
+import { type CreatePspPricePayload, type PspPrice } from '@types';
 
 export class PspPriceRessource extends InstanceRessource {
     private getUrl(customer: string) {

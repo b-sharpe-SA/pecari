@@ -1,12 +1,12 @@
 import {
-    Address,
-    BankAccount,
-    ClientType,
-    Fees,
-    Platform,
-    SourceOfFundsType,
-    Title,
-    TransactionType,
+    type Address,
+    type BankAccount,
+    type ClientType,
+    type Fees,
+    type Platform,
+    type SourceOfFundsType,
+    type Title,
+    type TransactionType,
 } from '@types';
 
 export interface ListTicketsParams {

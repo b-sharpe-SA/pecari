@@ -1,9 +1,9 @@
 import { handleError, InstanceRessource } from '@helpers';
 import {
-    CreateRateAlertPayload,
-    RateAlert,
-    UpdateRateAlertPayload,
-    WithPagination,
+    type CreateRateAlertPayload,
+    type RateAlert,
+    type UpdateRateAlertPayload,
+    type WithPagination,
 } from '@types';
 
 const BASE_URL = 'ratealert/';

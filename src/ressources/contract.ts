@@ -1,5 +1,5 @@
 import { handleError, InstanceRessource } from '@helpers';
-import { Contract, SignContractResponse } from '@types';
+import { type Contract, type SignContractResponse } from '@types';
 
 export class ContractRessource extends InstanceRessource {
     private getUrl(customer: string) {

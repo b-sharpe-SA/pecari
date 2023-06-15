@@ -1,5 +1,5 @@
 import { handleError, InstanceRessource } from '@helpers';
-import { LoginTokenResponse } from '@types';
+import { type LoginTokenResponse } from '@types';
 
 const BASE_URL = 'users/user/advanced_auth';
 
