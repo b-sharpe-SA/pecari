@@ -1,8 +1,8 @@
 import { CactusClient } from '@client';
 
-const cactusClient = new CactusClient(
-    'https://cactus.staging.nicewit.ch/api/v2'
-);
+const cactusClient = new CactusClient({
+    baseUrl: 'https://cactus.staging.nicewit.ch/api/v2',
+});
 
 function login() {
     cactusClient.login

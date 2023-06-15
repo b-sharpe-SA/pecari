@@ -1,5 +1,10 @@
 import { type AxiosInstance } from 'axios';
 import { LoginRessource, MyselfRessource, CustomerRessource, AdvancedAuthRessource, PasswordResetRessource, TicketRessource, PspPriceRessource, BeneficialOwnerRessource, BeneficiaryRessource, MapboxRessource, EmailRessource, OnfidoRessource, MessageRessource, ContractRessource, UpdatePasswordRessource, UploadRessource, PspBankAccountRessource, SignupRessource, RateAlertRessource, SponsorshipRessource, BankAccountRessource, AppCompatibilityResource } from './ressources';
+interface CactusClientParams {
+    baseUrl: string;
+    token?: string;
+    language?: string;
+}
 /**
  * Client definition
  * @property {string} baseUrl - base url to fetch cactus api
@@ -8,8 +13,9 @@ import { LoginRessource, MyselfRessource, CustomerRessource, AdvancedAuthRessour
 export declare class CactusClient {
     private readonly baseUrl;
     private readonly token?;
+    private readonly language?;
     readonly instance: AxiosInstance;
-    constructor(baseUrl: string, token?: string);
+    constructor(params: CactusClientParams);
     /**
      * Add authorization token to global instance
      * @param token
@@ -47,3 +53,4 @@ export declare class CactusClient {
     bankAccount: BankAccountRessource;
     appCompatibility: AppCompatibilityResource;
 }
+export {};
