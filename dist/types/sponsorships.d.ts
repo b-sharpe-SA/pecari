@@ -1,5 +1,5 @@
-import { Reward } from './common';
-import { CustomerNextStep } from './customer';
+import { type Reward } from './common';
+import { type CustomerNextStep } from './customer';
 export interface Sponsorship {
     first_activation_date: string;
     first_transaction_date: string;

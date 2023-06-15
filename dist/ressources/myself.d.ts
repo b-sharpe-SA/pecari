@@ -1,5 +1,5 @@
 import { InstanceRessource } from '../helpers';
-import { Myself, UpdateMyselfPayload } from '../types';
+import { type Myself, type UpdateMyselfPayload } from '../types';
 export declare class MyselfRessource extends InstanceRessource {
     /**
      * Fetch myself

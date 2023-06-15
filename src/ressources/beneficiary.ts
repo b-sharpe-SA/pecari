@@ -5,12 +5,12 @@ import {
     InstanceRessource,
 } from '@helpers';
 import {
-    BankAccount,
-    Beneficiary,
-    CreateBankAccountPayload,
-    CreateBeneficiaryPayload,
-    ListBeneficiaryQueryParams,
-    WithPagination,
+    type BankAccount,
+    type Beneficiary,
+    type CreateBankAccountPayload,
+    type CreateBeneficiaryPayload,
+    type ListBeneficiaryQueryParams,
+    type WithPagination,
 } from '@types';
 
 export class BeneficiaryRessource extends InstanceRessource {

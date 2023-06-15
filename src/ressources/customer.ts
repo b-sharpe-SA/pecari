@@ -1,5 +1,9 @@
 import { handleError, InstanceRessource } from '@helpers';
-import { Customer, UpdateCustomerPayload, WithPagination } from '@types';
+import {
+    type Customer,
+    type UpdateCustomerPayload,
+    type WithPagination,
+} from '@types';
 
 export class CustomerRessource extends InstanceRessource {
     /**

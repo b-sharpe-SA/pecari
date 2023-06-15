@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/strict-boolean-expressions */
 import { handleError, InstanceRessource } from '@helpers';
 import {
-    BeneficialOwner,
-    CreateBeneficialOwnerPayload,
-    UpdateBeneficialOwnerPayload,
-    WithPagination,
+    type BeneficialOwner,
+    type CreateBeneficialOwnerPayload,
+    type UpdateBeneficialOwnerPayload,
+    type WithPagination,
 } from '@types';
 
 export class BeneficialOwnerRessource extends InstanceRessource {

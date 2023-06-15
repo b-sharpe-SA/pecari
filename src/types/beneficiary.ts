@@ -1,4 +1,9 @@
-import { Address, BankAccount, ClientType, Title } from '@types';
+import {
+    type Address,
+    type BankAccount,
+    type ClientType,
+    type Title,
+} from '@types';
 
 export interface ListBeneficiaryQueryParams extends Record<string, any> {
     limit?: string;

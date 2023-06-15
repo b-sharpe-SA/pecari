@@ -1,5 +1,5 @@
 import { handleError, InstanceRessource } from '@helpers';
-import { PasswordResetValidationPayload } from '@types';
+import { type PasswordResetValidationPayload } from '@types';
 
 const BASE_URL = '/password/reset/';
 

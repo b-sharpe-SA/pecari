@@ -6,4 +6,4 @@ var AlertStatus;
     AlertStatus["Active"] = "active";
     AlertStatus["Closed"] = "closed";
     AlertStatus["Disable"] = "disable";
-})(AlertStatus = exports.AlertStatus || (exports.AlertStatus = {}));
+})(AlertStatus || (exports.AlertStatus = AlertStatus = {}));
