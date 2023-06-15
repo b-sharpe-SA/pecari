@@ -23,7 +23,7 @@ import {
     BankAccountRessource,
     AppCompatibilityResource,
 } from '@ressources';
-import { AUTH_HEADER_KEY } from './constants';
+import { AUTH_HEADER_KEY, LANGUAGE_HEADER_KEY } from './constants';
 
 interface CactusClientParams {
     baseUrl: string;
@@ -55,7 +55,7 @@ export class CactusClient {
         }
 
         if (this.language != null) {
-            this.instance.defaults.headers.common['Accept-Language'] =
+            this.instance.defaults.headers.common[LANGUAGE_HEADER_KEY] =
                 this.language;
         }
 
@@ -80,6 +80,14 @@ export class CactusClient {
     removeToken() {
         // eslint-disable-next-line @typescript-eslint/no-dynamic-delete
         delete this.instance.defaults.headers.common[AUTH_HEADER_KEY];
+    }
+
+    /**
+     * Update Accept-Language header for global instance
+     * @param language
+     */
+    setLanguage(language: string) {
+        this.instance.defaults.headers.common[LANGUAGE_HEADER_KEY] = language;
     }
 
     instanceParams = {

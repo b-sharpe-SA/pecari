@@ -51,7 +51,8 @@ class CactusClient {
             this.instance.defaults.baseURL = this.baseUrl;
         }
         if (this.language != null) {
-            this.instance.defaults.headers.common['Accept-Language'] = this.language;
+            this.instance.defaults.headers.common[constants_1.LANGUAGE_HEADER_KEY] =
+                this.language;
         }
         if (this.token != null && typeof this.token === 'string') {
             this.setToken(this.token);
@@ -70,6 +71,13 @@ class CactusClient {
     removeToken() {
         // eslint-disable-next-line @typescript-eslint/no-dynamic-delete
         delete this.instance.defaults.headers.common[constants_1.AUTH_HEADER_KEY];
+    }
+    /**
+     * Update Accept-Language header for global instance
+     * @param language
+     */
+    setLanguage(language) {
+        this.instance.defaults.headers.common[constants_1.LANGUAGE_HEADER_KEY] = language;
     }
 }
 exports.CactusClient = CactusClient;

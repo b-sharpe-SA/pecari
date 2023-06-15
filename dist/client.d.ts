@@ -25,6 +25,11 @@ export declare class CactusClient {
      * Remove authorization token to global instance
      */
     removeToken(): void;
+    /**
+     * Update Accept-Language header for global instance
+     * @param language
+     */
+    setLanguage(language: string): void;
     instanceParams: {
         instance: AxiosInstance;
         setToken: (token: string) => void;
