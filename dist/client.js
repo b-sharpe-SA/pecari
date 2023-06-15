@@ -13,7 +13,7 @@ const constants_1 = require("./constants");
  * @property {string} token - set default authorization token
  */
 class CactusClient {
-    constructor(baseUrl, token) {
+    constructor(params) {
         this.instance = axios_1.default.create({
             timeout: 10000,
         });
@@ -44,10 +44,15 @@ class CactusClient {
         this.sponsorship = new _ressources_1.SponsorshipRessource(this.instanceParams);
         this.bankAccount = new _ressources_1.BankAccountRessource(this.instanceParams);
         this.appCompatibility = new _ressources_1.AppCompatibilityResource(this.instanceParams);
-        this.baseUrl = baseUrl;
-        this.token = token;
-        if (baseUrl.length > 0) {
+        this.baseUrl = params.baseUrl;
+        this.token = params.token;
+        this.language = params.language;
+        if (this.baseUrl.length > 0) {
             this.instance.defaults.baseURL = this.baseUrl;
+        }
+        if (this.language != null) {
+            this.instance.defaults.headers.common[constants_1.LANGUAGE_HEADER_KEY] =
+                this.language;
         }
         if (this.token != null && typeof this.token === 'string') {
             this.setToken(this.token);
@@ -66,6 +71,13 @@ class CactusClient {
     removeToken() {
         // eslint-disable-next-line @typescript-eslint/no-dynamic-delete
         delete this.instance.defaults.headers.common[constants_1.AUTH_HEADER_KEY];
+    }
+    /**
+     * Update Accept-Language header for global instance
+     * @param language
+     */
+    setLanguage(language) {
+        this.instance.defaults.headers.common[constants_1.LANGUAGE_HEADER_KEY] = language;
     }
 }
 exports.CactusClient = CactusClient;
