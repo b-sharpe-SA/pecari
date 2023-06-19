@@ -25,6 +25,12 @@ import {
 } from '@ressources';
 import { AUTH_HEADER_KEY } from './constants';
 
+interface CactusClientParams {
+    baseUrl: string;
+    token?: string;
+    language?: string;
+}
+
 /**
  * Client definition
  * @property {string} baseUrl - base url to fetch cactus api
@@ -33,17 +39,24 @@ import { AUTH_HEADER_KEY } from './constants';
 export class CactusClient {
     private readonly baseUrl: string;
     private readonly token?: string;
+    private readonly language?: string;
 
     readonly instance: AxiosInstance = axios.create({
         timeout: 10000,
     });
 
-    constructor(baseUrl: string, token?: string) {
-        this.baseUrl = baseUrl;
-        this.token = token;
+    constructor(params: CactusClientParams) {
+        this.baseUrl = params.baseUrl;
+        this.token = params.token;
+        this.language = params.language;
 
-        if (baseUrl.length > 0) {
+        if (this.baseUrl.length > 0) {
             this.instance.defaults.baseURL = this.baseUrl;
+        }
+
+        if (this.language != null) {
+            this.instance.defaults.headers.common['Accept-Language'] =
+                this.language;
         }
 
         if (this.token != null && typeof this.token === 'string') {
