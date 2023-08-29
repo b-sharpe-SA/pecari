@@ -12,5 +12,6 @@ export interface Myself {
 export interface UpdateMyselfPayload {
     email?: string;
     mobile_phone_number?: string;
+    send_phone_number_confirmation?: boolean;
     language?: string;
 }

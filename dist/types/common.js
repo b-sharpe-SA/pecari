@@ -5,7 +5,7 @@ var ClientType;
 (function (ClientType) {
     ClientType["Private"] = "n";
     ClientType["Legal"] = "l";
-})(ClientType = exports.ClientType || (exports.ClientType = {}));
+})(ClientType || (exports.ClientType = ClientType = {}));
 var SourceOfFundsType;
 (function (SourceOfFundsType) {
     SourceOfFundsType["Employer"] = "employer";
@@ -13,4 +13,4 @@ var SourceOfFundsType;
     SourceOfFundsType["Taxes"] = "taxes";
     SourceOfFundsType["Allowances"] = "allowances";
     SourceOfFundsType["Pentions"] = "pensions ahv iv";
-})(SourceOfFundsType = exports.SourceOfFundsType || (exports.SourceOfFundsType = {}));
+})(SourceOfFundsType || (exports.SourceOfFundsType = SourceOfFundsType = {}));
