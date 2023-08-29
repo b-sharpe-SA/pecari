@@ -36,3 +36,4 @@ __exportStar(require("./rate-alert"), exports);
 __exportStar(require("./sponsorships"), exports);
 __exportStar(require("./bank_account"), exports);
 __exportStar(require("./app-compatibility"), exports);
+__exportStar(require("./phone-number"), exports);
