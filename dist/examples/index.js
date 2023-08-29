@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const _client_1 = require("../client");
 const cactusClient = new _client_1.CactusClient({
-    baseUrl: 'https://cactus.staging.nicewit.ch/api/v2',
+    baseUrl: 'https://cactus.staging.nicewit.ch/api/v3',
 });
 function login() {
     cactusClient.login
