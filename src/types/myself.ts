@@ -3,6 +3,7 @@ export interface Myself {
     last_name: string;
     language: string;
     email_validated: boolean;
+    phone_number_validated: boolean;
     email: string;
     mobile_phone_number: string;
     external_user_id: string;
