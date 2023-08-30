@@ -1,12 +1,12 @@
-import { Address, ClientType, Reward, Title, Utm } from '@types';
+import { type Address, type ClientType, type Reward, type Title, type Utm } from '@types';
 
 export interface Customer extends Address, Utm {
     reference: string;
     title: Title;
     legal_form: string;
-    birth_date: string;
-    first_name: string;
-    last_name: string;
+    birth_date: string | null;
+    first_name: string | null;
+    last_name: string | null;
     company_name: string;
     name: string;
     nationality: string;
@@ -14,7 +14,7 @@ export interface Customer extends Address, Utm {
     business_details: string;
     registration_number: string;
     type: ClientType;
-    default_psp_bank: number;
+    default_psp_bank: number | null;
     company_email: string;
     personal_email: string;
     personal_phone_number: string;
@@ -31,7 +31,7 @@ export interface Customer extends Address, Utm {
     frontend_data: CustomerFrontEndData;
     newsletter_optin: boolean;
     sponsor_code: string;
-    sponsor: string;
+    sponsor: string | null;
     sponsoring_key: string;
     sponsoring_url: string;
     sponsoring_url_qrcode: string;
