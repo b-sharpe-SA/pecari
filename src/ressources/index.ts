@@ -20,3 +20,4 @@ export * from './rate-alert';
 export * from './sponsorships';
 export * from './bank_account';
 export * from './app-compatibility';
+export * from './phone-number';

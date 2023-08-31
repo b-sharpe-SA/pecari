@@ -3,6 +3,7 @@ export interface Myself {
     last_name: string;
     language: string;
     email_validated: boolean;
+    phone_number_validated: boolean;
     email: string;
     mobile_phone_number: string;
     external_user_id: string;
@@ -13,5 +14,6 @@ export interface Myself {
 export interface UpdateMyselfPayload {
     email?: string;
     mobile_phone_number?: string;
+    send_phone_number_confirmation?: boolean;
     language?: string;
 }
