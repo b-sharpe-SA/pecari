@@ -1,4 +1,10 @@
 import { type Address, type ClientType, type Reward, type Title, type Utm } from '.';
+export declare enum CustomerStatus {
+    New = "New",
+    Completed = "Completed",
+    Enabled = "Enabled",
+    Disabled = "Disabled"
+}
 export interface Customer extends Address, Utm {
     reference: string;
     title: Title;
@@ -35,6 +41,7 @@ export interface Customer extends Address, Utm {
     sponsoring_url: string;
     sponsoring_url_qrcode: string;
     rewards: Reward[];
+    status: CustomerStatus;
 }
 export declare enum CustomerNextStep {
     BaseInfo = "base_info_completed",

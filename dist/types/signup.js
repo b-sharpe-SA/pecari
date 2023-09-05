@@ -7,4 +7,4 @@ var SignupDevice;
     SignupDevice["Android"] = "android";
     SignupDevice["Ios"] = "ios";
     SignupDevice["Unknown"] = "unknown";
-})(SignupDevice || (exports.SignupDevice = SignupDevice = {}));
+})(SignupDevice = exports.SignupDevice || (exports.SignupDevice = {}));

@@ -30,4 +30,4 @@ var ErrorCodes;
     ErrorCodes["ACT_TICKET_QRBILL"] = "ACT_TICKET_QRBILL";
     // Unexpected
     ErrorCodes["UNEXPECTED_ERROR"] = "UNEXPECTED_ERROR";
-})(ErrorCodes || (exports.ErrorCodes = ErrorCodes = {}));
+})(ErrorCodes = exports.ErrorCodes || (exports.ErrorCodes = {}));

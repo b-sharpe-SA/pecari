@@ -1,6 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.CustomerNextStep = void 0;
+exports.CustomerNextStep = exports.CustomerStatus = void 0;
+var CustomerStatus;
+(function (CustomerStatus) {
+    CustomerStatus["New"] = "New";
+    CustomerStatus["Completed"] = "Completed";
+    CustomerStatus["Enabled"] = "Enabled";
+    CustomerStatus["Disabled"] = "Disabled";
+})(CustomerStatus = exports.CustomerStatus || (exports.CustomerStatus = {}));
 var CustomerNextStep;
 (function (CustomerNextStep) {
     CustomerNextStep["BaseInfo"] = "base_info_completed";
@@ -13,4 +20,4 @@ var CustomerNextStep;
     CustomerNextStep["ESign"] = "esign";
     CustomerNextStep["ProofResidence"] = "proof_of_residence";
     CustomerNextStep["AdminWait"] = "admin_wait";
-})(CustomerNextStep || (exports.CustomerNextStep = CustomerNextStep = {}));
+})(CustomerNextStep = exports.CustomerNextStep || (exports.CustomerNextStep = {}));
