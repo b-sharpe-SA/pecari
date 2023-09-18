@@ -5,12 +5,13 @@ const _helpers_1 = require("../helpers");
 const BASE_URL = 'users/user/email/';
 class EmailRessource extends _helpers_1.InstanceRessource {
     /**
-     * Request an user email verification code
+     * Send email to verify user email
+     * can be a code or a link
      * @returns
      */
-    async request() {
+    async request(payload) {
         try {
-            const { data } = await this.instance.post(`${BASE_URL}request/`);
+            const { data } = await this.instance.post(`${BASE_URL}request/`, payload);
             return data;
         }
         catch (error) {
