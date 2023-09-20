@@ -1,10 +1,13 @@
 import { InstanceRessource } from '../helpers';
 export declare class EmailRessource extends InstanceRessource {
     /**
-     * Request an user email verification code
+     * Send email to verify user email
+     * can be a code or a link
      * @returns
      */
-    request(): Promise<any>;
+    request(payload: {
+        link: boolean;
+    }): Promise<any>;
     /**
      * Verify user email code
      * @param code otp code

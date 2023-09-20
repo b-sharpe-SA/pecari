@@ -4,12 +4,16 @@ const BASE_URL = 'users/user/email/';
 
 export class EmailRessource extends InstanceRessource {
     /**
-     * Request an user email verification code
+     * Send email to verify user email
+     * can be a code or a link
      * @returns
      */
-    async request() {
+    async request(payload: { link: boolean }) {
         try {
-            const { data } = await this.instance.post(`${BASE_URL}request/`);
+            const { data } = await this.instance.post(
+                `${BASE_URL}request/`,
+                payload
+            );
             return data;
         } catch (error) {
             throw handleError(error);
