@@ -49,6 +49,9 @@ export interface Customer extends Address, Utm {
     sponsoring_url_qrcode: string;
     rewards: Reward[];
     status: CustomerStatus;
+    trade_currency_pair: string | null;
+    trade_frequency: string | null;
+    trade_amount: string | null;
 }
 
 export enum CustomerNextStep {
