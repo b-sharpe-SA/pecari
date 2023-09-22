@@ -5,6 +5,17 @@ export declare enum CustomerStatus {
     Enabled = "Enabled",
     Disabled = "Disabled"
 }
+export declare enum TradeFrequency {
+    Once = "ONCE",
+    Less = "LESS",
+    Monthly = "MONTHLY"
+}
+export declare enum TradeAmount {
+    Low = 0,
+    Middle = 1,
+    High = 2,
+    VeryHigh = 3
+}
 export interface Customer extends Address, Utm {
     reference: string;
     title: Title;
@@ -43,8 +54,8 @@ export interface Customer extends Address, Utm {
     rewards: Reward[];
     status: CustomerStatus;
     trade_currency_pair: string | null;
-    trade_frequency: string | null;
-    trade_amount: string | null;
+    trade_frequency: TradeFrequency | null;
+    trade_amount: TradeAmount | null;
 }
 export declare enum CustomerNextStep {
     BaseInfo = "base_info_completed",
