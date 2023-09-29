@@ -53,7 +53,8 @@ export interface Customer extends Address, Utm {
     sponsoring_url_qrcode: string;
     rewards: Reward[];
     status: CustomerStatus;
-    trade_currency_pair: string | null;
+    trade_currency_from: string | null;
+    trade_currency_to: string | null;
     trade_frequency: TradeFrequency | null;
     trade_amount: TradeAmount | null;
 }
