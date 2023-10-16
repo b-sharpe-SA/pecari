@@ -7,20 +7,21 @@ var CustomerStatus;
     CustomerStatus["Completed"] = "Completed";
     CustomerStatus["Enabled"] = "Enabled";
     CustomerStatus["Disabled"] = "Disabled";
-})(CustomerStatus || (exports.CustomerStatus = CustomerStatus = {}));
+})(CustomerStatus = exports.CustomerStatus || (exports.CustomerStatus = {}));
 var TradeFrequency;
 (function (TradeFrequency) {
-    TradeFrequency["Once"] = "ONCE";
-    TradeFrequency["Less"] = "LESS";
+    TradeFrequency["Once"] = "ONE-TIME";
+    TradeFrequency["Weekly"] = "WEEKLY";
     TradeFrequency["Monthly"] = "MONTHLY";
-})(TradeFrequency || (exports.TradeFrequency = TradeFrequency = {}));
+    TradeFrequency["Yearly"] = "YEARLY";
+})(TradeFrequency = exports.TradeFrequency || (exports.TradeFrequency = {}));
 var TradeAmount;
 (function (TradeAmount) {
     TradeAmount[TradeAmount["Low"] = 0] = "Low";
     TradeAmount[TradeAmount["Middle"] = 1] = "Middle";
     TradeAmount[TradeAmount["High"] = 2] = "High";
     TradeAmount[TradeAmount["VeryHigh"] = 3] = "VeryHigh";
-})(TradeAmount || (exports.TradeAmount = TradeAmount = {}));
+})(TradeAmount = exports.TradeAmount || (exports.TradeAmount = {}));
 var CustomerNextStep;
 (function (CustomerNextStep) {
     CustomerNextStep["BaseInfo"] = "base_info_completed";

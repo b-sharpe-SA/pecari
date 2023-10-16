@@ -6,9 +6,10 @@ export declare enum CustomerStatus {
     Disabled = "Disabled"
 }
 export declare enum TradeFrequency {
-    Once = "ONCE",
-    Less = "LESS",
-    Monthly = "MONTHLY"
+    Once = "ONE-TIME",
+    Weekly = "WEEKLY",
+    Monthly = "MONTHLY",
+    Yearly = "YEARLY"
 }
 export declare enum TradeAmount {
     Low = 0,

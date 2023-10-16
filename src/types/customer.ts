@@ -14,9 +14,10 @@ export enum CustomerStatus {
 }
 
 export enum TradeFrequency {
-    Once = 'ONCE',
-    Less = 'LESS',
+    Once = 'ONE-TIME',
+    Weekly = 'WEEKLY',
     Monthly = 'MONTHLY',
+    Yearly = 'YEARLY',
 }
 
 export enum TradeAmount {
