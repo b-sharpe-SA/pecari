@@ -1,5 +1,5 @@
 import { InstanceRessource } from '../helpers';
-import { type Contract, type SignContractPayload, type SignContractResponse } from '../types';
+import type { Contract, SignContractPayload, SignContractResponse } from '../types';
 export declare class ContractRessource extends InstanceRessource {
     private getUrl;
     /**

@@ -1,4 +1,4 @@
-import { type Address, type ClientType, type Reward, type Title, type Utm } from '.';
+import type { Address, ClientType, Reward, Title, Utm } from '.';
 export declare enum CustomerStatus {
     New = "New",
     Completed = "Completed",
