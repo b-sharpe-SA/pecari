@@ -11,6 +11,7 @@ export interface Myself {
     external_user_email_hash: string;
     has_uploaded: boolean;
     identity_ok: boolean;
+    email_sent: boolean;
 }
 
 export interface UpdateMyselfPayload {
