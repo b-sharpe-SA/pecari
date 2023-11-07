@@ -10,7 +10,7 @@ var CustomerStatus;
 })(CustomerStatus = exports.CustomerStatus || (exports.CustomerStatus = {}));
 var TradeFrequency;
 (function (TradeFrequency) {
-    TradeFrequency["Once"] = "ONE-TIME";
+    TradeFrequency["Once"] = "ONCE";
     TradeFrequency["Weekly"] = "WEEKLY";
     TradeFrequency["Monthly"] = "MONTHLY";
     TradeFrequency["Yearly"] = "YEARLY";
