@@ -11,6 +11,7 @@ var CustomerStatus;
 var TradeFrequency;
 (function (TradeFrequency) {
     TradeFrequency["Once"] = "ONCE";
+    TradeFrequency["Weekly"] = "WEEKLY";
     TradeFrequency["Less"] = "LESS";
     TradeFrequency["Monthly"] = "MONTHLY";
 })(TradeFrequency || (exports.TradeFrequency = TradeFrequency = {}));
