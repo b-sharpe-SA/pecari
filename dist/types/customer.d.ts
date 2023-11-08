@@ -7,6 +7,7 @@ export declare enum CustomerStatus {
 }
 export declare enum TradeFrequency {
     Once = "ONCE",
+    Weekly = "WEEKLY",
     Less = "LESS",
     Monthly = "MONTHLY"
 }
