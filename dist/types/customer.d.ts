@@ -8,8 +8,8 @@ export declare enum CustomerStatus {
 export declare enum TradeFrequency {
     Once = "ONCE",
     Weekly = "WEEKLY",
-    Less = "LESS",
-    Monthly = "MONTHLY"
+    Monthly = "MONTHLY",
+    Yearly = "YEARLY"
 }
 export declare enum TradeAmount {
     Low = 0,

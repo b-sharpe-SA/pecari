@@ -12,8 +12,8 @@ var TradeFrequency;
 (function (TradeFrequency) {
     TradeFrequency["Once"] = "ONCE";
     TradeFrequency["Weekly"] = "WEEKLY";
-    TradeFrequency["Less"] = "LESS";
     TradeFrequency["Monthly"] = "MONTHLY";
+    TradeFrequency["Yearly"] = "YEARLY";
 })(TradeFrequency || (exports.TradeFrequency = TradeFrequency = {}));
 var TradeAmount;
 (function (TradeAmount) {
