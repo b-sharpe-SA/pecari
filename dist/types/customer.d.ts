@@ -1,6 +1,7 @@
 import { type Address, type ClientType, type Reward, type Title, type Utm } from '.';
 export declare enum CustomerStatus {
     New = "New",
+    Basic = "Basic",
     Completed = "Completed",
     Enabled = "Enabled",
     Disabled = "Disabled"
