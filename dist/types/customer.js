@@ -1,6 +1,28 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.CustomerNextStep = void 0;
+exports.CustomerNextStep = exports.TradeAmount = exports.TradeFrequency = exports.CustomerStatus = void 0;
+var CustomerStatus;
+(function (CustomerStatus) {
+    CustomerStatus["New"] = "New";
+    CustomerStatus["Basic"] = "Basic";
+    CustomerStatus["Completed"] = "Complete";
+    CustomerStatus["Enabled"] = "Enabled";
+    CustomerStatus["Disabled"] = "Disabled";
+})(CustomerStatus = exports.CustomerStatus || (exports.CustomerStatus = {}));
+var TradeFrequency;
+(function (TradeFrequency) {
+    TradeFrequency["Once"] = "ONCE";
+    TradeFrequency["Weekly"] = "WEEKLY";
+    TradeFrequency["Monthly"] = "MONTHLY";
+    TradeFrequency["Yearly"] = "YEARLY";
+})(TradeFrequency = exports.TradeFrequency || (exports.TradeFrequency = {}));
+var TradeAmount;
+(function (TradeAmount) {
+    TradeAmount[TradeAmount["Low"] = 0] = "Low";
+    TradeAmount[TradeAmount["Middle"] = 1] = "Middle";
+    TradeAmount[TradeAmount["High"] = 2] = "High";
+    TradeAmount[TradeAmount["VeryHigh"] = 3] = "VeryHigh";
+})(TradeAmount = exports.TradeAmount || (exports.TradeAmount = {}));
 var CustomerNextStep;
 (function (CustomerNextStep) {
     CustomerNextStep["BaseInfo"] = "base_info_completed";

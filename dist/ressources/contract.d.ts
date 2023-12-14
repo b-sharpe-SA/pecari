@@ -1,5 +1,5 @@
 import { InstanceRessource } from '../helpers';
-import { Contract, SignContractResponse } from '../types';
+import type { Contract, SignContractPayload, SignContractResponse } from '../types';
 export declare class ContractRessource extends InstanceRessource {
     private getUrl;
     /**
@@ -11,10 +11,12 @@ export declare class ContractRessource extends InstanceRessource {
     /**
      * Sign contract
      * @param customer Customer reference
-     * @param code otp code
+     * @param payload payload
+     * @param payload.otp_code Optional otp code
+     * @param payload.skip Sign contract without otp code
      * @returns
      */
-    sign(customer: string, code: string): Promise<SignContractResponse>;
+    sign(customer: string, payload: SignContractPayload): Promise<SignContractResponse>;
     /**
      * Request code to sign contract
      * @param customer Customer reference

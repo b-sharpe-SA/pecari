@@ -1,17 +1,16 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.EmailRessource = void 0;
+exports.PhoneNumberRessource = void 0;
 const _helpers_1 = require("../helpers");
-const BASE_URL = 'users/user/email/';
-class EmailRessource extends _helpers_1.InstanceRessource {
+const BASE_URL = 'users/user/phone_number';
+class PhoneNumberRessource extends _helpers_1.InstanceRessource {
     /**
-     * Send email to verify user email
-     * can be a code or a link
+     * Send an OTP code to the connected user's phone number
      * @returns
      */
-    async request(payload) {
+    async request() {
         try {
-            const { data } = await this.instance.post(`${BASE_URL}request/`, payload);
+            const { data } = await this.instance.post(`${BASE_URL}/request/`);
             return data;
         }
         catch (error) {
@@ -19,13 +18,13 @@ class EmailRessource extends _helpers_1.InstanceRessource {
         }
     }
     /**
-     * Verify user email code
-     * @param code otp code
+     * Verify of an OTP code sent to a user's phone
+     * @param code
      * @returns
      */
     async verify(code) {
         try {
-            const { data } = await this.instance.post(`${BASE_URL}verify/`, {
+            const { data } = await this.instance.post(`${BASE_URL}/verify/`, {
                 otp_code: code,
             });
             return data;
@@ -35,4 +34,4 @@ class EmailRessource extends _helpers_1.InstanceRessource {
         }
     }
 }
-exports.EmailRessource = EmailRessource;
+exports.PhoneNumberRessource = PhoneNumberRessource;

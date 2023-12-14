@@ -44,6 +44,7 @@ class CactusClient {
         this.sponsorship = new _ressources_1.SponsorshipRessource(this.instanceParams);
         this.bankAccount = new _ressources_1.BankAccountRessource(this.instanceParams);
         this.appCompatibility = new _ressources_1.AppCompatibilityResource(this.instanceParams);
+        this.phoneNumber = new _ressources_1.PhoneNumberRessource(this.instanceParams);
         this.baseUrl = params.baseUrl;
         this.token = params.token;
         this.language = params.language;

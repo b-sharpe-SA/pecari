@@ -1,11 +1,30 @@
-import { Address, ClientType, Reward, Title, Utm } from '.';
+import type { Address, ClientType, Reward, Title, Utm } from '.';
+export declare enum CustomerStatus {
+    New = "New",
+    Basic = "Basic",
+    Completed = "Complete",
+    Enabled = "Enabled",
+    Disabled = "Disabled"
+}
+export declare enum TradeFrequency {
+    Once = "ONCE",
+    Weekly = "WEEKLY",
+    Monthly = "MONTHLY",
+    Yearly = "YEARLY"
+}
+export declare enum TradeAmount {
+    Low = 0,
+    Middle = 1,
+    High = 2,
+    VeryHigh = 3
+}
 export interface Customer extends Address, Utm {
     reference: string;
     title: Title;
     legal_form: string;
-    birth_date: string;
-    first_name: string;
-    last_name: string;
+    birth_date: string | null;
+    first_name: string | null;
+    last_name: string | null;
     company_name: string;
     name: string;
     nationality: string;
@@ -13,7 +32,7 @@ export interface Customer extends Address, Utm {
     business_details: string;
     registration_number: string;
     type: ClientType;
-    default_psp_bank: number;
+    default_psp_bank: number | null;
     company_email: string;
     personal_email: string;
     personal_phone_number: string;
@@ -30,11 +49,16 @@ export interface Customer extends Address, Utm {
     frontend_data: CustomerFrontEndData;
     newsletter_optin: boolean;
     sponsor_code: string;
-    sponsor: string;
+    sponsor: string | null;
     sponsoring_key: string;
     sponsoring_url: string;
     sponsoring_url_qrcode: string;
     rewards: Reward[];
+    status: CustomerStatus;
+    trade_currency_from: string | null;
+    trade_currency_to: string | null;
+    trade_frequency: TradeFrequency | null;
+    trade_amount: TradeAmount | null;
 }
 export declare enum CustomerNextStep {
     BaseInfo = "base_info_completed",
