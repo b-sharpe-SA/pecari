@@ -9,7 +9,7 @@ import {
 export enum CustomerStatus {
     New = 'New',
     Basic = 'Basic',
-    Completed = 'Completed',
+    Completed = 'Complete',
     Enabled = 'Enabled',
     Disabled = 'Disabled',
 }
