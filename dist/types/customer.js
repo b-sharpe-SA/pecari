@@ -5,7 +5,7 @@ var CustomerStatus;
 (function (CustomerStatus) {
     CustomerStatus["New"] = "New";
     CustomerStatus["Basic"] = "Basic";
-    CustomerStatus["Completed"] = "Completed";
+    CustomerStatus["Completed"] = "Complete";
     CustomerStatus["Enabled"] = "Enabled";
     CustomerStatus["Disabled"] = "Disabled";
 })(CustomerStatus || (exports.CustomerStatus = CustomerStatus = {}));
