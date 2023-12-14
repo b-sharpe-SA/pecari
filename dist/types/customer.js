@@ -4,7 +4,8 @@ exports.CustomerNextStep = exports.TradeAmount = exports.TradeFrequency = export
 var CustomerStatus;
 (function (CustomerStatus) {
     CustomerStatus["New"] = "New";
-    CustomerStatus["Completed"] = "Completed";
+    CustomerStatus["Basic"] = "Basic";
+    CustomerStatus["Completed"] = "Complete";
     CustomerStatus["Enabled"] = "Enabled";
     CustomerStatus["Disabled"] = "Disabled";
 })(CustomerStatus = exports.CustomerStatus || (exports.CustomerStatus = {}));
