@@ -12,7 +12,8 @@
             "@helpers": ["src/helpers"],
             "@ressources": ["src/ressources"],
             "@client": ["src/client"],
-            "@types": ["src/types"]
+            "@types": ["src/types"],
+            "@trackers": ["src/trackers"]
         }
     },
     "include": ["src/**/*"]
