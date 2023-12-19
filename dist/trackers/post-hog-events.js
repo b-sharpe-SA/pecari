@@ -12,6 +12,7 @@ var PostHogEvents;
     PostHogEvents["CompletedNewAlert"] = "completed_new_alert";
     PostHogEvents["UpdatedAlert"] = "updated_alert";
     PostHogEvents["DeletedAlert"] = "deleted_alert";
+    PostHogEvents["DeletedPair"] = "deleted_pair";
     PostHogEvents["LoggedIn"] = "logged_in";
     PostHogEvents["LoggedOut"] = "logged_out";
     PostHogEvents["ViewedProfile"] = "viewed_profile";
