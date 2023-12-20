@@ -8,6 +8,8 @@ export declare enum PostHogEvents {
     CompletedNewAlert = "completed_new_alert",
     UpdatedAlert = "updated_alert",
     DeletedAlert = "deleted_alert",
+    DeletedPair = "deleted_pair",
+    DeletedOperation = "deleted_operation",
     LoggedIn = "logged_in",
     LoggedOut = "logged_out",
     ViewedProfile = "viewed_profile",
