@@ -63,6 +63,7 @@ export interface Customer extends Address, Utm {
     trade_currency_to: string | null;
     trade_frequency: TradeFrequency | null;
     trade_amount: TradeAmount | null;
+    psp_updated: boolean;
 }
 
 export enum CustomerNextStep {
