@@ -13,7 +13,8 @@
             "@ressources": ["src/ressources"],
             "@client": ["src/client"],
             "@types": ["src/types"],
-            "@trackers": ["src/trackers"]
+            "@trackers": ["src/trackers"],
+            "@constants": ["src/constants"]
         }
     },
     "include": ["src/**/*"]

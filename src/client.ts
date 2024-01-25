@@ -24,7 +24,7 @@ import {
     AppCompatibilityResource,
     PhoneNumberRessource,
 } from '@ressources';
-import { AUTH_HEADER_KEY } from './constants';
+import { AUTH_HEADER_KEY } from './constants/config';
 
 interface CactusClientParams {
     baseUrl: string;
