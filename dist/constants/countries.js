@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.countryList = void 0;
 exports.countryList = [
     {
-        name: 'countries:Switzerland',
+        name: 'Switzerland',
         alpha3: 'CHE',
         alpha2: 'CH',
         region: 'Europe',
@@ -11,7 +11,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:France',
+        name: 'France',
         alpha3: 'FRA',
         alpha2: 'FR',
         region: 'Europe',
@@ -19,7 +19,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Italy',
+        name: 'Italy',
         alpha3: 'ITA',
         alpha2: 'IT',
         region: 'Europe',
@@ -27,7 +27,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Germany',
+        name: 'Germany',
         alpha3: 'DEU',
         alpha2: 'DE',
         region: 'Europe',
@@ -35,7 +35,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Afghanistan',
+        name: 'Afghanistan',
         alpha3: 'AFG',
         alpha2: 'AF',
         region: 'Asia',
@@ -43,7 +43,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Albania',
+        name: 'Albania',
         alpha3: 'ALB',
         alpha2: 'AL',
         region: 'Europe',
@@ -51,7 +51,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Algeria',
+        name: 'Algeria',
         alpha3: 'DZA',
         alpha2: 'DZ',
         region: 'Africa',
@@ -59,7 +59,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:American Samoa',
+        name: 'American Samoa',
         alpha3: 'ASM',
         alpha2: 'AS',
         region: 'Oceania',
@@ -67,7 +67,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Andorra',
+        name: 'Andorra',
         alpha3: 'AND',
         alpha2: 'AD',
         region: 'Europe',
@@ -75,7 +75,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Angola',
+        name: 'Angola',
         alpha3: 'AGO',
         alpha2: 'AO',
         region: 'Africa',
@@ -83,7 +83,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Anguilla',
+        name: 'Anguilla',
         alpha3: 'AIA',
         alpha2: 'AI',
         region: 'Americas',
@@ -91,7 +91,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Antarctica',
+        name: 'Antarctica',
         alpha3: 'ATA',
         alpha2: 'AQ',
         region: '',
@@ -99,7 +99,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Antigua and Barbuda',
+        name: 'Antigua and Barbuda',
         alpha3: 'ATG',
         alpha2: 'AG',
         region: 'Americas',
@@ -107,7 +107,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Argentina',
+        name: 'Argentina',
         alpha3: 'ARG',
         alpha2: 'AR',
         region: 'Americas',
@@ -115,7 +115,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Armenia',
+        name: 'Armenia',
         alpha3: 'ARM',
         alpha2: 'AM',
         region: 'Asia',
@@ -123,7 +123,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Aruba',
+        name: 'Aruba',
         alpha3: 'ABW',
         alpha2: 'AW',
         region: 'Americas',
@@ -131,7 +131,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Australia',
+        name: 'Australia',
         alpha3: 'AUS',
         alpha2: 'AU',
         region: 'Oceania',
@@ -139,7 +139,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Austria',
+        name: 'Austria',
         alpha3: 'AUT',
         alpha2: 'AT',
         region: 'Europe',
@@ -147,7 +147,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Azerbaijan',
+        name: 'Azerbaijan',
         alpha3: 'AZE',
         alpha2: 'AZ',
         region: 'Asia',
@@ -155,7 +155,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Bahamas',
+        name: 'Bahamas',
         alpha3: 'BHS',
         alpha2: 'BS',
         region: 'Americas',
@@ -163,7 +163,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Bahrain',
+        name: 'Bahrain',
         alpha3: 'BHR',
         alpha2: 'BH',
         region: 'Asia',
@@ -171,7 +171,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Bangladesh',
+        name: 'Bangladesh',
         alpha3: 'BGD',
         alpha2: 'BD',
         region: 'Asia',
@@ -179,7 +179,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Barbados',
+        name: 'Barbados',
         alpha3: 'BRB',
         alpha2: 'BB',
         region: 'Americas',
@@ -187,7 +187,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Belarus',
+        name: 'Belarus',
         alpha3: 'BLR',
         alpha2: 'BY',
         region: 'Europe',
@@ -195,7 +195,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Belgium',
+        name: 'Belgium',
         alpha3: 'BEL',
         alpha2: 'BE',
         region: 'Europe',
@@ -203,7 +203,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Belize',
+        name: 'Belize',
         alpha3: 'BLZ',
         alpha2: 'BZ',
         region: 'Americas',
@@ -211,7 +211,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Benin',
+        name: 'Benin',
         alpha3: 'BEN',
         alpha2: 'BJ',
         region: 'Africa',
@@ -219,7 +219,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Bermuda',
+        name: 'Bermuda',
         alpha3: 'BMU',
         alpha2: 'BM',
         region: 'Americas',
@@ -227,7 +227,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Bhutan',
+        name: 'Bhutan',
         alpha3: 'BTN',
         alpha2: 'BT',
         region: 'Asia',
@@ -235,7 +235,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Bolivia (Plurinational State of)',
+        name: 'Bolivia (Plurinational State of)',
         alpha3: 'BOL',
         alpha2: 'BO',
         region: 'Americas',
@@ -243,7 +243,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Bonaire, Sint Eustatius and Saba',
+        name: 'Bonaire, Sint Eustatius and Saba',
         alpha3: 'BES',
         alpha2: 'NL',
         region: 'Americas',
@@ -251,7 +251,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Bosnia and Herzegovina',
+        name: 'Bosnia and Herzegovina',
         alpha3: 'BIH',
         alpha2: 'BA',
         region: 'Europe',
@@ -259,7 +259,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Botswana',
+        name: 'Botswana',
         alpha3: 'BWA',
         alpha2: 'BW',
         region: 'Africa',
@@ -267,7 +267,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Bouvet Island',
+        name: 'Bouvet Island',
         alpha3: 'BVT',
         alpha2: 'NO',
         region: '',
@@ -275,7 +275,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Brazil',
+        name: 'Brazil',
         alpha3: 'BRA',
         alpha2: 'BR',
         region: 'Americas',
@@ -283,7 +283,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:British Indian Ocean Territory',
+        name: 'British Indian Ocean Territory',
         alpha3: 'IOT',
         alpha2: 'GB',
         region: 'Africa',
@@ -291,7 +291,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Brunei Darussalam',
+        name: 'Brunei Darussalam',
         alpha3: 'BRN',
         alpha2: 'BN',
         region: 'Asia',
@@ -299,7 +299,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Bulgaria',
+        name: 'Bulgaria',
         alpha3: 'BGR',
         alpha2: 'BG',
         region: 'Europe',
@@ -307,7 +307,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Burkina Faso',
+        name: 'Burkina Faso',
         alpha3: 'BFA',
         alpha2: 'BF',
         region: 'Africa',
@@ -315,7 +315,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Burundi',
+        name: 'Burundi',
         alpha3: 'BDI',
         alpha2: 'BI',
         region: 'Africa',
@@ -323,7 +323,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Cabo Verde',
+        name: 'Cabo Verde',
         alpha3: 'CPV',
         alpha2: 'CV',
         region: 'Africa',
@@ -331,7 +331,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Cambodia',
+        name: 'Cambodia',
         alpha3: 'KHM',
         alpha2: 'KH',
         region: 'Asia',
@@ -339,7 +339,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Cameroon',
+        name: 'Cameroon',
         alpha3: 'CMR',
         alpha2: 'CM',
         region: 'Africa',
@@ -347,7 +347,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Canada',
+        name: 'Canada',
         alpha3: 'CAN',
         alpha2: 'CA',
         region: 'Americas',
@@ -355,7 +355,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Cayman Islands',
+        name: 'Cayman Islands',
         alpha3: 'CYM',
         alpha2: 'KY',
         region: 'Americas',
@@ -363,7 +363,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Central African Republic',
+        name: 'Central African Republic',
         alpha3: 'CAF',
         alpha2: 'CF',
         region: 'Africa',
@@ -371,7 +371,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Chad',
+        name: 'Chad',
         alpha3: 'TCD',
         alpha2: 'TD',
         region: 'Africa',
@@ -379,7 +379,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Chile',
+        name: 'Chile',
         alpha3: 'CHL',
         alpha2: 'CL',
         region: 'Americas',
@@ -387,7 +387,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:China',
+        name: 'China',
         alpha3: 'CHN',
         alpha2: 'CN',
         region: 'Asia',
@@ -395,7 +395,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Christmas Island',
+        name: 'Christmas Island',
         alpha3: 'CXR',
         alpha2: 'CX',
         region: 'Oceania',
@@ -403,7 +403,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Cocos (Keeling) Islands',
+        name: 'Cocos (Keeling) Islands',
         alpha3: 'CCK',
         alpha2: 'CC',
         region: 'Oceania',
@@ -411,7 +411,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Colombia',
+        name: 'Colombia',
         alpha3: 'COL',
         alpha2: 'CO',
         region: 'Americas',
@@ -419,7 +419,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Comoros',
+        name: 'Comoros',
         alpha3: 'COM',
         alpha2: 'KM',
         region: 'Africa',
@@ -427,7 +427,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Congo',
+        name: 'Congo',
         alpha3: 'COG',
         alpha2: 'CG',
         region: 'Africa',
@@ -435,7 +435,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Congo (Democratic Republic of the)',
+        name: 'Congo (Democratic Republic of the)',
         alpha3: 'COD',
         alpha2: 'CD',
         region: 'Africa',
@@ -443,7 +443,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Cook Islands',
+        name: 'Cook Islands',
         alpha3: 'COK',
         alpha2: 'CK',
         region: 'Oceania',
@@ -451,7 +451,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Costa Rica',
+        name: 'Costa Rica',
         alpha3: 'CRI',
         alpha2: 'CR',
         region: 'Americas',
@@ -459,7 +459,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Croatia',
+        name: 'Croatia',
         alpha3: 'HRV',
         alpha2: 'HR',
         region: 'Europe',
@@ -467,7 +467,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Cuba',
+        name: 'Cuba',
         alpha3: 'CUB',
         alpha2: 'CU',
         region: 'Americas',
@@ -475,7 +475,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Curaçao',
+        name: 'Curaçao',
         alpha3: 'CUW',
         alpha2: 'CW',
         region: 'Americas',
@@ -483,7 +483,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Cyprus',
+        name: 'Cyprus',
         alpha3: 'CYP',
         alpha2: 'CY',
         region: 'Asia',
@@ -491,7 +491,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Czechia',
+        name: 'Czechia',
         alpha3: 'CZE',
         alpha2: 'CZ',
         region: 'Europe',
@@ -507,7 +507,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Denmark',
+        name: 'Denmark',
         alpha3: 'DNK',
         alpha2: 'DK',
         region: 'Europe',
@@ -515,7 +515,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Djibouti',
+        name: 'Djibouti',
         alpha3: 'DJI',
         alpha2: 'DJ',
         region: 'Africa',
@@ -523,7 +523,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Dominica',
+        name: 'Dominica',
         alpha3: 'DMA',
         alpha2: 'DM',
         region: 'Americas',
@@ -531,7 +531,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Dominican Republic',
+        name: 'Dominican Republic',
         alpha3: 'DOM',
         alpha2: 'DO',
         region: 'Americas',
@@ -539,7 +539,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Ecuador',
+        name: 'Ecuador',
         alpha3: 'ECU',
         alpha2: 'EC',
         region: 'Americas',
@@ -547,7 +547,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Egypt',
+        name: 'Egypt',
         alpha3: 'EGY',
         alpha2: 'EG',
         region: 'Africa',
@@ -555,7 +555,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:El Salvador',
+        name: 'El Salvador',
         alpha3: 'SLV',
         alpha2: 'SV',
         region: 'Americas',
@@ -563,7 +563,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Equatorial Guinea',
+        name: 'Equatorial Guinea',
         alpha3: 'GNQ',
         alpha2: 'GQ',
         region: 'Africa',
@@ -571,7 +571,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Eritrea',
+        name: 'Eritrea',
         alpha3: 'ERI',
         alpha2: 'ER',
         region: 'Africa',
@@ -579,7 +579,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Estonia',
+        name: 'Estonia',
         alpha3: 'EST',
         alpha2: 'EE',
         region: 'Europe',
@@ -587,7 +587,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Ethiopia',
+        name: 'Ethiopia',
         alpha3: 'ETH',
         alpha2: 'ET',
         region: 'Africa',
@@ -595,7 +595,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Falkland Islands (Malvinas)',
+        name: 'Falkland Islands (Malvinas)',
         alpha3: 'FLK',
         alpha2: 'FK',
         region: 'Americas',
@@ -603,7 +603,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Faroe Islands',
+        name: 'Faroe Islands',
         alpha3: 'FRO',
         alpha2: 'FO',
         region: 'Europe',
@@ -611,7 +611,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Fiji',
+        name: 'Fiji',
         alpha3: 'FJI',
         alpha2: 'FJ',
         region: 'Oceania',
@@ -619,7 +619,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Finland',
+        name: 'Finland',
         alpha3: 'FIN',
         alpha2: 'FI',
         region: 'Europe',
@@ -627,7 +627,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:French Guiana',
+        name: 'French Guiana',
         alpha3: 'GUF',
         alpha2: 'FR',
         region: 'Americas',
@@ -635,7 +635,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:French Polynesia',
+        name: 'French Polynesia',
         alpha3: 'PYF',
         alpha2: 'PF',
         region: 'Oceania',
@@ -643,7 +643,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:French Southern Territories',
+        name: 'French Southern Territories',
         alpha3: 'ATF',
         alpha2: 'TF',
         region: '',
@@ -651,7 +651,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Gabon',
+        name: 'Gabon',
         alpha3: 'GAB',
         alpha2: 'GA',
         region: 'Africa',
@@ -659,7 +659,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Gambia',
+        name: 'Gambia',
         alpha3: 'GMB',
         alpha2: 'GM',
         region: 'Africa',
@@ -667,7 +667,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Georgia',
+        name: 'Georgia',
         alpha3: 'GEO',
         alpha2: 'GE',
         region: 'Asia',
@@ -675,7 +675,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Ghana',
+        name: 'Ghana',
         alpha3: 'GHA',
         alpha2: 'GH',
         region: 'Africa',
@@ -683,7 +683,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Gibraltar',
+        name: 'Gibraltar',
         alpha3: 'GIB',
         alpha2: 'GI',
         region: 'Europe',
@@ -691,7 +691,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Greece',
+        name: 'Greece',
         alpha3: 'GRC',
         alpha2: 'GR',
         region: 'Europe',
@@ -699,7 +699,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Greenland',
+        name: 'Greenland',
         alpha3: 'GRL',
         alpha2: 'GL',
         region: 'Americas',
@@ -707,7 +707,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Grenada',
+        name: 'Grenada',
         alpha3: 'GRD',
         alpha2: 'GD',
         region: 'Americas',
@@ -715,7 +715,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Guadeloupe',
+        name: 'Guadeloupe',
         alpha3: 'GLP',
         alpha2: 'FR',
         region: 'Americas',
@@ -723,7 +723,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Guam',
+        name: 'Guam',
         alpha3: 'GUM',
         alpha2: 'GU',
         region: 'Oceania',
@@ -731,7 +731,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Guatemala',
+        name: 'Guatemala',
         alpha3: 'GTM',
         alpha2: 'GT',
         region: 'Americas',
@@ -739,7 +739,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Guernsey',
+        name: 'Guernsey',
         alpha3: 'GGY',
         alpha2: 'GG',
         region: 'Europe',
@@ -747,7 +747,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Guinea',
+        name: 'Guinea',
         alpha3: 'GIN',
         alpha2: 'GN',
         region: 'Africa',
@@ -755,7 +755,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Guinea-Bissau',
+        name: 'Guinea-Bissau',
         alpha3: 'GNB',
         alpha2: 'GW',
         region: 'Africa',
@@ -763,7 +763,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Guyana',
+        name: 'Guyana',
         alpha3: 'GUY',
         alpha2: 'GY',
         region: 'Americas',
@@ -771,7 +771,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Haiti',
+        name: 'Haiti',
         alpha3: 'HTI',
         alpha2: 'HT',
         region: 'Americas',
@@ -779,7 +779,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Heard Island and McDonald Islands',
+        name: 'Heard Island and McDonald Islands',
         alpha3: 'HMD',
         alpha2: 'AU',
         region: '',
@@ -787,7 +787,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Holy See',
+        name: 'Holy See',
         alpha3: 'VAT',
         alpha2: 'VA',
         region: 'Europe',
@@ -795,7 +795,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Honduras',
+        name: 'Honduras',
         alpha3: 'HND',
         alpha2: 'HN',
         region: 'Americas',
@@ -803,7 +803,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Hong Kong',
+        name: 'Hong Kong',
         alpha3: 'HKG',
         alpha2: 'HK',
         region: 'Asia',
@@ -811,7 +811,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Hungary',
+        name: 'Hungary',
         alpha3: 'HUN',
         alpha2: 'HU',
         region: 'Europe',
@@ -819,7 +819,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Iceland',
+        name: 'Iceland',
         alpha3: 'ISL',
         alpha2: 'IS',
         region: 'Europe',
@@ -827,7 +827,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:India',
+        name: 'India',
         alpha3: 'IND',
         alpha2: 'IN',
         region: 'Asia',
@@ -835,7 +835,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Indonesia',
+        name: 'Indonesia',
         alpha3: 'IDN',
         alpha2: 'ID',
         region: 'Asia',
@@ -843,7 +843,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Iran (Islamic Republic of)',
+        name: 'Iran (Islamic Republic of)',
         alpha3: 'IRN',
         alpha2: 'IR',
         region: 'Asia',
@@ -851,7 +851,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Iraq',
+        name: 'Iraq',
         alpha3: 'IRQ',
         alpha2: 'IQ',
         region: 'Asia',
@@ -859,7 +859,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Ireland',
+        name: 'Ireland',
         alpha3: 'IRL',
         alpha2: 'IE',
         region: 'Europe',
@@ -867,7 +867,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Isle of Man',
+        name: 'Isle of Man',
         alpha3: 'IMN',
         alpha2: 'IM',
         region: 'Europe',
@@ -875,7 +875,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Israel',
+        name: 'Israel',
         alpha3: 'ISR',
         alpha2: 'IL',
         region: 'Asia',
@@ -883,7 +883,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Jamaica',
+        name: 'Jamaica',
         alpha3: 'JAM',
         alpha2: 'JM',
         region: 'Americas',
@@ -891,7 +891,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Japan',
+        name: 'Japan',
         alpha3: 'JPN',
         alpha2: 'JP',
         region: 'Asia',
@@ -899,7 +899,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Jersey',
+        name: 'Jersey',
         alpha3: 'JEY',
         alpha2: 'JE',
         region: 'Europe',
@@ -907,7 +907,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Jordan',
+        name: 'Jordan',
         alpha3: 'JOR',
         alpha2: 'JO',
         region: 'Asia',
@@ -915,7 +915,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Kazakhstan',
+        name: 'Kazakhstan',
         alpha3: 'KAZ',
         alpha2: 'KZ',
         region: 'Asia',
@@ -923,7 +923,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Kenya',
+        name: 'Kenya',
         alpha3: 'KEN',
         alpha2: 'KE',
         region: 'Africa',
@@ -931,7 +931,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Kiribati',
+        name: 'Kiribati',
         alpha3: 'KIR',
         alpha2: 'KI',
         region: 'Oceania',
@@ -947,7 +947,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Korea (Republic of)',
+        name: 'Korea (Republic of)',
         alpha3: 'KOR',
         alpha2: 'KR',
         region: 'Asia',
@@ -955,7 +955,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Kuwait',
+        name: 'Kuwait',
         alpha3: 'KWT',
         alpha2: 'KW',
         region: 'Asia',
@@ -963,7 +963,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Kyrgyzstan',
+        name: 'Kyrgyzstan',
         alpha3: 'KGZ',
         alpha2: 'KG',
         region: 'Asia',
@@ -979,7 +979,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Latvia',
+        name: 'Latvia',
         alpha3: 'LVA',
         alpha2: 'LV',
         region: 'Europe',
@@ -987,7 +987,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Lebanon',
+        name: 'Lebanon',
         alpha3: 'LBN',
         alpha2: 'LB',
         region: 'Asia',
@@ -995,7 +995,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Lesotho',
+        name: 'Lesotho',
         alpha3: 'LSO',
         alpha2: 'LS',
         region: 'Africa',
@@ -1003,7 +1003,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Liberia',
+        name: 'Liberia',
         alpha3: 'LBR',
         alpha2: 'LR',
         region: 'Africa',
@@ -1011,7 +1011,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Libya',
+        name: 'Libya',
         alpha3: 'LBY',
         alpha2: 'LY',
         region: 'Africa',
@@ -1019,7 +1019,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Liechtenstein',
+        name: 'Liechtenstein',
         alpha3: 'LIE',
         alpha2: 'LI',
         region: 'Europe',
@@ -1027,7 +1027,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Lithuania',
+        name: 'Lithuania',
         alpha3: 'LTU',
         alpha2: 'LT',
         region: 'Europe',
@@ -1035,7 +1035,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Luxembourg',
+        name: 'Luxembourg',
         alpha3: 'LUX',
         alpha2: 'LU',
         region: 'Europe',
@@ -1043,7 +1043,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Macao',
+        name: 'Macao',
         alpha3: 'MAC',
         alpha2: 'MO',
         region: 'Asia',
@@ -1051,7 +1051,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Macedonia (the former Yugoslav Republic of)',
+        name: 'Macedonia (the former Yugoslav Republic of)',
         alpha3: 'MKD',
         alpha2: 'MK',
         region: 'Europe',
@@ -1059,7 +1059,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Madagascar',
+        name: 'Madagascar',
         alpha3: 'MDG',
         alpha2: 'MG',
         region: 'Africa',
@@ -1067,7 +1067,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Malawi',
+        name: 'Malawi',
         alpha3: 'MWI',
         alpha2: 'MW',
         region: 'Africa',
@@ -1075,7 +1075,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Malaysia',
+        name: 'Malaysia',
         alpha3: 'MYS',
         alpha2: 'MY',
         region: 'Asia',
@@ -1083,7 +1083,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Maldives',
+        name: 'Maldives',
         alpha3: 'MDV',
         alpha2: 'MV',
         region: 'Asia',
@@ -1091,7 +1091,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Mali',
+        name: 'Mali',
         alpha3: 'MLI',
         alpha2: 'ML',
         region: 'Africa',
@@ -1099,7 +1099,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Malta',
+        name: 'Malta',
         alpha3: 'MLT',
         alpha2: 'MT',
         region: 'Europe',
@@ -1107,7 +1107,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Marshall Islands',
+        name: 'Marshall Islands',
         alpha3: 'MHL',
         alpha2: 'MH',
         region: 'Oceania',
@@ -1115,7 +1115,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Martinique',
+        name: 'Martinique',
         alpha3: 'MTQ',
         alpha2: 'FR',
         region: 'Americas',
@@ -1123,7 +1123,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Mauritania',
+        name: 'Mauritania',
         alpha3: 'MRT',
         alpha2: 'MR',
         region: 'Africa',
@@ -1131,7 +1131,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Mauritius',
+        name: 'Mauritius',
         alpha3: 'MUS',
         alpha2: 'MU',
         region: 'Africa',
@@ -1139,7 +1139,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Mayotte',
+        name: 'Mayotte',
         alpha3: 'MYT',
         alpha2: 'YT',
         region: 'Africa',
@@ -1147,7 +1147,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Mexico',
+        name: 'Mexico',
         alpha3: 'MEX',
         alpha2: 'MX',
         region: 'Americas',
@@ -1155,7 +1155,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Micronesia (Federated States of)',
+        name: 'Micronesia (Federated States of)',
         alpha3: 'FSM',
         alpha2: 'FM',
         region: 'Oceania',
@@ -1163,7 +1163,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Moldova (Republic of)',
+        name: 'Moldova (Republic of)',
         alpha3: 'MDA',
         alpha2: 'MD',
         region: 'Europe',
@@ -1171,7 +1171,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Monaco',
+        name: 'Monaco',
         alpha3: 'MCO',
         alpha2: 'MC',
         region: 'Europe',
@@ -1179,7 +1179,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Mongolia',
+        name: 'Mongolia',
         alpha3: 'MNG',
         alpha2: 'MN',
         region: 'Asia',
@@ -1187,7 +1187,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Montenegro',
+        name: 'Montenegro',
         alpha3: 'MNE',
         alpha2: 'ME',
         region: 'Europe',
@@ -1195,7 +1195,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Montserrat',
+        name: 'Montserrat',
         alpha3: 'MSR',
         alpha2: 'MS',
         region: 'Americas',
@@ -1203,7 +1203,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Morocco',
+        name: 'Morocco',
         alpha3: 'MAR',
         alpha2: 'MA',
         region: 'Africa',
@@ -1211,7 +1211,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Mozambique',
+        name: 'Mozambique',
         alpha3: 'MOZ',
         alpha2: 'MZ',
         region: 'Africa',
@@ -1219,7 +1219,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Myanmar',
+        name: 'Myanmar',
         alpha3: 'MMR',
         alpha2: 'MM',
         region: 'Asia',
@@ -1227,7 +1227,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Namibia',
+        name: 'Namibia',
         alpha3: 'NAM',
         alpha2: 'NA',
         region: 'Africa',
@@ -1235,7 +1235,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Nauru',
+        name: 'Nauru',
         alpha3: 'NRU',
         alpha2: 'NR',
         region: 'Oceania',
@@ -1243,7 +1243,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Nepal',
+        name: 'Nepal',
         alpha3: 'NPL',
         alpha2: 'NP',
         region: 'Asia',
@@ -1251,7 +1251,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Netherlands',
+        name: 'Netherlands',
         alpha3: 'NLD',
         alpha2: 'NL',
         region: 'Europe',
@@ -1259,7 +1259,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:New Caledonia',
+        name: 'New Caledonia',
         alpha3: 'NCL',
         alpha2: 'NC',
         region: 'Oceania',
@@ -1267,7 +1267,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:New Zealand',
+        name: 'New Zealand',
         alpha3: 'NZL',
         alpha2: 'NZ',
         region: 'Oceania',
@@ -1275,7 +1275,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Nicaragua',
+        name: 'Nicaragua',
         alpha3: 'NIC',
         alpha2: 'NI',
         region: 'Americas',
@@ -1283,7 +1283,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Niger',
+        name: 'Niger',
         alpha3: 'NER',
         alpha2: 'NE',
         region: 'Africa',
@@ -1291,7 +1291,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Nigeria',
+        name: 'Nigeria',
         alpha3: 'NGA',
         alpha2: 'NG',
         region: 'Africa',
@@ -1299,7 +1299,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Niue',
+        name: 'Niue',
         alpha3: 'NIU',
         alpha2: 'NU',
         region: 'Oceania',
@@ -1307,7 +1307,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Norfolk Island',
+        name: 'Norfolk Island',
         alpha3: 'NFK',
         alpha2: 'NF',
         region: 'Oceania',
@@ -1315,7 +1315,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Northern Mariana Islands',
+        name: 'Northern Mariana Islands',
         alpha3: 'MNP',
         alpha2: 'MP',
         region: 'Oceania',
@@ -1323,7 +1323,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Norway',
+        name: 'Norway',
         alpha3: 'NOR',
         alpha2: 'NO',
         region: 'Europe',
@@ -1331,7 +1331,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Oman',
+        name: 'Oman',
         alpha3: 'OMN',
         alpha2: 'OM',
         region: 'Asia',
@@ -1339,7 +1339,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Pakistan',
+        name: 'Pakistan',
         alpha3: 'PAK',
         alpha2: 'PK',
         region: 'Asia',
@@ -1347,7 +1347,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Palau',
+        name: 'Palau',
         alpha3: 'PLW',
         alpha2: 'PW',
         region: 'Oceania',
@@ -1355,7 +1355,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Palestine, State of',
+        name: 'Palestine, State of',
         alpha3: 'PSE',
         alpha2: 'PS',
         region: 'Asia',
@@ -1363,7 +1363,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Panama',
+        name: 'Panama',
         alpha3: 'PAN',
         alpha2: 'PA',
         region: 'Americas',
@@ -1371,7 +1371,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Papua New Guinea',
+        name: 'Papua New Guinea',
         alpha3: 'PNG',
         alpha2: 'PG',
         region: 'Oceania',
@@ -1379,7 +1379,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Paraguay',
+        name: 'Paraguay',
         alpha3: 'PRY',
         alpha2: 'PY',
         region: 'Americas',
@@ -1387,7 +1387,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Peru',
+        name: 'Peru',
         alpha3: 'PER',
         alpha2: 'PE',
         region: 'Americas',
@@ -1395,7 +1395,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Philippines',
+        name: 'Philippines',
         alpha3: 'PHL',
         alpha2: 'PH',
         region: 'Asia',
@@ -1403,7 +1403,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Pitcairn',
+        name: 'Pitcairn',
         alpha3: 'PCN',
         alpha2: 'PN',
         region: 'Oceania',
@@ -1411,7 +1411,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Poland',
+        name: 'Poland',
         alpha3: 'POL',
         alpha2: 'PL',
         region: 'Europe',
@@ -1419,7 +1419,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Portugal',
+        name: 'Portugal',
         alpha3: 'PRT',
         alpha2: 'PT',
         region: 'Europe',
@@ -1427,7 +1427,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Puerto Rico',
+        name: 'Puerto Rico',
         alpha3: 'PRI',
         alpha2: 'PR',
         region: 'Americas',
@@ -1435,7 +1435,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Qatar',
+        name: 'Qatar',
         alpha3: 'QAT',
         alpha2: 'QA',
         region: 'Asia',
@@ -1443,7 +1443,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Romania',
+        name: 'Romania',
         alpha3: 'ROU',
         alpha2: 'RO',
         region: 'Europe',
@@ -1451,7 +1451,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Russian Federation',
+        name: 'Russian Federation',
         alpha3: 'RUS',
         alpha2: 'RU',
         region: 'Europe',
@@ -1459,7 +1459,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Rwanda',
+        name: 'Rwanda',
         alpha3: 'RWA',
         alpha2: 'RW',
         region: 'Africa',
@@ -1467,7 +1467,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Réunion',
+        name: 'Réunion',
         alpha3: 'REU',
         alpha2: 'FR',
         region: 'Africa',
@@ -1475,7 +1475,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Saint Barthélemy',
+        name: 'Saint Barthélemy',
         alpha3: 'BLM',
         alpha2: 'BL',
         region: 'Americas',
@@ -1483,7 +1483,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Saint Helena, Ascension and Tristan da Cunha',
+        name: 'Saint Helena, Ascension and Tristan da Cunha',
         alpha3: 'SHN',
         alpha2: 'SH',
         region: 'Africa',
@@ -1491,7 +1491,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Saint Kitts and Nevis',
+        name: 'Saint Kitts and Nevis',
         alpha3: 'KNA',
         alpha2: 'KN',
         region: 'Americas',
@@ -1499,7 +1499,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Saint Lucia',
+        name: 'Saint Lucia',
         alpha3: 'LCA',
         alpha2: 'LC',
         region: 'Americas',
@@ -1507,7 +1507,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Saint Martin (French part)',
+        name: 'Saint Martin (French part)',
         alpha3: 'MAF',
         alpha2: 'MF',
         region: 'Americas',
@@ -1515,7 +1515,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Saint Pierre and Miquelon',
+        name: 'Saint Pierre and Miquelon',
         alpha3: 'SPM',
         alpha2: 'FR',
         region: 'Americas',
@@ -1523,7 +1523,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Saint Vincent and the Grenadines',
+        name: 'Saint Vincent and the Grenadines',
         alpha3: 'VCT',
         alpha2: 'VC',
         region: 'Americas',
@@ -1531,7 +1531,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Samoa',
+        name: 'Samoa',
         alpha3: 'WSM',
         alpha2: 'WS',
         region: 'Oceania',
@@ -1539,7 +1539,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:San Marino',
+        name: 'San Marino',
         alpha3: 'SMR',
         alpha2: 'SM',
         region: 'Europe',
@@ -1547,7 +1547,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Sao Tome and Principe',
+        name: 'Sao Tome and Principe',
         alpha3: 'STP',
         alpha2: 'ST',
         region: 'Africa',
@@ -1555,7 +1555,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Saudi Arabia',
+        name: 'Saudi Arabia',
         alpha3: 'SAU',
         alpha2: 'SA',
         region: 'Asia',
@@ -1563,7 +1563,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Senegal',
+        name: 'Senegal',
         alpha3: 'SEN',
         alpha2: 'SN',
         region: 'Africa',
@@ -1571,7 +1571,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Serbia',
+        name: 'Serbia',
         alpha3: 'SRB',
         alpha2: 'RS',
         region: 'Europe',
@@ -1579,7 +1579,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Seychelles',
+        name: 'Seychelles',
         alpha3: 'SYC',
         alpha2: 'SC',
         region: 'Africa',
@@ -1587,7 +1587,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Sierra Leone',
+        name: 'Sierra Leone',
         alpha3: 'SLE',
         alpha2: 'SL',
         region: 'Africa',
@@ -1595,7 +1595,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Singapore',
+        name: 'Singapore',
         alpha3: 'SGP',
         alpha2: 'SG',
         region: 'Asia',
@@ -1603,7 +1603,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Sint Maarten (Dutch part)',
+        name: 'Sint Maarten (Dutch part)',
         alpha3: 'SXM',
         alpha2: 'NL',
         region: 'Americas',
@@ -1611,7 +1611,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Slovakia',
+        name: 'Slovakia',
         alpha3: 'SVK',
         alpha2: 'SK',
         region: 'Europe',
@@ -1619,7 +1619,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Slovenia',
+        name: 'Slovenia',
         alpha3: 'SVN',
         alpha2: 'SI',
         region: 'Europe',
@@ -1627,7 +1627,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Solomon Islands',
+        name: 'Solomon Islands',
         alpha3: 'SLB',
         alpha2: 'SB',
         region: 'Oceania',
@@ -1635,7 +1635,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Somalia',
+        name: 'Somalia',
         alpha3: 'SOM',
         alpha2: 'SO',
         region: 'Africa',
@@ -1643,7 +1643,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:South Africa',
+        name: 'South Africa',
         alpha3: 'ZAF',
         alpha2: 'ZA',
         region: 'Africa',
@@ -1651,7 +1651,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:South Georgia and the South Sandwich Islands',
+        name: 'South Georgia and the South Sandwich Islands',
         alpha3: 'SGS',
         alpha2: 'GS',
         region: 'Americas',
@@ -1659,7 +1659,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:South Sudan',
+        name: 'South Sudan',
         alpha3: 'SSD',
         alpha2: 'SS',
         region: 'Africa',
@@ -1667,7 +1667,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Spain',
+        name: 'Spain',
         alpha3: 'ESP',
         alpha2: 'ES',
         region: 'Europe',
@@ -1675,7 +1675,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Sri Lanka',
+        name: 'Sri Lanka',
         alpha3: 'LKA',
         alpha2: 'LK',
         region: 'Asia',
@@ -1683,7 +1683,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Sudan',
+        name: 'Sudan',
         alpha3: 'SDN',
         alpha2: 'SD',
         region: 'Africa',
@@ -1691,7 +1691,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Suriname',
+        name: 'Suriname',
         alpha3: 'SUR',
         alpha2: 'SR',
         region: 'Americas',
@@ -1699,7 +1699,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Svalbard and Jan Mayen',
+        name: 'Svalbard and Jan Mayen',
         alpha3: 'SJM',
         alpha2: 'NO',
         region: 'Europe',
@@ -1707,7 +1707,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Swaziland',
+        name: 'Swaziland',
         alpha3: 'SWZ',
         alpha2: 'SZ',
         region: 'Africa',
@@ -1715,7 +1715,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Sweden',
+        name: 'Sweden',
         alpha3: 'SWE',
         alpha2: 'SE',
         region: 'Europe',
@@ -1723,7 +1723,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Syrian Arab Republic',
+        name: 'Syrian Arab Republic',
         alpha3: 'SYR',
         alpha2: 'SY',
         region: 'Asia',
@@ -1731,7 +1731,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Taiwan, Province of China',
+        name: 'Taiwan, Province of China',
         alpha3: 'TWN',
         alpha2: 'TW',
         region: 'Asia',
@@ -1739,7 +1739,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Tajikistan',
+        name: 'Tajikistan',
         alpha3: 'TJK',
         alpha2: 'TJ',
         region: 'Asia',
@@ -1747,7 +1747,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Tanzania, United Republic of',
+        name: 'Tanzania, United Republic of',
         alpha3: 'TZA',
         alpha2: 'TZ',
         region: 'Africa',
@@ -1755,7 +1755,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Thailand',
+        name: 'Thailand',
         alpha3: 'THA',
         alpha2: 'TH',
         region: 'Asia',
@@ -1763,7 +1763,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Timor-Leste',
+        name: 'Timor-Leste',
         alpha3: 'TLS',
         alpha2: 'TL',
         region: 'Asia',
@@ -1771,7 +1771,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Togo',
+        name: 'Togo',
         alpha3: 'TGO',
         alpha2: 'TG',
         region: 'Africa',
@@ -1779,7 +1779,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Tokelau',
+        name: 'Tokelau',
         alpha3: 'TKL',
         alpha2: 'TK',
         region: 'Oceania',
@@ -1787,7 +1787,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Tonga',
+        name: 'Tonga',
         alpha3: 'TON',
         alpha2: 'TO',
         region: 'Oceania',
@@ -1795,7 +1795,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Trinidad and Tobago',
+        name: 'Trinidad and Tobago',
         alpha3: 'TTO',
         alpha2: 'TT',
         region: 'Americas',
@@ -1803,7 +1803,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Tunisia',
+        name: 'Tunisia',
         alpha3: 'TUN',
         alpha2: 'TN',
         region: 'Africa',
@@ -1811,7 +1811,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Turkey',
+        name: 'Turkey',
         alpha3: 'TUR',
         alpha2: 'TR',
         region: 'Asia',
@@ -1819,7 +1819,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Turkmenistan',
+        name: 'Turkmenistan',
         alpha3: 'TKM',
         alpha2: 'TM',
         region: 'Asia',
@@ -1827,7 +1827,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Turks and Caicos Islands',
+        name: 'Turks and Caicos Islands',
         alpha3: 'TCA',
         alpha2: 'TC',
         region: 'Americas',
@@ -1835,7 +1835,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Tuvalu',
+        name: 'Tuvalu',
         alpha3: 'TUV',
         alpha2: 'TV',
         region: 'Oceania',
@@ -1843,7 +1843,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Uganda',
+        name: 'Uganda',
         alpha3: 'UGA',
         alpha2: 'UG',
         region: 'Africa',
@@ -1851,7 +1851,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Ukraine',
+        name: 'Ukraine',
         alpha3: 'UKR',
         alpha2: 'UA',
         region: 'Europe',
@@ -1859,7 +1859,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:United Arab Emirates',
+        name: 'United Arab Emirates',
         alpha3: 'ARE',
         alpha2: 'AE',
         region: 'Asia',
@@ -1867,7 +1867,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:United Kingdom of Great Britain and Northern Ireland',
+        name: 'United Kingdom of Great Britain and Northern Ireland',
         alpha3: 'GBR',
         alpha2: 'GB',
         region: 'Europe',
@@ -1875,7 +1875,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:United States Minor Outlying Islands',
+        name: 'United States Minor Outlying Islands',
         alpha3: 'UMI',
         alpha2: 'US',
         region: 'Americas',
@@ -1883,7 +1883,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:United States of America',
+        name: 'United States of America',
         alpha3: 'USA',
         alpha2: 'US',
         region: 'Americas',
@@ -1891,7 +1891,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Uruguay',
+        name: 'Uruguay',
         alpha3: 'URY',
         alpha2: 'UY',
         region: 'Americas',
@@ -1899,7 +1899,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Uzbekistan',
+        name: 'Uzbekistan',
         alpha3: 'UZB',
         alpha2: 'UZ',
         region: 'Asia',
@@ -1907,7 +1907,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Vanuatu',
+        name: 'Vanuatu',
         alpha3: 'VUT',
         alpha2: 'VU',
         region: 'Oceania',
@@ -1915,7 +1915,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Venezuela (Bolivarian Republic of)',
+        name: 'Venezuela (Bolivarian Republic of)',
         alpha3: 'VEN',
         alpha2: 'VE',
         region: 'Americas',
@@ -1923,7 +1923,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Viet Nam',
+        name: 'Viet Nam',
         alpha3: 'VNM',
         alpha2: 'VN',
         region: 'Asia',
@@ -1931,7 +1931,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Virgin Islands (British)',
+        name: 'Virgin Islands (British)',
         alpha3: 'VGB',
         alpha2: 'VG',
         region: 'Americas',
@@ -1939,7 +1939,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Virgin Islands (U.S.)',
+        name: 'Virgin Islands (U.S.)',
         alpha3: 'VIR',
         alpha2: 'VI',
         region: 'Americas',
@@ -1947,7 +1947,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Wallis and Futuna',
+        name: 'Wallis and Futuna',
         alpha3: 'WLF',
         alpha2: 'WF',
         region: 'Oceania',
@@ -1955,7 +1955,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Western Sahara',
+        name: 'Western Sahara',
         alpha3: 'ESH',
         alpha2: 'EH',
         region: 'Africa',
@@ -1963,7 +1963,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Yemen',
+        name: 'Yemen',
         alpha3: 'YEM',
         alpha2: 'YE',
         region: 'Asia',
@@ -1971,7 +1971,7 @@ exports.countryList = [
         supported_identity_report: false,
     },
     {
-        name: 'countries:Zambia',
+        name: 'Zambia',
         alpha3: 'ZMB',
         alpha2: 'ZM',
         region: 'Africa',
@@ -1979,7 +1979,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Zimbabwe',
+        name: 'Zimbabwe',
         alpha3: 'ZWE',
         alpha2: 'ZW',
         region: 'Africa',
@@ -1987,7 +1987,7 @@ exports.countryList = [
         supported_identity_report: true,
     },
     {
-        name: 'countries:Åland Islands',
+        name: 'Åland Islands',
         alpha3: 'ALA',
         alpha2: 'AX',
         region: 'Europe',
