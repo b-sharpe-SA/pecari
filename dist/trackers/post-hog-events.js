@@ -48,4 +48,5 @@ var PostHogEvents;
     PostHogEvents["ViewedInvitationList"] = "viewed_invitation_list";
     PostHogEvents["StartedInvitation"] = "started_invitation";
     PostHogEvents["CompletedInvitation"] = "completed_invitation";
-})(PostHogEvents || (exports.PostHogEvents = PostHogEvents = {}));
+    PostHogEvents["ViewedPspUpdatedModal"] = "viewed_psp_updated_modal";
+})(PostHogEvents = exports.PostHogEvents || (exports.PostHogEvents = {}));
