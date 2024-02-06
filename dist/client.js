@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.CactusClient = void 0;
 const axios_1 = __importDefault(require("axios"));
 const _ressources_1 = require("./ressources");
-const config_1 = require("./constants/config");
+const constants_1 = require("./constants");
 /**
  * Client definition
  * @property {string} baseUrl - base url to fetch cactus api
@@ -64,14 +64,14 @@ class CactusClient {
      * @param token
      */
     setToken(token) {
-        this.instance.defaults.headers.common[config_1.AUTH_HEADER_KEY] = `Bearer ${token}`;
+        this.instance.defaults.headers.common[constants_1.AUTH_HEADER_KEY] = `Bearer ${token}`;
     }
     /**
      * Remove authorization token to global instance
      */
     removeToken() {
         // eslint-disable-next-line @typescript-eslint/no-dynamic-delete
-        delete this.instance.defaults.headers.common[config_1.AUTH_HEADER_KEY];
+        delete this.instance.defaults.headers.common[constants_1.AUTH_HEADER_KEY];
     }
 }
 exports.CactusClient = CactusClient;
