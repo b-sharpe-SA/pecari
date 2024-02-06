@@ -44,4 +44,5 @@ export enum PostHogEvents {
     ViewedInvitationList = 'viewed_invitation_list',
     StartedInvitation = 'started_invitation',
     CompletedInvitation = 'completed_invitation',
+    ViewedPspUpdatedModal = 'viewed_psp_updated_modal',
 }
