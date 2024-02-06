@@ -43,5 +43,6 @@ export declare enum PostHogEvents {
     DownloadedEmployerDocument = "downloaded_employer_document",
     ViewedInvitationList = "viewed_invitation_list",
     StartedInvitation = "started_invitation",
-    CompletedInvitation = "completed_invitation"
+    CompletedInvitation = "completed_invitation",
+    ViewedPspUpdatedModal = "viewed_psp_updated_modal"
 }
