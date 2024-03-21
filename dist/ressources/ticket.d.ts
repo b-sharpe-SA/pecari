@@ -1,5 +1,5 @@
 import { InstanceRessource } from '../helpers';
-import { type CreateTicketPayload, type ListTicketsParams, Ticket, WithPagination } from '../types';
+import { type CreateTicketPayload, type ListTicketsParams, type Ticket, type WithPagination } from '../types';
 export declare class TicketRessource extends InstanceRessource {
     private getUrl;
     /**

@@ -1,5 +1,5 @@
 import { InstanceRessource } from '../helpers';
-import { type CreatePspPricePayload, PspPrice } from '../types';
+import { type CreatePspPricePayload, type PspPrice } from '../types';
 export declare class PspPriceRessource extends InstanceRessource {
     private getUrl;
     /**

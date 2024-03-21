@@ -1,5 +1,5 @@
 import { InstanceRessource } from '../helpers';
-import { type BankAccountListParameters, BankAccountRessourceResponse, WithPagination } from '../types';
+import { type BankAccountListParameters, type BankAccountRessourceResponse, type WithPagination } from '../types';
 export declare class BankAccountRessource extends InstanceRessource {
     private getUrl;
     /**

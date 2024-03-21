@@ -22,7 +22,8 @@ class CactusClient {
          * @param token
          */
         this.setToken = (token) => {
-            this.instance.defaults.headers.common[constants_1.AUTH_HEADER_KEY] = `Bearer ${token}`;
+            this.instance.defaults.headers.common[constants_1.AUTH_HEADER_KEY] =
+                `Bearer ${token}`;
         };
         /**
          * Remove authorization token to global instance
@@ -59,6 +60,7 @@ class CactusClient {
         this.bankAccount = new _ressources_1.BankAccountRessource(this.instanceParams);
         this.appCompatibility = new _ressources_1.AppCompatibilityResource(this.instanceParams);
         this.phoneNumber = new _ressources_1.PhoneNumberRessource(this.instanceParams);
+        this.management = new _ressources_1.ManagementRessource(this.instanceParams);
         this.baseUrl = params.baseUrl;
         this.token = params.token;
         this.language = params.language;

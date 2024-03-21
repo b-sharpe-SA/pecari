@@ -1,5 +1,5 @@
 {
-    "name": "cactus-sdk-js",
+    "name": "pecari",
     "version": "1.0.0",
     "description": "Javascript sdk for cactus API",
     "main": "index.js",

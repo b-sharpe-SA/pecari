@@ -1,5 +1,5 @@
 import { InstanceRessource } from '../helpers';
-import { LoginTokenResponse } from '../types';
+import { type LoginTokenResponse } from '../types';
 export declare class AdvancedAuthRessource extends InstanceRessource {
     /**
      * Send otp code to mobile
