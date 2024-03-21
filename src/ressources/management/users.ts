@@ -4,16 +4,13 @@ import {
     concatenateQueryParams,
     handleError,
 } from '@helpers';
-import { type WithPagination, type Myself } from '@types';
+import {
+    type WithPagination,
+    type ListUsersQueryParams,
+    type UsersAccount,
+} from '@types';
 
 const BASE_URL = `${MANAGEMENT_PATH}/users/`;
-
-interface ListUsersQueryParams extends Record<string, any> {
-    limit: number;
-    offset: number;
-    ordering: string;
-    search: string;
-}
 
 export class UsersRessource extends InstanceRessource {
     /**
@@ -26,7 +23,7 @@ export class UsersRessource extends InstanceRessource {
         try {
             const url = concatenateQueryParams(BASE_URL, queryParams ?? {});
             const { data } =
-                await this.instance.get<WithPagination<Myself>>(url);
+                await this.instance.get<WithPagination<UsersAccount>>(url);
             return data;
         } catch (error) {
             throw handleError(error);
