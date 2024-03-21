@@ -4,10 +4,10 @@ import {
     InstanceRessource,
 } from '@helpers';
 import {
-    CreateTicketPayload,
-    ListTicketsParams,
-    Ticket,
-    WithPagination,
+    type CreateTicketPayload,
+    type ListTicketsParams,
+    type Ticket,
+    type WithPagination,
 } from '@types';
 
 export class TicketRessource extends InstanceRessource {
@@ -39,9 +39,8 @@ export class TicketRessource extends InstanceRessource {
                     canceled,
                     offset,
                 });
-            const { data } = await this.instance.get<WithPagination<Ticket>>(
-                url
-            );
+            const { data } =
+                await this.instance.get<WithPagination<Ticket>>(url);
             return data;
         } catch (error) {
             throw handleError(error);

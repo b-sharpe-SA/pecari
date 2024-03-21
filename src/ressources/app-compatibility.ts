@@ -1,5 +1,5 @@
 import { handleError, InstanceRessource } from '@helpers';
-import { AppCheck } from 'src/types/app-compatibility';
+import { type AppCheck } from 'src/types/app-compatibility';
 
 const BASE_URL = 'app_check/';
 

@@ -1,5 +1,9 @@
-import axios, { AxiosInstance } from 'axios';
-import { CactusError, ErrorCodes, InstanceRessourceParams } from '@types';
+import axios, { type AxiosInstance } from 'axios';
+import {
+    type CactusError,
+    ErrorCodes,
+    type InstanceRessourceParams,
+} from '@types';
 
 export function handleError(error: any): CactusError {
     if (axios.isAxiosError(error)) {

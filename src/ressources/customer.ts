@@ -1,5 +1,9 @@
 import { handleError, InstanceRessource } from '@helpers';
-import { Customer, UpdateCustomerPayload, WithPagination } from '@types';
+import {
+    type Customer,
+    type UpdateCustomerPayload,
+    type WithPagination,
+} from '@types';
 
 export class CustomerRessource extends InstanceRessource {
     /**
@@ -8,9 +12,10 @@ export class CustomerRessource extends InstanceRessource {
      */
     async list() {
         try {
-            const { data } = await this.instance.get<WithPagination<Customer>>(
-                'users/customer/'
-            );
+            const { data } =
+                await this.instance.get<WithPagination<Customer>>(
+                    'users/customer/'
+                );
             return data;
         } catch (error) {
             throw handleError(error);

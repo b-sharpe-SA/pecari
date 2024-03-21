@@ -1,4 +1,4 @@
-import { ClientType, Myself } from '.';
+import { type ClientType, type Myself } from '.';
 export declare enum SignupDevice {
     Web = "web",
     Android = "android",

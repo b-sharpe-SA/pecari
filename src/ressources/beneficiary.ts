@@ -5,12 +5,12 @@ import {
     InstanceRessource,
 } from '@helpers';
 import {
-    BankAccount,
-    Beneficiary,
-    CreateBankAccountPayload,
-    CreateBeneficiaryPayload,
-    ListBeneficiaryQueryParams,
-    WithPagination,
+    type BankAccount,
+    type Beneficiary,
+    type CreateBankAccountPayload,
+    type CreateBeneficiaryPayload,
+    type ListBeneficiaryQueryParams,
+    type WithPagination,
 } from '@types';
 
 export class BeneficiaryRessource extends InstanceRessource {
@@ -32,9 +32,8 @@ export class BeneficiaryRessource extends InstanceRessource {
                 this.getUrl(customer),
                 queryParams ?? {}
             );
-            const { data } = await this.instance.get<
-                WithPagination<Beneficiary>
-            >(url);
+            const { data } =
+                await this.instance.get<WithPagination<Beneficiary>>(url);
             return data;
         } catch (error) {
             throw handleError(error);

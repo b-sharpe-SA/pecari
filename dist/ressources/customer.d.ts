@@ -1,5 +1,5 @@
 import { InstanceRessource } from '../helpers';
-import { Customer, UpdateCustomerPayload, WithPagination } from '../types';
+import { Customer, type UpdateCustomerPayload, WithPagination } from '../types';
 export declare class CustomerRessource extends InstanceRessource {
     /**
      * List all customers for current user

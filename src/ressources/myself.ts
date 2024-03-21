@@ -1,5 +1,5 @@
 import { handleError, InstanceRessource } from '@helpers';
-import { Myself, UpdateMyselfPayload } from '@types';
+import { type Myself, type UpdateMyselfPayload } from '@types';
 
 export class MyselfRessource extends InstanceRessource {
     /**
@@ -8,9 +8,8 @@ export class MyselfRessource extends InstanceRessource {
      */
     async get() {
         try {
-            const { data } = await this.instance.get<Myself>(
-                'users/user/myself/'
-            );
+            const { data } =
+                await this.instance.get<Myself>('users/user/myself/');
             return data;
         } catch (error) {
             throw handleError(error);

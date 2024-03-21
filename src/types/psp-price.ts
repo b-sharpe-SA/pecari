@@ -1,4 +1,4 @@
-import { TransactionType } from '@types';
+import { type TransactionType } from '@types';
 
 export interface CreatePspPricePayload {
     currency_buy: string;
@@ -47,7 +47,7 @@ export interface PspPrice {
             name: string;
             value: string;
             perpetual: boolean;
-        }
+        },
     ];
     fee_discounts: [
         {
@@ -56,7 +56,7 @@ export interface PspPrice {
             value_processing_fees: string;
             value_currency_fees: boolean;
             perpetual: boolean;
-        }
+        },
     ];
     margin_discounts: [
         {
@@ -64,6 +64,6 @@ export interface PspPrice {
             name: string;
             value: number;
             perpetual: boolean;
-        }
+        },
     ];
 }

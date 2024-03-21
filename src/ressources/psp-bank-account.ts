@@ -1,5 +1,5 @@
 import { handleError, InstanceRessource } from '@helpers';
-import { PspBankAccount } from '@types';
+import { type PspBankAccount } from '@types';
 
 const BASE_URL = 'banking/psp_bank_account/';
 

@@ -1,5 +1,5 @@
 import { InstanceRessource } from '../helpers';
-import { PasswordResetValidationPayload } from '../types';
+import { type PasswordResetValidationPayload } from '../types';
 export declare class PasswordResetRessource extends InstanceRessource {
     /**
      * Send email to reset password

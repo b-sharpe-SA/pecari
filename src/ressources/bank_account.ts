@@ -4,9 +4,9 @@ import {
     InstanceRessource,
 } from '@helpers';
 import {
-    BankAccountListParameters,
-    BankAccountRessourceResponse,
-    WithPagination,
+    type BankAccountListParameters,
+    type BankAccountRessourceResponse,
+    type WithPagination,
 } from '@types';
 
 export class BankAccountRessource extends InstanceRessource {
@@ -27,9 +27,10 @@ export class BankAccountRessource extends InstanceRessource {
                 parameters?.next ??
                 concatenateQueryParams(this.getUrl(customer), parameters);
 
-            const { data } = await this.instance.get<
-                WithPagination<BankAccountRessourceResponse>
-            >(url);
+            const { data } =
+                await this.instance.get<
+                    WithPagination<BankAccountRessourceResponse>
+                >(url);
             return data;
         } catch (error) {
             throw handleError(error);
