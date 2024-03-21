@@ -1,7 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CustomerRessource = void 0;
+const _constants_1 = require("../constants");
 const _helpers_1 = require("../helpers");
+const BASE_URL = `${_constants_1.PUBLIC_PATH}/users/customer/`;
 class CustomerRessource extends _helpers_1.InstanceRessource {
     /**
      * List all customers for current user
@@ -9,7 +11,7 @@ class CustomerRessource extends _helpers_1.InstanceRessource {
      */
     async list() {
         try {
-            const { data } = await this.instance.get('users/customer/');
+            const { data } = await this.instance.get(BASE_URL);
             return data;
         }
         catch (error) {
@@ -23,7 +25,7 @@ class CustomerRessource extends _helpers_1.InstanceRessource {
      */
     async get(reference) {
         try {
-            const { data } = await this.instance.get(`users/customer/${reference}/`);
+            const { data } = await this.instance.get(`${BASE_URL}${reference}/`);
             return data;
         }
         catch (error) {
@@ -38,7 +40,7 @@ class CustomerRessource extends _helpers_1.InstanceRessource {
      */
     async update(reference, payload) {
         try {
-            const { data } = await this.instance.patch(`users/customer/${reference}/`, { ...payload });
+            const { data } = await this.instance.patch(`${BASE_URL}${reference}/`, { ...payload });
             return data;
         }
         catch (error) {

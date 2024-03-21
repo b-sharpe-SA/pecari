@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.MapboxRessource = void 0;
+const _constants_1 = require("../constants");
 const _helpers_1 = require("../helpers");
 class MapboxRessource extends _helpers_1.InstanceRessource {
     /**
@@ -9,7 +10,7 @@ class MapboxRessource extends _helpers_1.InstanceRessource {
      */
     async get() {
         try {
-            const { data } = await this.instance.get('mapbox/');
+            const { data } = await this.instance.get(`${_constants_1.PUBLIC_PATH}/mapbox/`);
             return data;
         }
         catch (error) {

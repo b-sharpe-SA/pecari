@@ -1,8 +1,9 @@
+import { PUBLIC_PATH } from '@constants';
 import { handleError, InstanceRessource } from '@helpers';
 
 export class UploadRessource extends InstanceRessource {
     private getUrl(customer: string) {
-        return `users/customer/${customer}/upload/`;
+        return `${PUBLIC_PATH}/users/customer/${customer}/upload/`;
     }
 
     /**

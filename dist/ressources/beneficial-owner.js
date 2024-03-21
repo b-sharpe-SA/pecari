@@ -2,10 +2,11 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.BeneficialOwnerRessource = void 0;
 /* eslint-disable @typescript-eslint/strict-boolean-expressions */
+const _constants_1 = require("../constants");
 const _helpers_1 = require("../helpers");
 class BeneficialOwnerRessource extends _helpers_1.InstanceRessource {
     getUrl(customer, reference) {
-        return `/users/customer/${customer}/beneficial_owner/${reference ? `${reference}/` : ''}`;
+        return `${_constants_1.PUBLIC_PATH}/users/customer/${customer}/beneficial_owner/${reference ? `${reference}/` : ''}`;
     }
     /**
      * List beneficial owners for specific customer

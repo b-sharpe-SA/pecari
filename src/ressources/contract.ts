@@ -1,9 +1,14 @@
+import { PUBLIC_PATH } from '@constants';
 import { handleError, InstanceRessource } from '@helpers';
-import { type Contract, type SignContractPayload, type SignContractResponse } from '@types';
+import {
+    type Contract,
+    type SignContractPayload,
+    type SignContractResponse,
+} from '@types';
 
 export class ContractRessource extends InstanceRessource {
     private getUrl(customer: string) {
-        return `users/customer/${customer}/contract/`;
+        return `${PUBLIC_PATH}/users/customer/${customer}/contract/`;
     }
 
     /**
@@ -50,9 +55,8 @@ export class ContractRessource extends InstanceRessource {
     async request(customer: string) {
         try {
             const url = `${this.getUrl(customer)}sign/request/`;
-            const { data } = await this.instance.post<SignContractResponse>(
-                url
-            );
+            const { data } =
+                await this.instance.post<SignContractResponse>(url);
             return data;
         } catch (error) {
             throw handleError(error);
