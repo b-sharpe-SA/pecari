@@ -1,4 +1,4 @@
-import { AxiosInstance } from 'axios';
+import { type AxiosInstance } from 'axios';
 import { LoginRessource, MyselfRessource, CustomerRessource, AdvancedAuthRessource, PasswordResetRessource, TicketRessource, PspPriceRessource, BeneficialOwnerRessource, BeneficiaryRessource, MapboxRessource, EmailRessource, OnfidoRessource, MessageRessource, ContractRessource, UpdatePasswordRessource, UploadRessource, PspBankAccountRessource, SignupRessource, RateAlertRessource, SponsorshipRessource, BankAccountRessource, AppCompatibilityResource, PhoneNumberRessource } from './ressources';
 interface CactusClientParams {
     baseUrl: string;

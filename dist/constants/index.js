@@ -14,8 +14,5 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
     for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const _client_1 = require("./client");
-__exportStar(require("./types"), exports);
-__exportStar(require("./trackers"), exports);
-__exportStar(require("./constants"), exports);
-exports.default = _client_1.CactusClient;
+__exportStar(require("./countries"), exports);
+__exportStar(require("./config"), exports);
