@@ -1,3 +1,4 @@
+import { PUBLIC_PATH } from '@constants';
 import { handleError, InstanceRessource } from '@helpers';
 import {
     type Sponsorship,
@@ -7,7 +8,7 @@ import {
 
 export class SponsorshipRessource extends InstanceRessource {
     private getUrl(customerRef: string) {
-        return `users/customer/${customerRef}/sponsorships/`;
+        return `${PUBLIC_PATH}/users/customer/${customerRef}/sponsorships/`;
     }
 
     async list({ customer }: { customer: string }) {
@@ -24,7 +25,7 @@ export class SponsorshipRessource extends InstanceRessource {
     async get({ code }: { code: string }) {
         try {
             const { data } = await this.instance.get<SponsorshipInfoByCode>(
-                `users/customer/sponsorships/${code}`
+                `${PUBLIC_PATH}/users/customer/sponsorships/${code}`
             );
             return data;
         } catch (error) {

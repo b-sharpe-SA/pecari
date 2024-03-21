@@ -1,7 +1,8 @@
+import { PUBLIC_PATH } from '@constants';
 import { handleError, InstanceRessource } from '@helpers';
 import { type PspBankAccount } from '@types';
 
-const BASE_URL = 'banking/psp_bank_account/';
+const BASE_URL = `${PUBLIC_PATH}/banking/psp_bank_account/`;
 
 export class PspBankAccountRessource extends InstanceRessource {
     /**

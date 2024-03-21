@@ -1,7 +1,8 @@
+import { PUBLIC_PATH } from '@constants';
 import { handleError, InstanceRessource } from '@helpers';
 import { type AppCheck } from 'src/types/app-compatibility';
 
-const BASE_URL = 'app_check/';
+const BASE_URL = `${PUBLIC_PATH}/app_check/`;
 
 export class AppCompatibilityResource extends InstanceRessource {
     /**

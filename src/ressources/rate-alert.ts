@@ -1,3 +1,4 @@
+import { PUBLIC_PATH } from '@constants';
 import { handleError, InstanceRessource } from '@helpers';
 import {
     type CreateRateAlertPayload,
@@ -6,7 +7,7 @@ import {
     type WithPagination,
 } from '@types';
 
-const BASE_URL = 'ratealert/';
+const BASE_URL = `${PUBLIC_PATH}/ratealert/`;
 
 export class RateAlertRessource extends InstanceRessource {
     /**

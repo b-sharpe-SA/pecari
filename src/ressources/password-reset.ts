@@ -1,7 +1,8 @@
+import { PUBLIC_PATH } from '@constants';
 import { handleError, InstanceRessource } from '@helpers';
 import { type PasswordResetValidationPayload } from '@types';
 
-const BASE_URL = '/password/reset/';
+const BASE_URL = `${PUBLIC_PATH}/password/reset/`;
 
 export class PasswordResetRessource extends InstanceRessource {
     /**

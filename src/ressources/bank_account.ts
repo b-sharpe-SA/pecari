@@ -1,3 +1,4 @@
+import { PUBLIC_PATH } from '@constants';
 import {
     concatenateQueryParams,
     handleError,
@@ -11,7 +12,7 @@ import {
 
 export class BankAccountRessource extends InstanceRessource {
     private getUrl(customer: string, bankAccount?: number) {
-        return `/users/customer/${customer}/bank_account/${
+        return `${PUBLIC_PATH}/users/customer/${customer}/bank_account/${
             bankAccount != null ? `${bankAccount}/` : ''
         }`;
     }

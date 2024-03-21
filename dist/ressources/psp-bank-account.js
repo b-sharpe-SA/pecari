@@ -1,8 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.PspBankAccountRessource = void 0;
+const _constants_1 = require("../constants");
 const _helpers_1 = require("../helpers");
-const BASE_URL = 'banking/psp_bank_account/';
+const BASE_URL = `${_constants_1.PUBLIC_PATH}/banking/psp_bank_account/`;
 class PspBankAccountRessource extends _helpers_1.InstanceRessource {
     /**
      * Get psp bank account by currency

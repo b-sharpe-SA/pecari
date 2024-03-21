@@ -1,10 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.SponsorshipRessource = void 0;
+const _constants_1 = require("../constants");
 const _helpers_1 = require("../helpers");
 class SponsorshipRessource extends _helpers_1.InstanceRessource {
     getUrl(customerRef) {
-        return `users/customer/${customerRef}/sponsorships/`;
+        return `${_constants_1.PUBLIC_PATH}/users/customer/${customerRef}/sponsorships/`;
     }
     async list({ customer }) {
         try {
@@ -18,7 +19,7 @@ class SponsorshipRessource extends _helpers_1.InstanceRessource {
     }
     async get({ code }) {
         try {
-            const { data } = await this.instance.get(`users/customer/sponsorships/${code}`);
+            const { data } = await this.instance.get(`${_constants_1.PUBLIC_PATH}/users/customer/sponsorships/${code}`);
             return data;
         }
         catch (error) {

@@ -1,7 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.MyselfRessource = void 0;
+const _constants_1 = require("../constants");
 const _helpers_1 = require("../helpers");
+const BASE_URL = `${_constants_1.PUBLIC_PATH}/users/user/myself/`;
 class MyselfRessource extends _helpers_1.InstanceRessource {
     /**
      * Fetch myself
@@ -9,7 +11,7 @@ class MyselfRessource extends _helpers_1.InstanceRessource {
      */
     async get() {
         try {
-            const { data } = await this.instance.get('users/user/myself/');
+            const { data } = await this.instance.get(BASE_URL);
             return data;
         }
         catch (error) {
@@ -23,7 +25,7 @@ class MyselfRessource extends _helpers_1.InstanceRessource {
      */
     async update(payload) {
         try {
-            const { data } = await this.instance.patch('users/user/myself/', payload);
+            const { data } = await this.instance.patch(BASE_URL, payload);
             return data;
         }
         catch (error) {
@@ -39,7 +41,7 @@ class MyselfRessource extends _helpers_1.InstanceRessource {
      */
     async delete() {
         try {
-            const { data } = await this.instance.delete('users/user/myself/');
+            const { data } = await this.instance.delete(BASE_URL);
             return data;
         }
         catch (error) {

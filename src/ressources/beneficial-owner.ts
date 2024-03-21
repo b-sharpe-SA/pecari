@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/strict-boolean-expressions */
+import { PUBLIC_PATH } from '@constants';
 import { handleError, InstanceRessource } from '@helpers';
 import {
     type BeneficialOwner,
@@ -9,7 +10,7 @@ import {
 
 export class BeneficialOwnerRessource extends InstanceRessource {
     private getUrl(customer: string, reference?: string) {
-        return `/users/customer/${customer}/beneficial_owner/${
+        return `${PUBLIC_PATH}/users/customer/${customer}/beneficial_owner/${
             reference ? `${reference}/` : ''
         }`;
     }

@@ -1,6 +1,7 @@
+import { PUBLIC_PATH } from '@constants';
 import { handleError, InstanceRessource } from '@helpers';
 
-const BASE_URL = 'users/user/phone_number';
+const BASE_URL = `${PUBLIC_PATH}/users/user/phone_number`;
 
 export class PhoneNumberRessource extends InstanceRessource {
     /**

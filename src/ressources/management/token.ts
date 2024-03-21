@@ -1,3 +1,4 @@
+import { MANAGEMENT_PATH } from '@constants';
 import { InstanceRessource, handleError } from '@helpers';
 import { type LoginTokenResponse, type ManagementLoginPayload } from '@types';
 
@@ -11,7 +12,7 @@ export class TokenRessource extends InstanceRessource {
     async token({ email, password, otp_code }: ManagementLoginPayload) {
         try {
             const { data } = await this.instance.post<LoginTokenResponse>(
-                `/token/`,
+                `${MANAGEMENT_PATH}/token/`,
                 { email, password, otp_code }
             );
             this.setToken(data.access);

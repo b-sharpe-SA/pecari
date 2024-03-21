@@ -2,12 +2,13 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.BeneficiaryRessource = void 0;
 /* eslint-disable @typescript-eslint/strict-boolean-expressions */
+const _constants_1 = require("../constants");
 const _helpers_1 = require("../helpers");
 class BeneficiaryRessource extends _helpers_1.InstanceRessource {
     constructor() {
         super(...arguments);
         this.getUrl = (customer, reference) => {
-            return `/users/customer/${customer}/beneficiary/${reference ? `${reference}/` : ''}`;
+            return `${_constants_1.PUBLIC_PATH}/users/customer/${customer}/beneficiary/${reference ? `${reference}/` : ''}`;
         };
     }
     /**

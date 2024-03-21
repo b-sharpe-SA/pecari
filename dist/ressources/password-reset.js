@@ -1,8 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.PasswordResetRessource = void 0;
+const _constants_1 = require("../constants");
 const _helpers_1 = require("../helpers");
-const BASE_URL = '/password/reset/';
+const BASE_URL = `${_constants_1.PUBLIC_PATH}/password/reset/`;
 class PasswordResetRessource extends _helpers_1.InstanceRessource {
     /**
      * Send email to reset password

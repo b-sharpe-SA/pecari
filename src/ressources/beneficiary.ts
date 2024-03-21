@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/strict-boolean-expressions */
+import { PUBLIC_PATH } from '@constants';
 import {
     concatenateQueryParams,
     handleError,
@@ -15,7 +16,7 @@ import {
 
 export class BeneficiaryRessource extends InstanceRessource {
     private readonly getUrl = (customer: string, reference?: string) => {
-        return `/users/customer/${customer}/beneficiary/${
+        return `${PUBLIC_PATH}/users/customer/${customer}/beneficiary/${
             reference ? `${reference}/` : ''
         }`;
     };

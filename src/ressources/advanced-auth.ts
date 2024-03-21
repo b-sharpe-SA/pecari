@@ -1,7 +1,8 @@
+import { PUBLIC_PATH } from '@constants';
 import { handleError, InstanceRessource } from '@helpers';
 import { type LoginTokenResponse } from '@types';
 
-const BASE_URL = 'users/user/advanced_auth';
+const BASE_URL = `${PUBLIC_PATH}/users/user/advanced_auth`;
 
 export class AdvancedAuthRessource extends InstanceRessource {
     /**

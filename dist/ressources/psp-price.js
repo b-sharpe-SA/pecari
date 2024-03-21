@@ -1,10 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.PspPriceRessource = void 0;
+const _constants_1 = require("../constants");
 const _helpers_1 = require("../helpers");
 class PspPriceRessource extends _helpers_1.InstanceRessource {
     getUrl(customer) {
-        return `/users/customer/${customer}/psp_price/`;
+        return `${_constants_1.PUBLIC_PATH}/users/customer/${customer}/psp_price/`;
     }
     /**
      * Create psp price for current customer

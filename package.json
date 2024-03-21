@@ -1,9 +1,10 @@
 {
     "name": "pecari",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "description": "Javascript sdk for cactus API",
     "main": "index.js",
     "license": "MIT",
+    "type": "module",
     "scripts": {
         "build": "tsc && tsc-alias",
         "build:watch": "tsc && (concurrently \"tsc -w\" \"tsc-alias -w\")",
@@ -33,6 +34,9 @@
         "typescript": "*"
     },
     "lint-staged": {
-        "*.ts": "eslint --fix"
-    }
+        "*.ts": [
+          "eslint --fix",
+          "prettier --write"
+        ]
+      }
 }
