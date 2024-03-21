@@ -4,4 +4,4 @@ exports.MANAGEMENT_PATH = exports.PUBLIC_PATH = exports.LANGUAGE_HEADER_KEY = ex
 exports.AUTH_HEADER_KEY = 'Authorization';
 exports.LANGUAGE_HEADER_KEY = 'Accept-Language';
 exports.PUBLIC_PATH = '/api/v2';
-exports.MANAGEMENT_PATH = '/management';
+exports.MANAGEMENT_PATH = '/management/api';
