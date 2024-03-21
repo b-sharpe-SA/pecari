@@ -17,6 +17,20 @@ class CactusClient {
         this.instance = axios_1.default.create({
             timeout: 10000,
         });
+        /**
+         * Add authorization token to global instance
+         * @param token
+         */
+        this.setToken = (token) => {
+            this.instance.defaults.headers.common[constants_1.AUTH_HEADER_KEY] = `Bearer ${token}`;
+        };
+        /**
+         * Remove authorization token to global instance
+         */
+        this.removeToken = () => {
+            // eslint-disable-next-line @typescript-eslint/no-dynamic-delete
+            delete this.instance.defaults.headers.common[constants_1.AUTH_HEADER_KEY];
+        };
         this.instanceParams = {
             instance: this.instance,
             setToken: this.setToken,
@@ -48,6 +62,8 @@ class CactusClient {
         this.baseUrl = params.baseUrl;
         this.token = params.token;
         this.language = params.language;
+        this.setToken = this.setToken.bind(this);
+        this.removeToken = this.removeToken.bind(this);
         if (this.baseUrl.length > 0) {
             this.instance.defaults.baseURL = this.baseUrl;
         }
@@ -58,20 +74,6 @@ class CactusClient {
         if (this.token != null && typeof this.token === 'string') {
             this.setToken(this.token);
         }
-    }
-    /**
-     * Add authorization token to global instance
-     * @param token
-     */
-    setToken(token) {
-        this.instance.defaults.headers.common[constants_1.AUTH_HEADER_KEY] = `Bearer ${token}`;
-    }
-    /**
-     * Remove authorization token to global instance
-     */
-    removeToken() {
-        // eslint-disable-next-line @typescript-eslint/no-dynamic-delete
-        delete this.instance.defaults.headers.common[constants_1.AUTH_HEADER_KEY];
     }
     /**
      * Update Accept-Language header for global instance

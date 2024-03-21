@@ -1,8 +1,8 @@
 import { handleError, InstanceRessource } from '@helpers';
 import {
-    CreateRateAlertPayload,
+    type CreateRateAlertPayload,
     RateAlert,
-    UpdateRateAlertPayload,
+    type UpdateRateAlertPayload,
     WithPagination,
 } from '@types';
 
@@ -15,9 +15,8 @@ export class RateAlertRessource extends InstanceRessource {
      */
     async list() {
         try {
-            const { data } = await this.instance.get<WithPagination<RateAlert>>(
-                BASE_URL
-            );
+            const { data } =
+                await this.instance.get<WithPagination<RateAlert>>(BASE_URL);
             return data;
         } catch (error) {
             throw handleError(error);

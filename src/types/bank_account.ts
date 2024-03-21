@@ -1,4 +1,4 @@
-import { BankAccount } from './common';
+import { type BankAccount } from './common';
 
 export interface BankAccountListParameters
     extends Partial<{

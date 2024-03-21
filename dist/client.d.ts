@@ -20,11 +20,11 @@ export declare class CactusClient {
      * Add authorization token to global instance
      * @param token
      */
-    setToken(token: string): void;
+    setToken: (token: string) => void;
     /**
      * Remove authorization token to global instance
      */
-    removeToken(): void;
+    removeToken: () => void;
     /**
      * Update Accept-Language header for global instance
      * @param language

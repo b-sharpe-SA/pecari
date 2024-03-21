@@ -2,8 +2,8 @@
 import { handleError, InstanceRessource } from '@helpers';
 import {
     BeneficialOwner,
-    CreateBeneficialOwnerPayload,
-    UpdateBeneficialOwnerPayload,
+    type CreateBeneficialOwnerPayload,
+    type UpdateBeneficialOwnerPayload,
     WithPagination,
 } from '@types';
 
@@ -22,9 +22,8 @@ export class BeneficialOwnerRessource extends InstanceRessource {
     async list(customer: string) {
         try {
             const url = this.getUrl(customer);
-            const { data } = await this.instance.get<
-                WithPagination<BeneficialOwner>
-            >(url);
+            const { data } =
+                await this.instance.get<WithPagination<BeneficialOwner>>(url);
             return data;
         } catch (error) {
             throw handleError(error);

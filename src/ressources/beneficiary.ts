@@ -7,9 +7,9 @@ import {
 import {
     BankAccount,
     Beneficiary,
-    CreateBankAccountPayload,
-    CreateBeneficiaryPayload,
-    ListBeneficiaryQueryParams,
+    type CreateBankAccountPayload,
+    type CreateBeneficiaryPayload,
+    type ListBeneficiaryQueryParams,
     WithPagination,
 } from '@types';
 
@@ -32,9 +32,8 @@ export class BeneficiaryRessource extends InstanceRessource {
                 this.getUrl(customer),
                 queryParams ?? {}
             );
-            const { data } = await this.instance.get<
-                WithPagination<Beneficiary>
-            >(url);
+            const { data } =
+                await this.instance.get<WithPagination<Beneficiary>>(url);
             return data;
         } catch (error) {
             throw handleError(error);

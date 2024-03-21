@@ -51,6 +51,9 @@ export class CactusClient {
         this.token = params.token;
         this.language = params.language;
 
+        this.setToken = this.setToken.bind(this);
+        this.removeToken = this.removeToken.bind(this);
+
         if (this.baseUrl.length > 0) {
             this.instance.defaults.baseURL = this.baseUrl;
         }
@@ -69,19 +72,18 @@ export class CactusClient {
      * Add authorization token to global instance
      * @param token
      */
-    setToken(token: string) {
-        this.instance.defaults.headers.common[
-            AUTH_HEADER_KEY
-        ] = `Bearer ${token}`;
-    }
+    setToken = (token: string) => {
+        this.instance.defaults.headers.common[AUTH_HEADER_KEY] =
+            `Bearer ${token}`;
+    };
 
     /**
      * Remove authorization token to global instance
      */
-    removeToken() {
+    removeToken = () => {
         // eslint-disable-next-line @typescript-eslint/no-dynamic-delete
         delete this.instance.defaults.headers.common[AUTH_HEADER_KEY];
-    }
+    };
 
     /**
      * Update Accept-Language header for global instance
