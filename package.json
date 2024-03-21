@@ -4,7 +4,6 @@
     "description": "Javascript sdk for cactus API",
     "main": "index.js",
     "license": "MIT",
-    "type": "module",
     "scripts": {
         "build": "tsc && tsc-alias",
         "build:watch": "tsc && (concurrently \"tsc -w\" \"tsc-alias -w\")",
