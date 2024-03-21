@@ -6,8 +6,8 @@ import {
 import {
     type CreateTicketPayload,
     type ListTicketsParams,
-    Ticket,
-    WithPagination,
+    type Ticket,
+    type WithPagination,
 } from '@types';
 
 export class TicketRessource extends InstanceRessource {

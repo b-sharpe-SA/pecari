@@ -1,5 +1,5 @@
 import { handleError, InstanceRessource } from '@helpers';
-import { type LoginPayload, LoginTokenResponse } from '@types';
+import { type LoginPayload, type LoginTokenResponse } from '@types';
 
 export class LoginRessource extends InstanceRessource {
     /**

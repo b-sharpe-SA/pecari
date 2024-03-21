@@ -5,8 +5,8 @@ import {
 } from '@helpers';
 import {
     type BankAccountListParameters,
-    BankAccountRessourceResponse,
-    WithPagination,
+    type BankAccountRessourceResponse,
+    type WithPagination,
 } from '@types';
 
 export class BankAccountRessource extends InstanceRessource {

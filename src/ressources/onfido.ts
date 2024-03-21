@@ -1,5 +1,5 @@
 import { handleError, InstanceRessource } from '@helpers';
-import { OnfidoSession } from '@types';
+import { type OnfidoSession } from '@types';
 
 const BASE_URL = 'users/user/onfido/';
 

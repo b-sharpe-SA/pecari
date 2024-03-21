@@ -1,5 +1,5 @@
 import { handleError, InstanceRessource } from '@helpers';
-import { Myself, type UpdateMyselfPayload } from '@types';
+import { type Myself, type UpdateMyselfPayload } from '@types';
 
 export class MyselfRessource extends InstanceRessource {
     /**
