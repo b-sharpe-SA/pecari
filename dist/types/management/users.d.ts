@@ -1,7 +1,8 @@
+export type ListUsersOrderingOptions = 'email' | 'first_name' | 'last_name' | 'identity_ok' | 'has_uploaded' | 'date_joined' | '-email' | '-first_name' | '-last_name' | '-identity_ok' | '-has_uploaded' | '-date_joined';
 export interface ListUsersQueryParams extends Record<string, any> {
     limit?: number;
     offset?: number;
-    ordering?: "email" | "first_name" | "last_name" | "identity_ok" | "has_uploaded" | "date_joined" | "-email" | "-first_name" | "-last_name" | "-identity_ok" | "-has_uploaded" | "-date_joined";
+    ordering?: ListUsersOrderingOptions;
     search?: string;
     identity_ok?: boolean;
     has_uploaded?: boolean;
