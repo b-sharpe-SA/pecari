@@ -49,3 +49,7 @@ export interface Permission {
     id: number;
     name: string;
 }
+export interface CreateUserAccountPayload {
+    email: string;
+    password: string;
+}
