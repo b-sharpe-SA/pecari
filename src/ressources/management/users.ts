@@ -7,7 +7,7 @@ import {
 import {
     type WithPagination,
     type ListUsersQueryParams,
-    type UsersAccount,
+    type AdminRestrictedUser,
     type CreateUserAccountPayload,
 } from '@types';
 
@@ -24,7 +24,9 @@ export class UsersRessource extends InstanceRessource {
         try {
             const url = concatenateQueryParams(BASE_URL, queryParams ?? {});
             const { data } =
-                await this.instance.get<WithPagination<UsersAccount>>(url);
+                await this.instance.get<WithPagination<AdminRestrictedUser>>(
+                    url
+                );
             return data;
         } catch (error) {
             throw handleError(error);
@@ -38,8 +40,26 @@ export class UsersRessource extends InstanceRessource {
      */
     async create(payload: CreateUserAccountPayload) {
         try {
-            const { data } = await this.instance.post<UsersAccount>(
+            const { data } = await this.instance.post<AdminRestrictedUser>(
                 BASE_URL,
+                payload
+            );
+            return data;
+        } catch (error) {
+            throw handleError(error);
+        }
+    }
+
+    /**
+     * Update a user by id
+     * @param id
+     * @param payload
+     * @returns
+     */
+    async update(id: string, payload: Partial<AdminRestrictedUser>) {
+        try {
+            const { data } = await this.instance.patch<AdminRestrictedUser>(
+                `${BASE_URL}${id}/`,
                 payload
             );
             return data;

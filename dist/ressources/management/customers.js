@@ -1,16 +1,15 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UsersRessource = void 0;
+exports.CustomersRessource = void 0;
 const _constants_1 = require("../../constants");
 const _helpers_1 = require("../../helpers");
-const BASE_URL = `${_constants_1.MANAGEMENT_PATH}/users/`;
-class UsersRessource extends _helpers_1.InstanceRessource {
+const BASE_URL = `${_constants_1.MANAGEMENT_PATH}/customers/`;
+class CustomersRessource extends _helpers_1.InstanceRessource {
     /**
      * List users with filters
      * @param payload - { limit, offset, ordering, search }
      * @returns
      */
-    // eslint-disable-next-line @typescript-eslint/naming-convention
     async list(queryParams) {
         try {
             const url = (0, _helpers_1.concatenateQueryParams)(BASE_URL, queryParams ?? {});
@@ -22,13 +21,14 @@ class UsersRessource extends _helpers_1.InstanceRessource {
         }
     }
     /**
-     * Create a user in cactus
-     * @param payload { email, password }
+     * Get a customer by id
+     * @param id
      * @returns
      */
-    async create(payload) {
+    async get(id) {
         try {
-            const { data } = await this.instance.post(BASE_URL, payload);
+            const url = `${BASE_URL}${id}/`;
+            const { data } = await this.instance.get(url);
             return data;
         }
         catch (error) {
@@ -36,14 +36,29 @@ class UsersRessource extends _helpers_1.InstanceRessource {
         }
     }
     /**
-     * Update a user by id
+     * Update a customer by id
      * @param id
-     * @param payload
      * @returns
      */
-    async update(id, payload) {
+    async update(id, customer) {
         try {
-            const { data } = await this.instance.patch(`${BASE_URL}${id}/`, payload);
+            const url = `${BASE_URL}${id}/`;
+            const { data } = await this.instance.patch(url, customer);
+            return data;
+        }
+        catch (error) {
+            throw (0, _helpers_1.handleError)(error);
+        }
+    }
+    /**
+     * Delete a customer by id
+     * @param id
+     * @returns
+     */
+    async delete(id) {
+        try {
+            const url = `${BASE_URL}${id}/`;
+            const { data } = await this.instance.delete(url);
             return data;
         }
         catch (error) {
@@ -51,4 +66,4 @@ class UsersRessource extends _helpers_1.InstanceRessource {
         }
     }
 }
-exports.UsersRessource = UsersRessource;
+exports.CustomersRessource = CustomersRessource;
