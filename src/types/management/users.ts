@@ -21,7 +21,7 @@ export interface ListUsersQueryParams extends Record<string, any> {
     has_uploaded?: boolean;
 }
 
-export interface UsersAccount {
+export interface AdminRestrictedUser {
     id: number;
     email: string;
     title: string;
