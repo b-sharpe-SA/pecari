@@ -1,5 +1,5 @@
 import { InstanceRessource } from '../helpers';
-import { BankAccount, Beneficiary, type CreateBankAccountPayload, type CreateBeneficiaryPayload, type ListBeneficiaryQueryParams, WithPagination } from '../types';
+import { type BankAccount, type Beneficiary, type CreateBankAccountPayload, type CreateBeneficiaryPayload, type ListBeneficiaryQueryParams, type WithPagination } from '../types';
 export declare class BeneficiaryRessource extends InstanceRessource {
     private readonly getUrl;
     /**

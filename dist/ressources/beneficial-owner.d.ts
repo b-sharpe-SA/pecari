@@ -1,5 +1,5 @@
 import { InstanceRessource } from '../helpers';
-import { BeneficialOwner, type CreateBeneficialOwnerPayload, type UpdateBeneficialOwnerPayload, WithPagination } from '../types';
+import { type BeneficialOwner, type CreateBeneficialOwnerPayload, type UpdateBeneficialOwnerPayload, type WithPagination } from '../types';
 export declare class BeneficialOwnerRessource extends InstanceRessource {
     private getUrl;
     /**

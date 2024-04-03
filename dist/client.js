@@ -22,7 +22,8 @@ class CactusClient {
          * @param token
          */
         this.setToken = (token) => {
-            this.instance.defaults.headers.common[constants_1.AUTH_HEADER_KEY] = `Bearer ${token}`;
+            this.instance.defaults.headers.common[constants_1.AUTH_HEADER_KEY] =
+                `Bearer ${token}`;
         };
         /**
          * Remove authorization token to global instance
