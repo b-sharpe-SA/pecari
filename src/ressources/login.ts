@@ -1,6 +1,11 @@
 import { PUBLIC_PATH } from '@constants';
 import { handleError, InstanceRessource } from '@helpers';
-import { LoginPayload, LoginTokenResponse } from '@types';
+import {
+    type RefreshTokenPayload,
+    type LoginPayload,
+    type LoginTokenResponse,
+    type RefreshTokenResponse,
+} from '@types';
 
 export class LoginRessource extends InstanceRessource {
     /**
@@ -14,7 +19,25 @@ export class LoginRessource extends InstanceRessource {
                 `${PUBLIC_PATH}/login/token/`,
                 { email, password }
             );
-            this.setToken(data.access);
+            this.handleTokens(data.access, data.refresh);
+            return data;
+        } catch (error) {
+            throw handleError(error);
+        }
+    }
+
+    /**
+     * Try to refresh token
+     * @param payload - { refresh }
+     * @returns access and refresh token
+     */
+    async refreshToken({ refresh }: RefreshTokenPayload) {
+        try {
+            const { data } = await this.instance.post<RefreshTokenResponse>(
+                `${PUBLIC_PATH}/login/token/refresh/`,
+                { refresh }
+            );
+            this.handleTokens(data.access);
             return data;
         } catch (error) {
             throw handleError(error);

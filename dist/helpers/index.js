@@ -17,10 +17,10 @@ function handleError(error) {
 }
 exports.handleError = handleError;
 class InstanceRessource {
-    constructor({ instance, setToken, removeToken }) {
+    constructor({ instance, handleTokens, logout, }) {
         this.instance = instance;
-        this.setToken = setToken;
-        this.removeToken = removeToken;
+        this.handleTokens = handleTokens;
+        this.logout = logout;
     }
 }
 exports.InstanceRessource = InstanceRessource;

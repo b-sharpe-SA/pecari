@@ -36,8 +36,8 @@ export interface Utm {
 
 export interface InstanceRessourceParams {
     instance: AxiosInstance;
-    setToken: (token: string) => void;
-    removeToken: () => void;
+    handleTokens: (access: string, refresh?: string) => void;
+    logout: () => void;
 }
 
 export type TransactionType = 'sell' | 'buy';

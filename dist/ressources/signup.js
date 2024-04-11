@@ -8,7 +8,7 @@ class SignupRessource extends _helpers_1.InstanceRessource {
         try {
             const { data } = await this.instance.post(`${_constants_1.PUBLIC_PATH}/users/user/signup/`, payload);
             if (payload.auth_method === 'jwt') {
-                this.setToken(data.access);
+                this.handleTokens(data.access);
             }
             return data;
         }

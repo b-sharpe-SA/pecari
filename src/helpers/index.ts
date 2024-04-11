@@ -13,13 +13,13 @@ export function handleError(error: any): CactusError {
 
 export class InstanceRessource {
     readonly instance: AxiosInstance;
-    setToken: (token: string) => void;
-    removeToken: () => void;
+    handleTokens: (access: string, refersh?: string) => void;
+    logout: () => void;
 
-    constructor({ instance, setToken, removeToken }: InstanceRessourceParams) {
+    constructor({ instance, handleTokens, logout }: InstanceRessourceParams) {
         this.instance = instance;
-        this.setToken = setToken;
-        this.removeToken = removeToken;
+        this.handleTokens = handleTokens;
+        this.logout = logout;
     }
 }
 

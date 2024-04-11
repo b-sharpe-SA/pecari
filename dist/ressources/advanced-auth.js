@@ -28,7 +28,7 @@ class AdvancedAuthRessource extends _helpers_1.InstanceRessource {
             const { data } = await this.instance.post(`${BASE_URL}/verify/`, {
                 otp_code: code,
             });
-            this.setToken(data.access);
+            this.handleTokens(data.access, data.refresh);
             return data;
         }
         catch (error) {
