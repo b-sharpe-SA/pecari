@@ -4,13 +4,19 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CactusClient = void 0;
+/* eslint-disable @typescript-eslint/return-await */
 const axios_1 = __importDefault(require("axios"));
 const _ressources_1 = require("./ressources");
 const constants_1 = require("./constants");
+const errors_1 = require("./types/errors");
 /**
  * Client definition
  * @property {string} baseUrl - base url to fetch cactus api
  * @property {string} token - set default authorization token
+ * @property {string} refreshToken - pass refresh token that will be used in interceptor in case of expired token
+ * @property {string} language - set default language for all requests
+ * @property {string} saveTokens - function to save tokens in local storage
+ * @property {string} onLogout - callback function to call when logout is called (eg. reset tokens from local storage)
  */
 class CactusClient {
     constructor(params) {
@@ -18,7 +24,7 @@ class CactusClient {
             timeout: 10000,
         });
         /**
-         * Add authorization token to global instance
+         * Add access token to axios global instance headers
          * @param token
          */
         this.setToken = (token) => {
@@ -26,16 +32,42 @@ class CactusClient {
                 `Bearer ${token}`;
         };
         /**
-         * Remove authorization token to global instance
+         * Set refresh token, it will be used in interceptor in case of expired token
+         * @param refreshToken
          */
-        this.removeToken = () => {
+        this.setRefreshToken = (refreshToken) => {
+            this.refreshToken = refreshToken;
+        };
+        /**
+         * This function is called only from pecari login and refresh token
+         * @param access
+         * @param refresh
+         */
+        this.handleTokens = (access, refresh) => {
+            if (this.saveTokens != null) {
+                this.saveTokens(access, refresh);
+            }
+            this.setToken(access);
+            if (refresh != null) {
+                this.setRefreshToken(refresh);
+            }
+        };
+        /**
+         * You can call this function to remove access token from axios global instance headers
+         *
+         * It will also call resetTokens function if it is provided in constructor
+         */
+        this.logout = () => {
             // eslint-disable-next-line @typescript-eslint/no-dynamic-delete
             delete this.instance.defaults.headers.common[constants_1.AUTH_HEADER_KEY];
+            if (this.onLogout != null) {
+                this.onLogout();
+            }
         };
         this.instanceParams = {
             instance: this.instance,
-            setToken: this.setToken,
-            removeToken: this.removeToken,
+            handleTokens: this.handleTokens,
+            logout: this.logout,
         };
         this.login = new _ressources_1.LoginRessource(this.instanceParams);
         this.myself = new _ressources_1.MyselfRessource(this.instanceParams);
@@ -61,21 +93,46 @@ class CactusClient {
         this.appCompatibility = new _ressources_1.AppCompatibilityResource(this.instanceParams);
         this.phoneNumber = new _ressources_1.PhoneNumberRessource(this.instanceParams);
         this.management = new _ressources_1.ManagementRessource(this.instanceParams);
+        // initialize client with params
         this.baseUrl = params.baseUrl;
-        this.token = params.token;
+        this.refreshToken = params.refreshToken;
         this.language = params.language;
-        this.setToken = this.setToken.bind(this);
-        this.removeToken = this.removeToken.bind(this);
-        if (this.baseUrl.length > 0) {
-            this.instance.defaults.baseURL = this.baseUrl;
-        }
+        this.saveTokens = params.saveTokens;
+        this.onLogout = params.onLogout;
+        // set default base url, language and token to global axios instance
+        this.instance.defaults.baseURL = this.baseUrl;
         if (this.language != null) {
             this.instance.defaults.headers.common[constants_1.LANGUAGE_HEADER_KEY] =
                 this.language;
         }
-        if (this.token != null && typeof this.token === 'string') {
-            this.setToken(this.token);
+        if (params.token != null) {
+            this.setToken(params.token);
         }
+        // Intercetor to handle expired token and try to refresh it
+        // TODO: Stop incoming requests while refreshing token
+        this.instance.interceptors.response.use(undefined, async (err) => {
+            if (err.response?.data.code === errors_1.ErrorCodes.AUTH_TOKEN_EXPIRED &&
+                this.refreshToken != null) {
+                try {
+                    const { access } = await this.login.refreshToken({
+                        refresh: this.refreshToken,
+                    });
+                    const config = err.config;
+                    if (config.headers != null) {
+                        config.headers[constants_1.AUTH_HEADER_KEY] =
+                            `Bearer ${access}`;
+                    }
+                    const data = await this.instance.request(config);
+                    return Promise.resolve(data);
+                }
+                catch (err) {
+                    return Promise.reject(err);
+                }
+            }
+            else {
+                return Promise.reject(err);
+            }
+        });
     }
     /**
      * Update Accept-Language header for global instance

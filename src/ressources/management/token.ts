@@ -15,7 +15,7 @@ export class TokenRessource extends InstanceRessource {
                 `${MANAGEMENT_PATH}/token/`,
                 { email, password, otp_code }
             );
-            this.setToken(data.access);
+            this.handleTokens(data.access, data.refresh);
             return data;
         } catch (error) {
             throw handleError(error);

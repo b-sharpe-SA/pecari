@@ -31,7 +31,7 @@ export class AdvancedAuthRessource extends InstanceRessource {
                     otp_code: code,
                 }
             );
-            this.setToken(data.access);
+            this.handleTokens(data.access, data.refresh);
             return data;
         } catch (error) {
             throw handleError(error);

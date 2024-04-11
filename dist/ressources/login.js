@@ -12,7 +12,22 @@ class LoginRessource extends _helpers_1.InstanceRessource {
     async token({ email, password }) {
         try {
             const { data } = await this.instance.post(`${_constants_1.PUBLIC_PATH}/login/token/`, { email, password });
-            this.setToken(data.access);
+            this.handleTokens(data.access, data.refresh);
+            return data;
+        }
+        catch (error) {
+            throw (0, _helpers_1.handleError)(error);
+        }
+    }
+    /**
+     * Try to refresh token
+     * @param payload - { refresh }
+     * @returns access and refresh token
+     */
+    async refreshToken({ refresh }) {
+        try {
+            const { data } = await this.instance.post(`${_constants_1.PUBLIC_PATH}/login/token/refresh/`, { refresh });
+            this.handleTokens(data.access);
             return data;
         }
         catch (error) {

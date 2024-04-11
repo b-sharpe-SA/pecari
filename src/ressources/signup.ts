@@ -10,7 +10,7 @@ export class SignupRessource extends InstanceRessource {
                 payload
             );
             if (payload.auth_method === 'jwt') {
-                this.setToken(data.access);
+                this.handleTokens(data.access);
             }
             return data;
         } catch (error) {

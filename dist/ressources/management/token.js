@@ -13,7 +13,7 @@ class TokenRessource extends _helpers_1.InstanceRessource {
     async token({ email, password, otp_code }) {
         try {
             const { data } = await this.instance.post(`${_constants_1.MANAGEMENT_PATH}/token/`, { email, password, otp_code });
-            this.setToken(data.access);
+            this.handleTokens(data.access, data.refresh);
             return data;
         }
         catch (error) {

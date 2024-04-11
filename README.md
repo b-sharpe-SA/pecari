@@ -27,10 +27,14 @@ To make requests with Pecari you have to initialize a new client and then use th
 import CactusClient from 'pecari/dist';
 
 // Initialize new client
-export const cactusClient = new CactusClient(
-    BASE_URL, // staging or production url
-    SESSION_TOKEN // Authentification token (can be undefined)
-);
+export const cactusClient = new CactusClient({
+    baseUrl: 'cactus.b-sharpe.com',
+    token: 'optional access token', // If pass will be set in axios global config headers
+    refreshToken: 'optional refresh token' // If pass will be saved in cactus instance and will be used if access token is expired
+    language: 'en' // If pass will be set in axios global config headers
+    saveTokens: (access: string, refresh?: string) => saveTokensToLocalStorage(access, refresh), // This function will be trigger on login success or refresh token success. This callback is useful to save tokens in localstorage to keep user signed in.
+    onLogout: () => handleLogout() // This function will be trigger when calling cactusClient.logout() from any projects or when pecari failed to refresh token or failed any requests with error invalid token
+});
 ```
 
 Make requests
@@ -50,7 +54,7 @@ This client exports methods to make requests and manage authorization token
 ```js
 /**
  * Login user
- * On success it calls cactusClient.setToken()
+ * On success it calls cactusClient.handleTokens()
  * No need to call it yourself
  */
 cactusClient.login.token();
@@ -65,7 +69,7 @@ cactusClient.setToken('your token');
 ```
 
 ```js
-cactusClient.removeToken(); // Remove token
+cactusClient.logout(); // Remove token from axios instance and call onLogout callback
 ```
 
 ## Release

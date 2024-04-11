@@ -3,28 +3,50 @@ import { LoginRessource, MyselfRessource, CustomerRessource, AdvancedAuthRessour
 interface CactusClientParams {
     baseUrl: string;
     token?: string;
+    refreshToken?: string;
     language?: string;
+    saveTokens?: (access: string, refresh?: string) => void;
+    onLogout?: () => void;
 }
 /**
  * Client definition
  * @property {string} baseUrl - base url to fetch cactus api
  * @property {string} token - set default authorization token
+ * @property {string} refreshToken - pass refresh token that will be used in interceptor in case of expired token
+ * @property {string} language - set default language for all requests
+ * @property {string} saveTokens - function to save tokens in local storage
+ * @property {string} onLogout - callback function to call when logout is called (eg. reset tokens from local storage)
  */
 export declare class CactusClient {
     private readonly baseUrl;
-    private readonly token?;
+    private refreshToken?;
     private readonly language?;
+    private readonly saveTokens?;
+    private readonly onLogout?;
     readonly instance: AxiosInstance;
     constructor(params: CactusClientParams);
     /**
-     * Add authorization token to global instance
+     * Add access token to axios global instance headers
      * @param token
      */
     setToken: (token: string) => void;
     /**
-     * Remove authorization token to global instance
+     * Set refresh token, it will be used in interceptor in case of expired token
+     * @param refreshToken
      */
-    removeToken: () => void;
+    setRefreshToken: (refreshToken: string) => void;
+    /**
+     * This function is called only from pecari login and refresh token
+     * @param access
+     * @param refresh
+     */
+    handleTokens: (access: string, refresh?: string) => void;
+    /**
+     * You can call this function to remove access token from axios global instance headers
+     *
+     * It will also call resetTokens function if it is provided in constructor
+     */
+    logout: () => void;
     /**
      * Update Accept-Language header for global instance
      * @param language
@@ -32,8 +54,8 @@ export declare class CactusClient {
     setLanguage(language: string): void;
     instanceParams: {
         instance: AxiosInstance;
-        setToken: (token: string) => void;
-        removeToken: () => void;
+        handleTokens: (access: string, refresh?: string) => void;
+        logout: () => void;
     };
     login: LoginRessource;
     myself: MyselfRessource;
