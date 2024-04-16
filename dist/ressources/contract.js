@@ -1,10 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ContractRessource = void 0;
+const _constants_1 = require("../constants");
 const _helpers_1 = require("../helpers");
 class ContractRessource extends _helpers_1.InstanceRessource {
     getUrl(customer) {
-        return `users/customer/${customer}/contract/`;
+        return `${_constants_1.PUBLIC_PATH}/users/customer/${customer}/contract/`;
     }
     /**
      * Get contract

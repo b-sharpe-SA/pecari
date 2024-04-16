@@ -1,10 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.BankAccountRessource = void 0;
+const _constants_1 = require("../constants");
 const _helpers_1 = require("../helpers");
 class BankAccountRessource extends _helpers_1.InstanceRessource {
     getUrl(customer, bankAccount) {
-        return `/users/customer/${customer}/bank_account/${bankAccount != null ? `${bankAccount}/` : ''}`;
+        return `${_constants_1.PUBLIC_PATH}/users/customer/${customer}/bank_account/${bankAccount != null ? `${bankAccount}/` : ''}`;
     }
     /**
      * List bank accounts for specific customer

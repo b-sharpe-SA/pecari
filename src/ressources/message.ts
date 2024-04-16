@@ -1,3 +1,4 @@
+import { PUBLIC_PATH } from '@constants';
 import { handleError, InstanceRessource } from '@helpers';
 import { Message } from '@types';
 
@@ -10,7 +11,7 @@ export class MessageRessource extends InstanceRessource {
     async post(payload: Message) {
         try {
             const { data } = await this.instance.post<Message>(
-                'message/',
+                `${PUBLIC_PATH}/message/`,
                 payload
             );
             return data;

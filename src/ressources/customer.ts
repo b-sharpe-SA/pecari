@@ -1,5 +1,8 @@
+import { PUBLIC_PATH } from '@constants';
 import { handleError, InstanceRessource } from '@helpers';
 import { Customer, UpdateCustomerPayload, WithPagination } from '@types';
+
+const BASE_URL = `${PUBLIC_PATH}/users/customer/`;
 
 export class CustomerRessource extends InstanceRessource {
     /**
@@ -9,7 +12,7 @@ export class CustomerRessource extends InstanceRessource {
     async list() {
         try {
             const { data } = await this.instance.get<WithPagination<Customer>>(
-                'users/customer/'
+                BASE_URL
             );
             return data;
         } catch (error) {
@@ -25,7 +28,7 @@ export class CustomerRessource extends InstanceRessource {
     async get(reference: string) {
         try {
             const { data } = await this.instance.get<Customer>(
-                `users/customer/${reference}/`
+                `${BASE_URL}${reference}/`
             );
             return data;
         } catch (error) {
@@ -42,7 +45,7 @@ export class CustomerRessource extends InstanceRessource {
     async update(reference: string, payload: UpdateCustomerPayload) {
         try {
             const { data } = await this.instance.patch<Customer>(
-                `users/customer/${reference}/`,
+                `${BASE_URL}${reference}/`,
                 { ...payload }
             );
             return data;

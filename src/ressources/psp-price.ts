@@ -1,9 +1,10 @@
+import { PUBLIC_PATH } from '@constants';
 import { handleError, InstanceRessource } from '@helpers';
 import { CreatePspPricePayload, PspPrice } from '@types';
 
 export class PspPriceRessource extends InstanceRessource {
     private getUrl(customer: string) {
-        return `/users/customer/${customer}/psp_price/`;
+        return `${PUBLIC_PATH}/users/customer/${customer}/psp_price/`;
     }
 
     /**

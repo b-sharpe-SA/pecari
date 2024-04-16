@@ -1,7 +1,8 @@
+import { PUBLIC_PATH } from '@constants';
 import { handleError, InstanceRessource } from '@helpers';
 import { OnfidoSession } from '@types';
 
-const BASE_URL = 'users/user/onfido/';
+const BASE_URL = `${PUBLIC_PATH}/users/user/onfido/`;
 
 export class OnfidoRessource extends InstanceRessource {
     /**

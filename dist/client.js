@@ -17,6 +17,21 @@ class CactusClient {
         this.instance = axios_1.default.create({
             timeout: 10000,
         });
+        /**
+         * Add authorization token to global instance
+         * @param token
+         */
+        this.setToken = (token) => {
+            this.instance.defaults.headers.common[constants_1.AUTH_HEADER_KEY] =
+                `Bearer ${token}`;
+        };
+        /**
+         * Remove authorization token to global instance
+         */
+        this.removeToken = () => {
+            // eslint-disable-next-line @typescript-eslint/no-dynamic-delete
+            delete this.instance.defaults.headers.common[constants_1.AUTH_HEADER_KEY];
+        };
         this.instanceParams = {
             instance: this.instance,
             setToken: this.setToken,
@@ -45,6 +60,7 @@ class CactusClient {
         this.bankAccount = new _ressources_1.BankAccountRessource(this.instanceParams);
         this.appCompatibility = new _ressources_1.AppCompatibilityResource(this.instanceParams);
         this.phoneNumber = new _ressources_1.PhoneNumberRessource(this.instanceParams);
+        this.management = new _ressources_1.ManagementRessource(this.instanceParams);
         this.baseUrl = params.baseUrl;
         this.token = params.token;
         this.language = params.language;

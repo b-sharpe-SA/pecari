@@ -1,7 +1,8 @@
+import { PUBLIC_PATH } from '@constants';
 import { handleError, InstanceRessource } from '@helpers';
 import { UpdatePasswordPayload } from '@types';
 
-const BASE_URL = 'users/user/update_password/';
+const BASE_URL = `${PUBLIC_PATH}/users/user/update_password/`;
 
 export class UpdatePasswordRessource extends InstanceRessource {
     async update(payload: UpdatePasswordPayload) {

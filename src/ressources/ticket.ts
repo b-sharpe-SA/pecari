@@ -1,3 +1,4 @@
+import { PUBLIC_PATH } from '@constants';
 import {
     concatenateQueryParams,
     handleError,
@@ -12,7 +13,9 @@ import {
 
 export class TicketRessource extends InstanceRessource {
     private getUrl(customerRef: string, ticketRef?: string) {
-        return `users/customer/${customerRef}/ticket/${ticketRef ?? ''}`;
+        return `${PUBLIC_PATH}/users/customer/${customerRef}/ticket/${
+            ticketRef ?? ''
+        }`;
     }
 
     /**

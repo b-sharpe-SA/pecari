@@ -1,13 +1,14 @@
+import { PUBLIC_PATH } from '@constants';
 import { handleError, InstanceRessource } from '@helpers';
-import type {
-    Contract,
-    SignContractPayload,
-    SignContractResponse,
+import {
+    type Contract,
+    type SignContractPayload,
+    type SignContractResponse,
 } from '@types';
 
 export class ContractRessource extends InstanceRessource {
     private getUrl(customer: string) {
-        return `users/customer/${customer}/contract/`;
+        return `${PUBLIC_PATH}/users/customer/${customer}/contract/`;
     }
 
     /**
