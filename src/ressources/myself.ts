@@ -1,5 +1,8 @@
+import { PUBLIC_PATH } from '@constants';
 import { handleError, InstanceRessource } from '@helpers';
 import { type Myself, type UpdateMyselfPayload } from '@types';
+
+const BASE_URL = `${PUBLIC_PATH}/users/user/myself/`;
 
 export class MyselfRessource extends InstanceRessource {
     /**
@@ -8,8 +11,7 @@ export class MyselfRessource extends InstanceRessource {
      */
     async get() {
         try {
-            const { data } =
-                await this.instance.get<Myself>('users/user/myself/');
+            const { data } = await this.instance.get<Myself>(BASE_URL);
             return data;
         } catch (error) {
             throw handleError(error);
@@ -24,7 +26,7 @@ export class MyselfRessource extends InstanceRessource {
     async update(payload: UpdateMyselfPayload) {
         try {
             const { data } = await this.instance.patch<Myself>(
-                'users/user/myself/',
+                BASE_URL,
                 payload
             );
             return data;
@@ -42,7 +44,7 @@ export class MyselfRessource extends InstanceRessource {
      */
     async delete() {
         try {
-            const { data } = await this.instance.delete('users/user/myself/');
+            const { data } = await this.instance.delete(BASE_URL);
             return data;
         } catch (error) {
             throw handleError(error);

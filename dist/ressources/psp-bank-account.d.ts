@@ -1,5 +1,5 @@
 import { InstanceRessource } from '../helpers';
-import { PspBankAccount } from '../types';
+import { type PspBankAccount } from '../types';
 export declare class PspBankAccountRessource extends InstanceRessource {
     /**
      * Get psp bank account by currency
