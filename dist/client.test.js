@@ -67,7 +67,7 @@ describe('global/token management', () => {
         await cactusClient.management.token.token({
             email: '',
             password: '',
-            otp_code: ''
+            otp_code: '',
         });
         expect(saveTokens).toHaveBeenCalledWith(VALID_ACCESS_TOKEN, REFRESH_TOKEN);
     });
@@ -77,7 +77,7 @@ describe('management/customers ressource', () => {
         const onLogout = jest.fn();
         const cactusClient = new client_1.CactusClient({
             baseUrl: BASE_API_URL,
-            onLogout
+            onLogout,
         });
         try {
             const data = await cactusClient.management.customers.list({});
