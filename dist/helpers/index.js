@@ -17,7 +17,7 @@ function handleError(error) {
 }
 exports.handleError = handleError;
 class InstanceRessource {
-    constructor({ instance, handleTokens, logout, }) {
+    constructor({ instance, handleTokens, logout }) {
         this.instance = instance;
         this.handleTokens = handleTokens;
         this.logout = logout;

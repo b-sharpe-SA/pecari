@@ -43,7 +43,7 @@ const handlers: HttpHandler[] = [
         `${BASE_API_URL}/api/v2/login/token/refresh/`,
         // intercepted request, and decides how to handle it.
         async ({ request, params, cookies }) => {
-            const { refresh } = await request.json();
+            const { refresh } = (await request.json()) as any;
             if (refresh === REFRESH_TOKEN) {
                 return HttpResponse.json({
                     access: VALID_ACCESS_TOKEN,

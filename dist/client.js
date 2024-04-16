@@ -24,14 +24,6 @@ class CactusClient {
             timeout: 10000,
         });
         /**
-         * Add access token to axios global instance headers
-         * @param token
-         */
-        this.setToken = (token) => {
-            this.instance.defaults.headers.common[constants_1.AUTH_HEADER_KEY] =
-                `Bearer ${token}`;
-        };
-        /**
          * Set refresh token, it will be used in interceptor in case of expired token
          * @param refreshToken
          */
@@ -119,8 +111,7 @@ class CactusClient {
                     });
                     const config = err.config;
                     if (config.headers != null) {
-                        config.headers[constants_1.AUTH_HEADER_KEY] =
-                            `Bearer ${access}`;
+                        config.headers[constants_1.AUTH_HEADER_KEY] = `Bearer ${access}`;
                     }
                     const data = await this.instance.request(config);
                     return Promise.resolve(data);
@@ -135,18 +126,18 @@ class CactusClient {
         });
     }
     /**
-     * Update Accept-Language header for global instance
-     * @param language
+     * Add access token to axios global instance headers
+     * @param token
      */
     setToken(token) {
         this.instance.defaults.headers.common[constants_1.AUTH_HEADER_KEY] = `Bearer ${token}`;
     }
     /**
-     * Remove authorization token to global instance
+     * Update Accept-Language header for global instance
+     * @param language
      */
-    removeToken() {
-        // eslint-disable-next-line @typescript-eslint/no-dynamic-delete
-        delete this.instance.defaults.headers.common[constants_1.AUTH_HEADER_KEY];
+    setLanguage(language) {
+        this.instance.defaults.headers.common[constants_1.LANGUAGE_HEADER_KEY] = language;
     }
 }
 exports.CactusClient = CactusClient;

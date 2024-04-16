@@ -1,5 +1,5 @@
 import { InstanceRessource } from '../helpers';
-import { type OnfidoSession } from '../types';
+import { OnfidoSession } from '../types';
 export declare class OnfidoRessource extends InstanceRessource {
     /**
      * Get the user onfido SDK token and applicant ID.
