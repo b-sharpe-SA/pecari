@@ -17,3 +17,4 @@ Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./token"), exports);
 __exportStar(require("./users"), exports);
 __exportStar(require("./customers"), exports);
+__exportStar(require("./beneficiaries"), exports);
