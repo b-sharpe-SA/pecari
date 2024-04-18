@@ -1,12 +1,12 @@
 import { InstanceRessource } from '../../helpers';
-import { type WithPagination, type ListCustomersQueryParams, type AdminRestrictedBeneficiary } from '../../types';
+import { type WithPagination, type AdminRestrictedBeneficiary, type ListBeneficiariesQueryParams } from '../../types';
 export declare class BeneficiariesRessource extends InstanceRessource {
     /**
      * List beneficiaries with filters
      * @param payload - { limit, offset, ordering, search }
      * @returns
      */
-    list(queryParams: ListCustomersQueryParams): Promise<WithPagination<AdminRestrictedBeneficiary>>;
+    list(queryParams: ListBeneficiariesQueryParams): Promise<WithPagination<AdminRestrictedBeneficiary>>;
     /**
      * Get a beneficiary by id
      * @param id

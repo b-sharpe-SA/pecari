@@ -6,8 +6,8 @@ import {
 } from '@helpers';
 import {
     type WithPagination,
-    type ListCustomersQueryParams,
     type AdminRestrictedBeneficiary,
+    type ListBeneficiariesQueryParams,
 } from '@types';
 
 const BASE_URL = `${MANAGEMENT_PATH}/beneficiaries/`;
@@ -18,7 +18,7 @@ export class BeneficiariesRessource extends InstanceRessource {
      * @param payload - { limit, offset, ordering, search }
      * @returns
      */
-    async list(queryParams: ListCustomersQueryParams) {
+    async list(queryParams: ListBeneficiariesQueryParams) {
         try {
             const url = concatenateQueryParams(BASE_URL, queryParams ?? {});
             const { data } =

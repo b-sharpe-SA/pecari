@@ -1,5 +1,5 @@
-import { type Beneficiary } from "../beneficiary";
-import { type AdminRestrictedCustomer } from "./customers";
+import { type Beneficiary } from '../beneficiary';
+import { type AdminRestrictedCustomer } from './customers';
 export interface AdminRestrictedBeneficiary extends Omit<Beneficiary, 'customer'> {
     customer: AdminRestrictedCustomer;
 }
