@@ -1,0 +1,21 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DocumentType = void 0;
+var DocumentType;
+(function (DocumentType) {
+    DocumentType[DocumentType["KYCReport"] = 1] = "KYCReport";
+    DocumentType[DocumentType["AttestationDH\u00E9bergement"] = 3] = "AttestationDH\u00E9bergement";
+    DocumentType[DocumentType["CIH\u00E9bergeur"] = 4] = "CIH\u00E9bergeur";
+    DocumentType[DocumentType["ExtraitRegistreDuCommerceKbis"] = 5] = "ExtraitRegistreDuCommerceKbis";
+    DocumentType[DocumentType["JustificatifDeDomicile"] = 6] = "JustificatifDeDomicile";
+    DocumentType[DocumentType["PieceDIdentit\u00E9"] = 7] = "PieceDIdentit\u00E9";
+    DocumentType[DocumentType["RecherchesM\u00E9dias"] = 10] = "RecherchesM\u00E9dias";
+    DocumentType[DocumentType["CorrespondancesMail"] = 12] = "CorrespondancesMail";
+    DocumentType[DocumentType["ActeDeVenteImmobilier"] = 13] = "ActeDeVenteImmobilier";
+    DocumentType[DocumentType["FormulaireProfilDeRisqueClient"] = 14] = "FormulaireProfilDeRisqueClient";
+    DocumentType[DocumentType["HistoriqueTransactionsBSharpe"] = 15] = "HistoriqueTransactionsBSharpe";
+    DocumentType[DocumentType["FactureQR"] = 16] = "FactureQR";
+    DocumentType[DocumentType["ActeDeD\u00E9c\u00E8s"] = 17] = "ActeDeD\u00E9c\u00E8s";
+    DocumentType[DocumentType["DocFamille"] = 18] = "DocFamille";
+    DocumentType[DocumentType["PaiementFacture"] = 19] = "PaiementFacture";
+})(DocumentType || (exports.DocumentType = DocumentType = {}));

@@ -23,13 +23,15 @@ class UploadRessource extends _helpers_1.InstanceRessource {
             if (file instanceof File) {
                 formData = new FormData();
                 formData.append('file', file);
-                formData.append('type', type);
+                formData.append('type', type.toString());
             }
             else {
                 formData = file;
-                formData.append('type', type);
+                formData.append('type', type.toString());
             }
-            const { data } = await this.instance.post(url, formData, { headers });
+            const { data } = await this.instance.post(url, formData, {
+                headers,
+            });
             return data;
         }
         catch (error) {

@@ -1,4 +1,5 @@
 import { InstanceRessource } from '../helpers';
+import { type DocumentType } from '../types';
 export declare class UploadRessource extends InstanceRessource {
     private getUrl;
     /**
@@ -7,5 +8,5 @@ export declare class UploadRessource extends InstanceRessource {
      * @param file File | FormData
      * @returns
      */
-    post(customer: string, file: File | FormData, type: string): Promise<any>;
+    post(customer: string, file: File | FormData, type: DocumentType): Promise<any>;
 }
