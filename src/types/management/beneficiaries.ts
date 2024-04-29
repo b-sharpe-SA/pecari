@@ -20,4 +20,5 @@ export interface ListBeneficiariesQueryParams extends Record<string, any> {
     offset?: number;
     ordering?: ListBeneficiariesOrderingOptions;
     search?: string;
+    customer__id?: string;
 }
