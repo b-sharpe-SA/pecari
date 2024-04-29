@@ -18,3 +18,4 @@ __exportStar(require("./token"), exports);
 __exportStar(require("./users"), exports);
 __exportStar(require("./customers"), exports);
 __exportStar(require("./beneficiaries"), exports);
+__exportStar(require("./realtime_rules"), exports);
