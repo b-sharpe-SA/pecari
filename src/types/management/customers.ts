@@ -67,4 +67,5 @@ export interface AdminRestrictedCustomer extends Customer {
     high_net_worth: boolean;
     pep: boolean;
     applicant_id: string;
+    address_validated: boolean;
 }
