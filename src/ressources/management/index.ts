@@ -3,6 +3,7 @@ import { TokenRessource } from './token';
 import { UsersRessource } from './users';
 import { CustomersRessource } from './customers';
 import { BeneficiariesRessource } from './beneficiaries';
+import { RealtimeRulesRessource } from './realtime-rules';
 
 export class ManagementRessource extends InstanceRessource {
     token = new TokenRessource(this);
@@ -12,4 +13,6 @@ export class ManagementRessource extends InstanceRessource {
     customers = new CustomersRessource(this);
 
     beneficiaries = new BeneficiariesRessource(this);
+
+    realtimeRules = new RealtimeRulesRessource(this);
 }
