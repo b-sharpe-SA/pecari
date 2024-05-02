@@ -53,4 +53,5 @@ export interface AdminRestrictedCustomer extends Customer {
     pep: boolean;
     applicant_id: string;
     address_validated: boolean;
+    realtime_rule: number;
 }
