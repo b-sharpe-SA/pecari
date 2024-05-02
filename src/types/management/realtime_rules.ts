@@ -4,6 +4,7 @@ export enum RuleType {
 }
 
 export interface RealtimeRule {
+    id: number;
     rule_type: RuleType;
     customer_group: string;
     customer_group_display: string;
