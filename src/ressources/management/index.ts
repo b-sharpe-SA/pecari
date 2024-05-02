@@ -5,6 +5,7 @@ import { CustomersRessource } from './customers';
 import { BeneficiariesRessource } from './beneficiaries';
 import { RealtimeRulesRessource } from './realtime-rules';
 import { BanksRessource } from './banks';
+import { TicketsRessource } from './tickets';
 
 export class ManagementRessource extends InstanceRessource {
     token = new TokenRessource(this);
@@ -18,4 +19,6 @@ export class ManagementRessource extends InstanceRessource {
     realtimeRules = new RealtimeRulesRessource(this);
 
     banks = new BanksRessource(this);
+
+    tickets = new TicketsRessource(this);
 }

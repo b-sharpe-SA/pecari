@@ -5,6 +5,7 @@ import { CustomersRessource } from './customers';
 import { BeneficiariesRessource } from './beneficiaries';
 import { RealtimeRulesRessource } from './realtime-rules';
 import { BanksRessource } from './banks';
+import { TicketsRessource } from './tickets';
 export declare class ManagementRessource extends InstanceRessource {
     token: TokenRessource;
     users: UsersRessource;
@@ -12,4 +13,5 @@ export declare class ManagementRessource extends InstanceRessource {
     beneficiaries: BeneficiariesRessource;
     realtimeRules: RealtimeRulesRessource;
     banks: BanksRessource;
+    tickets: TicketsRessource;
 }

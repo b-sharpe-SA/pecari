@@ -8,6 +8,7 @@ const customers_1 = require("./customers");
 const beneficiaries_1 = require("./beneficiaries");
 const realtime_rules_1 = require("./realtime-rules");
 const banks_1 = require("./banks");
+const tickets_1 = require("./tickets");
 class ManagementRessource extends _helpers_1.InstanceRessource {
     constructor() {
         super(...arguments);
@@ -17,6 +18,7 @@ class ManagementRessource extends _helpers_1.InstanceRessource {
         this.beneficiaries = new beneficiaries_1.BeneficiariesRessource(this);
         this.realtimeRules = new realtime_rules_1.RealtimeRulesRessource(this);
         this.banks = new banks_1.BanksRessource(this);
+        this.tickets = new tickets_1.TicketsRessource(this);
     }
 }
 exports.ManagementRessource = ManagementRessource;
