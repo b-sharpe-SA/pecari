@@ -9,7 +9,7 @@ export type AdminListTicketsOrderingOptions =
 export interface AdminListTicketsQueryParams extends Record<string, any> {
     limit?: number;
     offset?: number;
-    ordering?: string;
+    ordering?: AdminListTicketsOrderingOptions;
     search?: string;
     customer__id?: string;
 }

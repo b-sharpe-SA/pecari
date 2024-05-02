@@ -2,7 +2,7 @@ export type AdminListTicketsOrderingOptions = 'creation_datetime' | '-creation_d
 export interface AdminListTicketsQueryParams extends Record<string, any> {
     limit?: number;
     offset?: number;
-    ordering?: string;
+    ordering?: AdminListTicketsOrderingOptions;
     search?: string;
     customer__id?: string;
 }
