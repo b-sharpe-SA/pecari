@@ -6,7 +6,7 @@ import {
 } from '@helpers';
 import {
     type AdminListTicketsQueryParams,
-    type Ticket,
+    type AdminRestrictedTicket,
     type WithPagination,
 } from '@types';
 
@@ -22,7 +22,9 @@ export class TicketsRessource extends InstanceRessource {
         try {
             const url = concatenateQueryParams(BASE_URL, queryParams ?? {});
             const { data } =
-                await this.instance.get<WithPagination<Ticket>>(url);
+                await this.instance.get<WithPagination<AdminRestrictedTicket>>(
+                    url
+                );
             return data;
         } catch (error) {
             throw handleError(error);
@@ -37,7 +39,8 @@ export class TicketsRessource extends InstanceRessource {
     async get(id: string) {
         try {
             const url = `${BASE_URL}${id}/`;
-            const { data } = await this.instance.get<Ticket>(url);
+            const { data } =
+                await this.instance.get<AdminRestrictedTicket>(url);
             return data;
         } catch (error) {
             throw handleError(error);
@@ -49,10 +52,13 @@ export class TicketsRessource extends InstanceRessource {
      * @param id
      * @returns
      */
-    async update(id: string, ticket: Partial<Ticket>) {
+    async update(id: string, ticket: Partial<AdminRestrictedTicket>) {
         try {
             const url = `${BASE_URL}${id}/`;
-            const { data } = await this.instance.patch<Ticket>(url, ticket);
+            const { data } = await this.instance.patch<AdminRestrictedTicket>(
+                url,
+                ticket
+            );
             return data;
         } catch (error) {
             throw handleError(error);
