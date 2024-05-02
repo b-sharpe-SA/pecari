@@ -16,7 +16,14 @@ export interface AdminListTicketsQueryParams extends Record<string, any> {
     customer__id?: string;
 }
 
+export enum TicketStatus {
+    Treated = 0,
+    Pending = 1,
+    Canceled = 2,
+}
+
 export interface AdminRestrictedTicket extends Ticket {
     payment_confirmation: string | null;
     change_confirmation: string | null;
+    status: TicketStatus;
 }
