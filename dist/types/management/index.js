@@ -19,3 +19,4 @@ __exportStar(require("./users"), exports);
 __exportStar(require("./customers"), exports);
 __exportStar(require("./beneficiaries"), exports);
 __exportStar(require("./realtime_rules"), exports);
+__exportStar(require("./banks"), exports);
