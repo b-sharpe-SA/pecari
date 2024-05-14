@@ -6,6 +6,7 @@ const jestConfig: JestConfigWithTsJest = {
     moduleDirectories: ['node_modules', '<rootDir>'],
     testEnvironment: 'node',
     moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths),
+    testPathIgnorePatterns: ['/node_modules/', '/dist/'], // Ignore dist folder
 };
 
 export default jestConfig;

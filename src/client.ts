@@ -95,6 +95,7 @@ export class CactusClient {
                     return Promise.reject(err);
                 }
                 if (
+                    err.response?.status === 403 &&
                     err.response?.data.code === ErrorCodes.AUTH_TOKEN_EXPIRED &&
                     this.refreshToken != null &&
                     !(originalConfig._retry ?? false)
