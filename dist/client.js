@@ -111,19 +111,26 @@ class CactusClient {
         }
         // Intercetor to handle expired token and try to refresh it
         // TODO: Stop incoming requests while refreshing token
-        this.instance.interceptors.response.use(undefined, async (err) => {
+        this.instance.interceptors.response.use((response) => {
+            return response;
+        }, async (err) => {
+            const originalConfig = err.config;
+            if (originalConfig == null) {
+                return Promise.reject(err);
+            }
             if (err.response?.data.code === errors_1.ErrorCodes.AUTH_TOKEN_EXPIRED &&
-                this.refreshToken != null) {
+                this.refreshToken != null && !(originalConfig._retry ?? false)) {
+                originalConfig._retry = true; // Prevent infinite loop and mark request as already retried
                 try {
                     const { access } = await this.login.refreshToken({
                         refresh: this.refreshToken,
                     });
-                    const config = err.config;
-                    if (config.headers != null) {
-                        config.headers[constants_1.AUTH_HEADER_KEY] =
+                    if (originalConfig.headers != null) {
+                        originalConfig.headers[constants_1.AUTH_HEADER_KEY] =
                             `Bearer ${access}`;
                     }
-                    const data = await this.instance.request(config);
+                    // Retry request with new access token
+                    const data = await this.instance.request(originalConfig);
                     return Promise.resolve(data);
                 }
                 catch (err) {

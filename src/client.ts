@@ -1,9 +1,5 @@
 /* eslint-disable @typescript-eslint/return-await */
-import axios, {
-    type AxiosRequestConfig,
-    type AxiosInstance,
-    type AxiosError,
-} from 'axios';
+import axios, { type AxiosInstance, type AxiosError } from 'axios';
 import {
     LoginRessource,
     MyselfRessource,
@@ -41,6 +37,12 @@ interface CactusClientParams {
     language?: string;
     saveTokens?: (access: string, refresh?: string) => void;
     onLogout?: () => void;
+}
+
+declare module 'axios' {
+    export interface AxiosRequestConfig {
+        _retry?: boolean;
+    }
 }
 
 /**
@@ -84,22 +86,31 @@ export class CactusClient {
         // Intercetor to handle expired token and try to refresh it
         // TODO: Stop incoming requests while refreshing token
         this.instance.interceptors.response.use(
-            undefined,
+            (response) => {
+                return response;
+            },
             async (err: AxiosError<any>) => {
+                const originalConfig = err.config;
+                if (originalConfig == null) {
+                    return Promise.reject(err);
+                }
                 if (
                     err.response?.data.code === ErrorCodes.AUTH_TOKEN_EXPIRED &&
-                    this.refreshToken != null
+                    this.refreshToken != null &&
+                    !(originalConfig._retry ?? false)
                 ) {
+                    originalConfig._retry = true; // Prevent infinite loop and mark request as already retried
                     try {
                         const { access } = await this.login.refreshToken({
                             refresh: this.refreshToken,
                         });
-                        const config = err.config as AxiosRequestConfig;
-                        if (config.headers != null) {
-                            config.headers[AUTH_HEADER_KEY] =
+                        if (originalConfig.headers != null) {
+                            originalConfig.headers[AUTH_HEADER_KEY] =
                                 `Bearer ${access}`;
                         }
-                        const data = await this.instance.request(config);
+                        // Retry request with new access token
+                        const data =
+                            await this.instance.request(originalConfig);
                         return Promise.resolve(data);
                     } catch (err) {
                         return Promise.reject(err);
