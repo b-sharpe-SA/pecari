@@ -8,6 +8,11 @@ interface CactusClientParams {
     saveTokens?: (access: string, refresh?: string) => void;
     onLogout?: () => void;
 }
+declare module 'axios' {
+    interface AxiosRequestConfig {
+        _retry?: boolean;
+    }
+}
 /**
  * Client definition
  * @property {string} baseUrl - base url to fetch cactus api
