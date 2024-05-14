@@ -118,8 +118,10 @@ class CactusClient {
             if (originalConfig == null) {
                 return Promise.reject(err);
             }
-            if (err.response?.data.code === errors_1.ErrorCodes.AUTH_TOKEN_EXPIRED &&
-                this.refreshToken != null && !(originalConfig._retry ?? false)) {
+            if (err.response?.status === 403 &&
+                err.response?.data.code === errors_1.ErrorCodes.AUTH_TOKEN_EXPIRED &&
+                this.refreshToken != null &&
+                !(originalConfig._retry ?? false)) {
                 originalConfig._retry = true; // Prevent infinite loop and mark request as already retried
                 try {
                     const { access } = await this.login.refreshToken({
