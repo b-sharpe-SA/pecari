@@ -11,7 +11,11 @@ export class AppCompatibilityResource extends InstanceRessource {
      */
     async get() {
         try {
-            const { data } = await this.instance.get<AppCheck>(BASE_URL);
+            const { data } = await this.instance.get<AppCheck>(BASE_URL, {
+                headers: {
+                    Authorization: undefined,
+                },
+            });
             return data;
         } catch (error) {
             throw handleError(error);

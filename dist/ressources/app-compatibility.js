@@ -11,7 +11,11 @@ class AppCompatibilityResource extends _helpers_1.InstanceRessource {
      */
     async get() {
         try {
-            const { data } = await this.instance.get(BASE_URL);
+            const { data } = await this.instance.get(BASE_URL, {
+                headers: {
+                    Authorization: undefined
+                }
+            });
             return data;
         }
         catch (error) {
