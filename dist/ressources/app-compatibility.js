@@ -13,8 +13,8 @@ class AppCompatibilityResource extends _helpers_1.InstanceRessource {
         try {
             const { data } = await this.instance.get(BASE_URL, {
                 headers: {
-                    Authorization: undefined
-                }
+                    Authorization: undefined,
+                },
             });
             return data;
         }
