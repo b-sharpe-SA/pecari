@@ -1,5 +1,6 @@
 import { PUBLIC_PATH } from '@constants';
 import { handleError, InstanceRessource } from '@helpers';
+import { type DocumentType } from '@types';
 
 export class UploadRessource extends InstanceRessource {
     private getUrl(customer: string) {
@@ -12,19 +13,25 @@ export class UploadRessource extends InstanceRessource {
      * @param file File | FormData
      * @returns
      */
-    async post(customer: string, file: File | FormData) {
+    async post(customer: string, file: File | FormData, type: DocumentType) {
         try {
             const url = this.getUrl(customer);
-            const { data } = await this.instance.post(url, file, {
-                headers:
-                    file instanceof File
-                        ? {
-                              'Content-Type': file.type,
-                              'Content-Disposition': `attachment; filename=${file.name}`,
-                          }
-                        : {
-                              'Content-Type': 'multipart/form-data',
-                          },
+            let formData: FormData;
+            const headers = {
+                'Content-Type': 'multipart/form-data',
+            };
+
+            if (file instanceof File) {
+                formData = new FormData();
+                formData.append('file', file);
+                formData.append('type', type.toString());
+            } else {
+                formData = file;
+                formData.append('type', type.toString());
+            }
+
+            const { data } = await this.instance.post(url, formData, {
+                headers,
             });
             return data;
         } catch (error) {

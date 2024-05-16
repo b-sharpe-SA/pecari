@@ -20,3 +20,4 @@ export * from './sponsorships';
 export * from './bank_account';
 export * from './app-compatibility';
 export * from './management';
+export * from './upload';
