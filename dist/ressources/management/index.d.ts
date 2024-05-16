@@ -6,6 +6,7 @@ import { BeneficiariesRessource } from './beneficiaries';
 import { RealtimeRulesRessource } from './realtime-rules';
 import { BanksRessource } from './banks';
 import { TicketsRessource } from './tickets';
+import { PasswordRessource } from './password';
 export declare class ManagementRessource extends InstanceRessource {
     token: TokenRessource;
     users: UsersRessource;
@@ -14,4 +15,5 @@ export declare class ManagementRessource extends InstanceRessource {
     realtimeRules: RealtimeRulesRessource;
     banks: BanksRessource;
     tickets: TicketsRessource;
+    password: PasswordRessource;
 }
