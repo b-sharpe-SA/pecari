@@ -54,4 +54,7 @@ export interface AdminRestrictedCustomer extends Customer {
     applicant_id: string;
     address_validated: boolean;
     realtime_rule: number;
+    trading_information_validated: boolean;
+    risk_assessment_validated: boolean;
+    contract_signature_validated: boolean;
 }
