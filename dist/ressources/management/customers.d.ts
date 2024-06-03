@@ -25,4 +25,5 @@ export declare class CustomersRessource extends InstanceRessource {
      * @returns
      */
     delete(id: string): Promise<any>;
+    uploadDocument(id: string, formData: FormData): Promise<any>;
 }

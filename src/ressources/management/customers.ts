@@ -79,4 +79,18 @@ export class CustomersRessource extends InstanceRessource {
             throw handleError(error);
         }
     }
+
+    async uploadDocument(id: string, formData: FormData) {
+        try {
+            const url = `${BASE_URL}${id}/upload/`;
+            const { data } = await this.instance.post(url, formData, {
+                headers: {
+                    'Content-Type': 'multipart/form-data',
+                },
+            });
+            return data;
+        } catch (error) {
+            throw handleError(error);
+        }
+    }
 }
