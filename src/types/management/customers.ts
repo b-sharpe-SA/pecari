@@ -2,6 +2,7 @@ import { type BeneficialOwner } from '../beneficial_owner';
 import { type Beneficiary } from '../beneficiary';
 import { type Customer } from '../customer';
 import { type Ticket } from '../ticket';
+import { type UploadDocumentType } from '../upload';
 
 export type ListCustomersOrderingOptions =
     | 'reference'
@@ -27,6 +28,7 @@ export interface UserCustomer {
 export interface Document {
     id: number;
     file: string;
+    type: UploadDocumentType;
     creation_dt: string;
 }
 
