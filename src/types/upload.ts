@@ -1,0 +1,18 @@
+export enum UploadDocumentType {
+    Other,
+    KYCReport,
+    AccomodationCertificate,
+    CIHosting,
+    ExtractCommercialRegistry,
+    ProofOfAddress,
+    IdentityDocument,
+    MediaSearch,
+    MailCorrespondence,
+    RealEstateDeedOfSale,
+    CustomerRiskProfileForm,
+    BsharpeTransactionHistory,
+    QrFacture,
+    DeathCertificate,
+    FamilyDocument,
+    BillPayment,
+}
