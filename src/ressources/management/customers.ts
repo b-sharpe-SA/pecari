@@ -8,6 +8,7 @@ import {
     type WithPagination,
     type ListCustomersQueryParams,
     type AdminRestrictedCustomer,
+    type UploadDocumentType,
 } from '@types';
 
 const BASE_URL = `${MANAGEMENT_PATH}/customers/`;
@@ -73,6 +74,44 @@ export class CustomersRessource extends InstanceRessource {
     async delete(id: string) {
         try {
             const url = `${BASE_URL}${id}/`;
+            const { data } = await this.instance.delete(url);
+            return data;
+        } catch (error) {
+            throw handleError(error);
+        }
+    }
+
+    async uploadDocument(id: string, formData: FormData) {
+        try {
+            const url = `${BASE_URL}${id}/upload/`;
+            const { data } = await this.instance.post(url, formData, {
+                headers: {
+                    'Content-Type': 'multipart/form-data',
+                },
+            });
+            return data;
+        } catch (error) {
+            throw handleError(error);
+        }
+    }
+
+    async updateDocumentType(
+        customerId: string,
+        documentId: string,
+        type: UploadDocumentType
+    ) {
+        try {
+            const url = `${BASE_URL}${customerId}/documents/${documentId}/`;
+            const { data } = await this.instance.put(url, { type });
+            return data;
+        } catch (error) {
+            throw handleError(error);
+        }
+    }
+
+    async deleteDocument(customerId: string, documentId: string) {
+        try {
+            const url = `${BASE_URL}${customerId}/documents/${documentId}/`;
             const { data } = await this.instance.delete(url);
             return data;
         } catch (error) {

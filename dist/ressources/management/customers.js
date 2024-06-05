@@ -65,5 +65,39 @@ class CustomersRessource extends _helpers_1.InstanceRessource {
             throw (0, _helpers_1.handleError)(error);
         }
     }
+    async uploadDocument(id, formData) {
+        try {
+            const url = `${BASE_URL}${id}/upload/`;
+            const { data } = await this.instance.post(url, formData, {
+                headers: {
+                    'Content-Type': 'multipart/form-data',
+                },
+            });
+            return data;
+        }
+        catch (error) {
+            throw (0, _helpers_1.handleError)(error);
+        }
+    }
+    async updateDocumentType(customerId, documentId, type) {
+        try {
+            const url = `${BASE_URL}${customerId}/documents/${documentId}/`;
+            const { data } = await this.instance.put(url, { type });
+            return data;
+        }
+        catch (error) {
+            throw (0, _helpers_1.handleError)(error);
+        }
+    }
+    async deleteDocument(customerId, documentId) {
+        try {
+            const url = `${BASE_URL}${customerId}/documents/${documentId}/`;
+            const { data } = await this.instance.delete(url);
+            return data;
+        }
+        catch (error) {
+            throw (0, _helpers_1.handleError)(error);
+        }
+    }
 }
 exports.CustomersRessource = CustomersRessource;
