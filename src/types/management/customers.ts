@@ -45,6 +45,14 @@ export enum ValidationFlags {
     Retry = 'RETRY',
 }
 
+export type FieldsWithValidationFlags =
+    | 'base_info_validated'
+    | 'identity_validated'
+    | 'address_validated'
+    | 'contract_signature_validated'
+    | 'risk_assessment_validated'
+    | 'trading_information_validated';
+
 export interface AdminRestrictedCustomer extends Customer {
     id: string;
     first_activation_date: string;
