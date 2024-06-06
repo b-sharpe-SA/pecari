@@ -38,6 +38,13 @@ export interface TermsOfUse {
     raw_signature: string;
 }
 
+export enum ValidationFlags {
+    ToBeCompleted = 'TO_BE_COMPLETED',
+    InReview = 'IN_REVIEW',
+    Completed = 'COMPLETED',
+    Retry = 'RETRY',
+}
+
 export interface AdminRestrictedCustomer extends Customer {
     id: string;
     first_activation_date: string;
@@ -69,6 +76,14 @@ export interface AdminRestrictedCustomer extends Customer {
     high_net_worth: boolean;
     pep: boolean;
     applicant_id: string;
-    address_validated: boolean;
     realtime_rule: number;
+
+    // --- Start validation flags ---
+    base_info_validated: ValidationFlags;
+    identity_validated: ValidationFlags;
+    address_validated: ValidationFlags;
+    contract_signature_validated: ValidationFlags;
+    risk_assessment_validated: ValidationFlags;
+    trading_information_validated: ValidationFlags;
+    // --- End validation flags ---
 }
