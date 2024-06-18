@@ -7,6 +7,7 @@ import { RealtimeRulesRessource } from './realtime-rules';
 import { BanksRessource } from './banks';
 import { TicketsRessource } from './tickets';
 import { PasswordRessource } from './password';
+import { TermsOfUseRessource } from './terms-of-use';
 
 export class ManagementRessource extends InstanceRessource {
     token = new TokenRessource(this);
@@ -24,4 +25,6 @@ export class ManagementRessource extends InstanceRessource {
     tickets = new TicketsRessource(this);
 
     password = new PasswordRessource(this);
+
+    termsOfUse = new TermsOfUseRessource(this);
 }
