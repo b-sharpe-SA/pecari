@@ -10,6 +10,7 @@ const realtime_rules_1 = require("./realtime-rules");
 const banks_1 = require("./banks");
 const tickets_1 = require("./tickets");
 const password_1 = require("./password");
+const terms_of_use_1 = require("./terms-of-use");
 class ManagementRessource extends _helpers_1.InstanceRessource {
     constructor() {
         super(...arguments);
@@ -21,6 +22,7 @@ class ManagementRessource extends _helpers_1.InstanceRessource {
         this.banks = new banks_1.BanksRessource(this);
         this.tickets = new tickets_1.TicketsRessource(this);
         this.password = new password_1.PasswordRessource(this);
+        this.termsOfUse = new terms_of_use_1.TermsOfUseRessource(this);
     }
 }
 exports.ManagementRessource = ManagementRessource;

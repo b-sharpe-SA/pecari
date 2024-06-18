@@ -7,6 +7,7 @@ import { RealtimeRulesRessource } from './realtime-rules';
 import { BanksRessource } from './banks';
 import { TicketsRessource } from './tickets';
 import { PasswordRessource } from './password';
+import { TermsOfUseRessource } from './terms-of-use';
 export declare class ManagementRessource extends InstanceRessource {
     token: TokenRessource;
     users: UsersRessource;
@@ -16,4 +17,5 @@ export declare class ManagementRessource extends InstanceRessource {
     banks: BanksRessource;
     tickets: TicketsRessource;
     password: PasswordRessource;
+    termsOfUse: TermsOfUseRessource;
 }

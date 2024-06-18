@@ -22,3 +22,4 @@ __exportStar(require("./realtime_rules"), exports);
 __exportStar(require("./banks"), exports);
 __exportStar(require("./tickets"), exports);
 __exportStar(require("./password"), exports);
+__exportStar(require("./terms-of-use"), exports);

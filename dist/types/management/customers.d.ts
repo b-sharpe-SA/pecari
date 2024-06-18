@@ -3,6 +3,7 @@ import { type Beneficiary } from '../beneficiary';
 import { type Customer } from '../customer';
 import { type Ticket } from '../ticket';
 import { type UploadDocumentType } from '../upload';
+import { type TermsOfUse } from './terms-of-use';
 export type ListCustomersOrderingOptions = 'reference' | 'type' | 'creation_datetime';
 export interface ListCustomersQueryParams extends Record<string, any> {
     limit?: number;
@@ -23,11 +24,6 @@ export interface Document {
     file: string;
     type: UploadDocumentType;
     creation_dt: string;
-}
-export interface TermsOfUse {
-    pdf_unsigned: string;
-    pdf_signed: string;
-    raw_signature: string;
 }
 export declare enum ValidationFlags {
     ToBeCompleted = "TO_BE_COMPLETED",
