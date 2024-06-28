@@ -49,4 +49,6 @@ var PostHogEvents;
     PostHogEvents["StartedInvitation"] = "started_invitation";
     PostHogEvents["CompletedInvitation"] = "completed_invitation";
     PostHogEvents["ViewedPspUpdatedModal"] = "viewed_psp_updated_modal";
+    PostHogEvents["StartedProgressScreen"] = "started_progress_screen";
+    PostHogEvents["CompletedProgressScreen"] = "completed_progress_screen";
 })(PostHogEvents || (exports.PostHogEvents = PostHogEvents = {}));
