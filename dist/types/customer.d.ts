@@ -1,4 +1,4 @@
-import { type Address, type ClientType, type Reward, type Title, type Utm } from '.';
+import { type ValidationFlags, type Address, type ClientType, type Reward, type Title, type Utm } from '.';
 export declare enum CustomerStatus {
     New = "New",
     Basic = "Basic",
@@ -60,6 +60,12 @@ export interface Customer extends Address, Utm {
     trade_frequency: TradeFrequency | null;
     trade_amount: TradeAmount | null;
     psp_updated: boolean;
+    base_info_validated: ValidationFlags;
+    identity_validated: ValidationFlags;
+    address_validated: ValidationFlags;
+    contract_signature_validated: ValidationFlags;
+    risk_assessment_validated: ValidationFlags;
+    trading_information_validated: ValidationFlags;
 }
 export declare enum CustomerNextStep {
     BaseInfo = "base_info_completed",
