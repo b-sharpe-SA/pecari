@@ -18,7 +18,7 @@ export declare enum TradeAmount {
     High = 2,
     VeryHigh = 3
 }
-export interface Customer extends Address, Utm {
+export interface Customer extends Address, Utm, CustomerValidationFlags {
     reference: string;
     title: Title;
     legal_form: string;
@@ -60,6 +60,8 @@ export interface Customer extends Address, Utm {
     trade_frequency: TradeFrequency | null;
     trade_amount: TradeAmount | null;
     psp_updated: boolean;
+}
+export interface CustomerValidationFlags {
     base_info_validated: ValidationFlags;
     identity_validated: ValidationFlags;
     address_validated: ValidationFlags;

@@ -58,10 +58,4 @@ export interface AdminRestrictedCustomer extends Customer {
     pep: boolean;
     applicant_id: string;
     realtime_rule: number;
-    base_info_validated: ValidationFlags;
-    identity_validated: ValidationFlags;
-    address_validated: ValidationFlags;
-    contract_signature_validated: ValidationFlags;
-    risk_assessment_validated: ValidationFlags;
-    trading_information_validated: ValidationFlags;
 }
