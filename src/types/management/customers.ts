@@ -46,7 +46,8 @@ export type FieldsWithValidationFlags =
     | 'address_validated'
     | 'contract_signature_validated'
     | 'risk_assessment_validated'
-    | 'trading_information_validated';
+    | 'trading_information_validated'
+    | 'usage_information_validated';
 
 export interface AdminRestrictedCustomer extends Customer {
     id: string;

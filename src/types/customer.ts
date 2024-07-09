@@ -81,6 +81,7 @@ export interface CustomerValidationFlags {
     contract_signature_validated: ValidationFlags;
     risk_assessment_validated: ValidationFlags;
     trading_information_validated: ValidationFlags;
+    usage_information_validated: ValidationFlags;
     // --- End validation flags ---
 }
 
