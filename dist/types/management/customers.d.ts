@@ -31,7 +31,7 @@ export declare enum ValidationFlags {
     Completed = "COMPLETED",
     Retry = "RETRY"
 }
-export type FieldsWithValidationFlags = 'base_info_validated' | 'identity_validated' | 'address_validated' | 'contract_signature_validated' | 'risk_assessment_validated' | 'trading_information_validated';
+export type FieldsWithValidationFlags = 'base_info_validated' | 'identity_validated' | 'address_validated' | 'contract_signature_validated' | 'risk_assessment_validated' | 'trading_information_validated' | 'usage_information_validated';
 export interface AdminRestrictedCustomer extends Customer {
     id: string;
     first_activation_date: string;
@@ -58,10 +58,4 @@ export interface AdminRestrictedCustomer extends Customer {
     pep: boolean;
     applicant_id: string;
     realtime_rule: number;
-    base_info_validated: ValidationFlags;
-    identity_validated: ValidationFlags;
-    address_validated: ValidationFlags;
-    contract_signature_validated: ValidationFlags;
-    risk_assessment_validated: ValidationFlags;
-    trading_information_validated: ValidationFlags;
 }
