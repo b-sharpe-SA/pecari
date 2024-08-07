@@ -32,15 +32,11 @@ export class LoginRessource extends InstanceRessource {
      * @returns access and refresh token
      */
     async refreshToken({ refresh }: RefreshTokenPayload) {
-        try {
-            const { data } = await this.instance.post<RefreshTokenResponse>(
-                `${PUBLIC_PATH}/login/token/refresh/`,
-                { refresh }
-            );
-            this.handleTokens(data.access);
-            return data;
-        } catch (error) {
-            throw handleError(error);
-        }
+        const { data } = await this.instance.post<RefreshTokenResponse>(
+            `${PUBLIC_PATH}/login/token/refresh/`,
+            { refresh }
+        );
+        this.handleTokens(data.access);
+        return data;
     }
 }
