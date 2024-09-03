@@ -9,6 +9,7 @@ import {
     type ListCustomersQueryParams,
     type AdminRestrictedCustomer,
     type UploadDocumentType,
+    type CustomersStatusCountResponse,
 } from '@types';
 
 const BASE_URL = `${MANAGEMENT_PATH}/customers/`;
@@ -113,6 +114,17 @@ export class CustomersRessource extends InstanceRessource {
         try {
             const url = `${BASE_URL}${customerId}/documents/${documentId}/`;
             const { data } = await this.instance.delete(url);
+            return data;
+        } catch (error) {
+            throw handleError(error);
+        }
+    }
+
+    async getStatusCount() {
+        try {
+            const url = `${BASE_URL}status/`;
+            const { data } =
+                await this.instance.get<CustomersStatusCountResponse>(url);
             return data;
         } catch (error) {
             throw handleError(error);

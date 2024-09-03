@@ -1,5 +1,5 @@
 import { InstanceRessource } from '../../helpers';
-import { type WithPagination, type ListCustomersQueryParams, type AdminRestrictedCustomer, type UploadDocumentType } from '../../types';
+import { type WithPagination, type ListCustomersQueryParams, type AdminRestrictedCustomer, type UploadDocumentType, type CustomersStatusCountResponse } from '../../types';
 export declare class CustomersRessource extends InstanceRessource {
     /**
      * List users with filters
@@ -28,4 +28,5 @@ export declare class CustomersRessource extends InstanceRessource {
     uploadDocument(id: string, formData: FormData): Promise<any>;
     updateDocumentType(customerId: string, documentId: string, type: UploadDocumentType): Promise<any>;
     deleteDocument(customerId: string, documentId: string): Promise<any>;
+    getStatusCount(): Promise<CustomersStatusCountResponse>;
 }

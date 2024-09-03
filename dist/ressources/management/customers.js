@@ -99,5 +99,15 @@ class CustomersRessource extends _helpers_1.InstanceRessource {
             throw (0, _helpers_1.handleError)(error);
         }
     }
+    async getStatusCount() {
+        try {
+            const url = `${BASE_URL}status/`;
+            const { data } = await this.instance.get(url);
+            return data;
+        }
+        catch (error) {
+            throw (0, _helpers_1.handleError)(error);
+        }
+    }
 }
 exports.CustomersRessource = CustomersRessource;

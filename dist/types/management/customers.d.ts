@@ -59,3 +59,11 @@ export interface AdminRestrictedCustomer extends Customer {
     applicant_id: string;
     realtime_rule: number;
 }
+export interface CustomersStatusCountResponse {
+    basic: number;
+    complete: number;
+    enabled: number;
+    new: number;
+    disabled: number;
+    total: number;
+}
