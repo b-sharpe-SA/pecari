@@ -1,7 +1,7 @@
 import { type BankAccount } from './common';
 export interface BankAccountListParameters extends Partial<{
     verified: boolean;
-    search: string;
+    mixed_search: string;
     ordering: string;
     offset: number;
     name: string;
