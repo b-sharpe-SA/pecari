@@ -7,3 +7,4 @@ export * from './banks';
 export * from './tickets';
 export * from './password';
 export * from './terms-of-use';
+export * from './vban';
