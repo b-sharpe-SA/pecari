@@ -10,6 +10,8 @@ import {
     type AdminRestrictedCustomer,
     type UploadDocumentType,
     type CustomersStatusCountResponse,
+    type Vban,
+    type ListVbansQueryParams,
 } from '@types';
 
 const BASE_URL = `${MANAGEMENT_PATH}/customers/`;
@@ -125,6 +127,24 @@ export class CustomersRessource extends InstanceRessource {
             const url = `${BASE_URL}status/`;
             const { data } =
                 await this.instance.get<CustomersStatusCountResponse>(url);
+            return data;
+        } catch (error) {
+            throw handleError(error);
+        }
+    }
+
+    /**
+     * Get all vbans for a customer
+     * @param reference customer reference
+     * @returns
+     */
+    async getVbans(reference: string, queryParams: ListVbansQueryParams) {
+        try {
+            const url = concatenateQueryParams(
+                `${BASE_URL}${reference}/vban/`,
+                queryParams ?? {}
+            );
+            const { data } = await this.instance.get<WithPagination<Vban>>(url);
             return data;
         } catch (error) {
             throw handleError(error);
