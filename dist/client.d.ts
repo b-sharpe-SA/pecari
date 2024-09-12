@@ -1,5 +1,5 @@
 import { type AxiosInstance } from 'axios';
-import { LoginRessource, MyselfRessource, CustomerRessource, AdvancedAuthRessource, PasswordResetRessource, TicketRessource, PspPriceRessource, BeneficialOwnerRessource, BeneficiaryRessource, MapboxRessource, EmailRessource, OnfidoRessource, MessageRessource, ContractRessource, UpdatePasswordRessource, UploadRessource, PspBankAccountRessource, SignupRessource, RateAlertRessource, RateAlertLegacyRessource, SponsorshipRessource, BankAccountRessource, AppCompatibilityResource, PhoneNumberRessource, ManagementRessource } from './ressources';
+import { LoginRessource, MyselfRessource, CustomerRessource, AdvancedAuthRessource, PasswordResetRessource, TicketRessource, PspPriceRessource, BeneficialOwnerRessource, BeneficiaryRessource, MapboxRessource, EmailRessource, OnfidoRessource, MessageRessource, ContractRessource, UpdatePasswordRessource, UploadRessource, PspBankAccountRessource, SignupRessource, RateAlertRessource, RateAlertLegacyRessource, SponsorshipRessource, BankAccountRessource, AppCompatibilityResource, PhoneNumberRessource, ManagementRessource, LogoutRessource } from './ressources';
 interface CactusClientParams {
     baseUrl: string;
     token?: string;
@@ -87,5 +87,6 @@ export declare class CactusClient {
     appCompatibility: AppCompatibilityResource;
     phoneNumber: PhoneNumberRessource;
     management: ManagementRessource;
+    logoutRessource: LogoutRessource;
 }
 export {};
