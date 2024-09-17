@@ -27,6 +27,7 @@ import {
     PhoneNumberRessource,
     ManagementRessource,
     LogoutRessource,
+    CountriesRessource,
 } from '@ressources';
 import { AUTH_HEADER_KEY, LANGUAGE_HEADER_KEY } from './constants';
 import { ErrorCodes } from './types/errors';
@@ -233,6 +234,8 @@ export class CactusClient {
     appCompatibility = new AppCompatibilityResource(this.instanceParams);
 
     phoneNumber = new PhoneNumberRessource(this.instanceParams);
+
+    countries = new CountriesRessource(this.instanceParams);
 
     management = new ManagementRessource(this.instanceParams);
 

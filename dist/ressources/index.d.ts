@@ -24,3 +24,4 @@ export * from './app-compatibility';
 export * from './phone-number';
 export * from './management';
 export * from './logout';
+export * from './countries';
