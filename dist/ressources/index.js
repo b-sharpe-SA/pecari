@@ -39,4 +39,5 @@ __exportStar(require("./bank_account"), exports);
 __exportStar(require("./app-compatibility"), exports);
 __exportStar(require("./phone-number"), exports);
 __exportStar(require("./management"), exports);
+__exportStar(require("./logout"), exports);
 __exportStar(require("./countries"), exports);

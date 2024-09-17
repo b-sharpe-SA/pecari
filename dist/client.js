@@ -58,6 +58,7 @@ class CactusClient {
          * It will also call resetTokens function if it is provided in constructor
          */
         this.logout = () => {
+            void this.logoutRessource.invalidateSession({ refreshToken: this.refreshToken ?? '' });
             // eslint-disable-next-line @typescript-eslint/no-dynamic-delete
             delete this.instance.defaults.headers.common[constants_1.AUTH_HEADER_KEY];
             if (this.onLogout != null) {
@@ -95,6 +96,7 @@ class CactusClient {
         this.phoneNumber = new _ressources_1.PhoneNumberRessource(this.instanceParams);
         this.countries = new _ressources_1.CountriesRessource(this.instanceParams);
         this.management = new _ressources_1.ManagementRessource(this.instanceParams);
+        this.logoutRessource = new _ressources_1.LogoutRessource(this.instanceParams);
         // initialize client with params
         this.baseUrl = params.baseUrl;
         this.refreshToken = params.refreshToken;

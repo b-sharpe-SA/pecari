@@ -26,6 +26,7 @@ import {
     AppCompatibilityResource,
     PhoneNumberRessource,
     ManagementRessource,
+    LogoutRessource,
     CountriesRessource,
 } from '@ressources';
 import { AUTH_HEADER_KEY, LANGUAGE_HEADER_KEY } from './constants';
@@ -162,6 +163,9 @@ export class CactusClient {
      * It will also call resetTokens function if it is provided in constructor
      */
     logout = () => {
+        void this.logoutRessource.invalidateSession({
+            refreshToken: this.refreshToken ?? '',
+        });
         // eslint-disable-next-line @typescript-eslint/no-dynamic-delete
         delete this.instance.defaults.headers.common[AUTH_HEADER_KEY];
         if (this.onLogout != null) {
@@ -234,4 +238,6 @@ export class CactusClient {
     countries = new CountriesRessource(this.instanceParams);
 
     management = new ManagementRessource(this.instanceParams);
+
+    logoutRessource = new LogoutRessource(this.instanceParams);
 }
