@@ -8,6 +8,7 @@ import { BanksRessource } from './banks';
 import { TicketsRessource } from './tickets';
 import { PasswordRessource } from './password';
 import { TermsOfUseRessource } from './terms-of-use';
+import { VbanRessource } from './vbans';
 export declare class ManagementRessource extends InstanceRessource {
     token: TokenRessource;
     users: UsersRessource;
@@ -18,4 +19,5 @@ export declare class ManagementRessource extends InstanceRessource {
     tickets: TicketsRessource;
     password: PasswordRessource;
     termsOfUse: TermsOfUseRessource;
+    vbans: VbanRessource;
 }

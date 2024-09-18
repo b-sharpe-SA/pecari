@@ -1,5 +1,5 @@
 import { InstanceRessource } from '../../helpers';
-import { type WithPagination, type ListCustomersQueryParams, type AdminRestrictedCustomer, type UploadDocumentType, type CustomersStatusCountResponse, type Vban, type ListVbansQueryParams } from '../../types';
+import { type WithPagination, type ListCustomersQueryParams, type AdminRestrictedCustomer, type UploadDocumentType, type CustomersStatusCountResponse } from '../../types';
 export declare class CustomersRessource extends InstanceRessource {
     /**
      * List users with filters
@@ -29,10 +29,4 @@ export declare class CustomersRessource extends InstanceRessource {
     updateDocumentType(customerId: string, documentId: string, type: UploadDocumentType): Promise<any>;
     deleteDocument(customerId: string, documentId: string): Promise<any>;
     getStatusCount(): Promise<CustomersStatusCountResponse>;
-    /**
-     * Get all vbans for a customer
-     * @param reference customer reference
-     * @returns
-     */
-    getVbans(reference: string, queryParams: ListVbansQueryParams): Promise<WithPagination<Vban>>;
 }
