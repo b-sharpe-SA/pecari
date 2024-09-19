@@ -14,3 +14,6 @@ export interface ListVbansQueryParams extends Record<string, any> {
     currency?: string;
     enabled?: boolean;
 }
+export interface VbanDocument {
+    pdf: string;
+}

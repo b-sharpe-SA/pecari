@@ -109,20 +109,5 @@ class CustomersRessource extends _helpers_1.InstanceRessource {
             throw (0, _helpers_1.handleError)(error);
         }
     }
-    /**
-     * Get all vbans for a customer
-     * @param reference customer reference
-     * @returns
-     */
-    async getVbans(reference, queryParams) {
-        try {
-            const url = (0, _helpers_1.concatenateQueryParams)(`${BASE_URL}${reference}/vban/`, queryParams ?? {});
-            const { data } = await this.instance.get(url);
-            return data;
-        }
-        catch (error) {
-            throw (0, _helpers_1.handleError)(error);
-        }
-    }
 }
 exports.CustomersRessource = CustomersRessource;
