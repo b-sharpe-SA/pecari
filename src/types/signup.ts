@@ -32,6 +32,8 @@ export type SignupPayload = Partial<{
     how_did_you_hear_about_us: string;
     sponsoring_key: string;
     signup_device: SignupDevice;
+
+    cf_turnstile_response?: string;
 }>;
 
 export interface SignupResponse extends Myself {
