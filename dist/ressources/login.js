@@ -9,9 +9,9 @@ class LoginRessource extends _helpers_1.InstanceRessource {
      * @param payload - { email, password }
      * @returns access and refresh token
      */
-    async token({ email, password }) {
+    async token(payload) {
         try {
-            const { data } = await this.instance.post(`${_constants_1.PUBLIC_PATH}/login/token/`, { email, password });
+            const { data } = await this.instance.post(`${_constants_1.PUBLIC_PATH}/login/token/`, payload);
             this.handleTokens(data.access, data.refresh);
             return data;
         }

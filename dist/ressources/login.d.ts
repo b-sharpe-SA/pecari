@@ -6,7 +6,7 @@ export declare class LoginRessource extends InstanceRessource {
      * @param payload - { email, password }
      * @returns access and refresh token
      */
-    token({ email, password }: LoginPayload): Promise<LoginTokenResponse>;
+    token(payload: LoginPayload): Promise<LoginTokenResponse>;
     /**
      * Try to refresh token
      * @param payload - { refresh }
