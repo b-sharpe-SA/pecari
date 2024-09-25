@@ -10,7 +10,7 @@ import {
 export class LoginRessource extends InstanceRessource {
     /**
      * Log user and set token to global instance
-     * @param payload - { email, password }
+     * @param payload - { email, password, cf_turnstile_response }
      * @returns access and refresh token
      */
     async token(payload: LoginPayload) {
