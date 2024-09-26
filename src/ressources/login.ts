@@ -10,14 +10,14 @@ import {
 export class LoginRessource extends InstanceRessource {
     /**
      * Log user and set token to global instance
-     * @param payload - { email, password }
+     * @param payload - { email, password, cf_turnstile_response }
      * @returns access and refresh token
      */
-    async token({ email, password }: LoginPayload) {
+    async token(payload: LoginPayload) {
         try {
             const { data } = await this.instance.post<LoginTokenResponse>(
                 `${PUBLIC_PATH}/login/token/`,
-                { email, password }
+                payload
             );
             this.handleTokens(data.access, data.refresh);
             return data;
