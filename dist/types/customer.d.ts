@@ -86,5 +86,6 @@ export interface CustomerFrontEndData extends Record<string, any> {
     accountType: 'own' | 'salary';
     ibanDocumentDownloaded: boolean;
     employerDocumentDownloaded: boolean;
+    currencyDocumentsList: string[];
 }
 export type UpdateCustomerPayload = Partial<Omit<Customer, 'reference'>>;
