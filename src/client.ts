@@ -28,6 +28,7 @@ import {
     ManagementRessource,
     LogoutRessource,
     CountriesRessource,
+    CustomerVbanRessouce,
 } from '@ressources';
 import { AUTH_HEADER_KEY, LANGUAGE_HEADER_KEY } from './constants';
 import { ErrorCodes } from './types/errors';
@@ -236,6 +237,8 @@ export class CactusClient {
     phoneNumber = new PhoneNumberRessource(this.instanceParams);
 
     countries = new CountriesRessource(this.instanceParams);
+
+    customerVban = new CustomerVbanRessouce(this.instanceParams);
 
     management = new ManagementRessource(this.instanceParams);
 
