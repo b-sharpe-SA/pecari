@@ -103,6 +103,7 @@ export interface CustomerFrontEndData extends Record<string, any> {
     ibanDocumentDownloaded: boolean;
     employerDocumentDownloaded: boolean;
     currencyDocumentsList: string[];
+    hasSwissBankAcc: boolean;
 }
 
 export type UpdateCustomerPayload = Partial<Omit<Customer, 'reference'>>;
