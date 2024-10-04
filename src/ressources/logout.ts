@@ -6,10 +6,10 @@ export class LogoutRessource extends InstanceRessource {
      * Invalidate current refresh token
      * @param {string} refreshToken - refresh token to invalidate
      */
-    async invalidateSession({ refreshToken }: { refreshToken: string }) {
+    async invalidateToken({ refreshToken }: { refreshToken: string }) {
         try {
             const { data } = await this.instance.post(
-                `${PUBLIC_PATH}/logout/session/`,
+                `${PUBLIC_PATH}/logout/token/`,
                 { refreshToken }
             );
             return data;

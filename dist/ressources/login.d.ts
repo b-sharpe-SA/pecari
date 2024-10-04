@@ -3,7 +3,7 @@ import { type RefreshTokenPayload, type LoginPayload, type LoginTokenResponse, t
 export declare class LoginRessource extends InstanceRessource {
     /**
      * Log user and set token to global instance
-     * @param payload - { email, password }
+     * @param payload - { email, password, cf_turnstile_response }
      * @returns access and refresh token
      */
     token(payload: LoginPayload): Promise<LoginTokenResponse>;

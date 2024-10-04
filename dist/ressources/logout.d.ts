@@ -4,7 +4,7 @@ export declare class LogoutRessource extends InstanceRessource {
      * Invalidate current refresh token
      * @param {string} refreshToken - refresh token to invalidate
      */
-    invalidateSession({ refreshToken }: {
+    invalidateToken({ refreshToken }: {
         refreshToken: string;
     }): Promise<any>;
 }
