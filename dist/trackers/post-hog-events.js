@@ -43,7 +43,6 @@ var PostHogEvents;
     PostHogEvents["UpdatedBeneficiary"] = "updated_beneficiary";
     PostHogEvents["ViewedIban"] = "viewed_iban";
     PostHogEvents["DownloadedIban"] = "downloaded_iban";
-    PostHogEvents["ViewedEmployerDocument"] = "viewed_employer_document";
     PostHogEvents["DownloadedEmployerDocument"] = "downloaded_employer_document";
     PostHogEvents["ViewedQrBill"] = "viewed_qr_bill";
     PostHogEvents["ClickedPromptVban"] = "clicked_prompt_vban";
