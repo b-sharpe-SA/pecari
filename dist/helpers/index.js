@@ -3,9 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.InstanceRessource = void 0;
-exports.handleError = handleError;
-exports.concatenateQueryParams = concatenateQueryParams;
+exports.concatenateQueryParams = exports.InstanceRessource = exports.handleError = void 0;
 const axios_1 = __importDefault(require("axios"));
 const _types_1 = require("../types");
 function handleError(error) {
@@ -17,6 +15,7 @@ function handleError(error) {
         detail: 'Unexpected error occured',
     };
 }
+exports.handleError = handleError;
 class InstanceRessource {
     constructor({ instance, handleTokens, logout }) {
         this.instance = instance;
@@ -46,3 +45,4 @@ function concatenateQueryParams(baseUrl, queryParams) {
     });
     return url;
 }
+exports.concatenateQueryParams = concatenateQueryParams;
