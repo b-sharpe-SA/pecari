@@ -26,6 +26,7 @@ export interface Owner extends Address {
 }
 export interface PspBankAccountIncoming extends BankAccount {
     iban: string;
+    type: 'bank_account' | 'vban';
 }
 export interface Creditor {
     id: number;

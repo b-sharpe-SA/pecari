@@ -38,3 +38,4 @@ __exportStar(require("./app-compatibility"), exports);
 __exportStar(require("./management"), exports);
 __exportStar(require("./upload"), exports);
 __exportStar(require("./countries"), exports);
+__exportStar(require("./vban"), exports);

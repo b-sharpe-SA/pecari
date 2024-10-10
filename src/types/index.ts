@@ -22,3 +22,4 @@ export * from './app-compatibility';
 export * from './management';
 export * from './upload';
 export * from './countries';
+export * from './vban';

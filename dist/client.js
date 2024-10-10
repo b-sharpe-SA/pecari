@@ -97,6 +97,7 @@ class CactusClient {
         this.appCompatibility = new _ressources_1.AppCompatibilityResource(this.instanceParams);
         this.phoneNumber = new _ressources_1.PhoneNumberRessource(this.instanceParams);
         this.countries = new _ressources_1.CountriesRessource(this.instanceParams);
+        this.customerVban = new _ressources_1.CustomerVbanRessouce(this.instanceParams);
         this.management = new _ressources_1.ManagementRessource(this.instanceParams);
         this.logoutRessource = new _ressources_1.LogoutRessource(this.instanceParams);
         // initialize client with params

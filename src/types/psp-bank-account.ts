@@ -7,4 +7,5 @@ export interface PspBankAccount {
     references: string;
     qrbill: string;
     pdf: string;
+    type: 'bank_account' | 'vban';
 }
