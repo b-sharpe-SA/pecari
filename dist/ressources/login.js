@@ -6,7 +6,7 @@ const _helpers_1 = require("../helpers");
 class LoginRessource extends _helpers_1.InstanceRessource {
     /**
      * Log user and set token to global instance
-     * @param payload - { email, password }
+     * @param payload - { email, password, cf_turnstile_response }
      * @returns access and refresh token
      */
     async token(payload) {

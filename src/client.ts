@@ -163,7 +163,7 @@ export class CactusClient {
      * It will also call resetTokens function if it is provided in constructor
      */
     logout = () => {
-        void this.logoutRessource.invalidateSession({
+        void this.logoutRessource.invalidateToken({
             refreshToken: this.refreshToken ?? '',
         });
         // eslint-disable-next-line @typescript-eslint/no-dynamic-delete
