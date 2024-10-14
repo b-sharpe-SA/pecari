@@ -1,6 +1,7 @@
 import { PUBLIC_PATH } from '@constants';
 import { handleError, InstanceRessource } from '@helpers';
 import {
+    type FieldsWithValidationFlags,
     type Customer,
     type UpdateCustomerPayload,
     type WithPagination,
@@ -54,6 +55,24 @@ export class CustomerRessource extends InstanceRessource {
             return data;
         } catch (error) {
             throw handleError(error);
+        }
+    }
+
+    /**
+     * Call this endpoint to validate the flags of a customer
+     * Mainly used during signup to validate a section
+     * @param reference customer reference
+     * @param flags array of flags to validate
+     */
+    async validateFlags(reference: string, flags: FieldsWithValidationFlags[]) {
+        try {
+            const { data } = await this.instance.post<Customer>(
+                `${BASE_URL}${reference}/validate_flags/`,
+                { flags }
+            );
+            return data;
+        } catch (err) {
+            throw handleError(err);
         }
     }
 }
