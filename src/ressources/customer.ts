@@ -66,7 +66,7 @@ export class CustomerRessource extends InstanceRessource {
      */
     async validateFlags(reference: string, flags: FieldsWithValidationFlags[]) {
         try {
-            const { data } = await this.instance.post<Customer>(
+            const { data } = await this.instance.post(
                 `${BASE_URL}${reference}/validate_flags/`,
                 { flags }
             );

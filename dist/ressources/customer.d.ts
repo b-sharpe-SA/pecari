@@ -25,5 +25,5 @@ export declare class CustomerRessource extends InstanceRessource {
      * @param reference customer reference
      * @param flags array of flags to validate
      */
-    validateFlags(reference: string, flags: FieldsWithValidationFlags[]): Promise<Customer>;
+    validateFlags(reference: string, flags: FieldsWithValidationFlags[]): Promise<any>;
 }
