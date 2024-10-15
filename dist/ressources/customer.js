@@ -47,5 +47,20 @@ class CustomerRessource extends _helpers_1.InstanceRessource {
             throw (0, _helpers_1.handleError)(error);
         }
     }
+    /**
+     * Call this endpoint to validate the flags of a customer
+     * Mainly used during signup to validate a section
+     * @param reference customer reference
+     * @param flags array of flags to validate
+     */
+    async validateFlags(reference, flags) {
+        try {
+            const { data } = await this.instance.post(`${BASE_URL}${reference}/validate_flags/`, { flags });
+            return data;
+        }
+        catch (err) {
+            throw (0, _helpers_1.handleError)(err);
+        }
+    }
 }
 exports.CustomerRessource = CustomerRessource;
