@@ -9,6 +9,7 @@ import { TicketsRessource } from './tickets';
 import { PasswordRessource } from './password';
 import { TermsOfUseRessource } from './terms-of-use';
 import { VbanRessource } from './vbans';
+import { YapealEntryRessource } from './yapeal-entries';
 
 export class ManagementRessource extends InstanceRessource {
     token = new TokenRessource(this);
@@ -30,4 +31,6 @@ export class ManagementRessource extends InstanceRessource {
     termsOfUse = new TermsOfUseRessource(this);
 
     vbans = new VbanRessource(this);
+
+    yapealEntries = new YapealEntryRessource(this);
 }

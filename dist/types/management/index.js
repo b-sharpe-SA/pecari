@@ -24,3 +24,4 @@ __exportStar(require("./tickets"), exports);
 __exportStar(require("./password"), exports);
 __exportStar(require("./terms-of-use"), exports);
 __exportStar(require("./vban"), exports);
+__exportStar(require("./yapeal-entries"), exports);
