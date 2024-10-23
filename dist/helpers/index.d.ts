@@ -13,4 +13,4 @@ export declare class InstanceRessource {
  * @param queryParams
  * @returns
  */
-export declare function concatenateQueryParams(baseUrl: string, queryParams?: Record<string, string | number | boolean>): string;
+export declare function concatenateQueryParams<TKey extends string>(baseUrl: string, queryParams?: Partial<Record<TKey, string | number | boolean | undefined | null>>): string;

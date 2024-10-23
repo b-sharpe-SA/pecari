@@ -33,9 +33,11 @@ export class InstanceRessource {
  * @param queryParams
  * @returns
  */
-export function concatenateQueryParams(
+export function concatenateQueryParams<TKey extends string>(
     baseUrl: string,
-    queryParams?: Record<string, string | number | boolean>
+    queryParams?: Partial<
+        Record<TKey, string | number | boolean | undefined | null>
+    >
 ) {
     let url = baseUrl;
     if (queryParams == null) {
