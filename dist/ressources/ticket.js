@@ -32,6 +32,22 @@ class TicketRessource extends _helpers_1.InstanceRessource {
         }
     }
     /**
+     * Get ticket for specific customer
+     * @param customer Customer reference
+     * @param reference Ticket reference
+     * @returns
+     */
+    async get(customer, reference) {
+        try {
+            const url = this.getUrl(customer, reference);
+            const { data } = await this.instance.get(url);
+            return data;
+        }
+        catch (error) {
+            throw (0, _helpers_1.handleError)(error);
+        }
+    }
+    /**
      * Create ticket for specific customer
      * @param customer Customer reference
      * @param payload Payload for ticket

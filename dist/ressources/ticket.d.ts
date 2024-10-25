@@ -13,6 +13,13 @@ export declare class TicketRessource extends InstanceRessource {
      */
     list({ limit, offset, canceled, customer, next, }: ListTicketsParams): Promise<WithPagination<Ticket>>;
     /**
+     * Get ticket for specific customer
+     * @param customer Customer reference
+     * @param reference Ticket reference
+     * @returns
+     */
+    get(customer: string, reference: string): Promise<Ticket>;
+    /**
      * Create ticket for specific customer
      * @param customer Customer reference
      * @param payload Payload for ticket
