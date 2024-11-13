@@ -10,11 +10,11 @@ import {
     type ListYapealEntriesQueryParams,
 } from '@types';
 
-const BASE_URL = `${MANAGEMENT_PATH}/customers/`;
+const BASE_URL = `${MANAGEMENT_PATH}/yapeal-entries/`;
 
 export class YapealEntryRessource extends InstanceRessource {
     private getUrl(yapealEntryId?: string) {
-        return `${BASE_URL}yapeal-entries/${yapealEntryId != null ? `${yapealEntryId}/` : ''}`;
+        return `${BASE_URL}${yapealEntryId != null ? `${yapealEntryId}/` : ''}`;
     }
 
     /**

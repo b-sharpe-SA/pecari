@@ -46,9 +46,9 @@ export interface ListYapealEntriesQueryParams {
     ordering?: ListYapealEntriesOrderingOptions;
     amount_max?: string;
     amount_min?: string;
-    currency?: string;
+    currency?: string[];
     push_timestamp_after?: string;
     push_timestamp_before?: string;
-    sense?: EntrySense;
-    status?: YapealEntryStatus;
+    sense?: EntrySense[];
+    status?: YapealEntryStatus[];
 }

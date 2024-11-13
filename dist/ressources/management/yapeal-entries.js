@@ -3,10 +3,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.YapealEntryRessource = void 0;
 const _constants_1 = require("../../constants");
 const _helpers_1 = require("../../helpers");
-const BASE_URL = `${_constants_1.MANAGEMENT_PATH}/customers/`;
+const BASE_URL = `${_constants_1.MANAGEMENT_PATH}/yapeal-entries/`;
 class YapealEntryRessource extends _helpers_1.InstanceRessource {
     getUrl(yapealEntryId) {
-        return `${BASE_URL}yapeal-entries/${yapealEntryId != null ? `${yapealEntryId}/` : ''}`;
+        return `${BASE_URL}${yapealEntryId != null ? `${yapealEntryId}/` : ''}`;
     }
     /**
      * List yapeal entries
