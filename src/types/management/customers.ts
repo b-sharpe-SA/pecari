@@ -94,5 +94,6 @@ export interface CustomersStatusCountResponse {
     enabled: number;
     new: number;
     disabled: number;
+    increased_risk: number;
     total: number;
 }
