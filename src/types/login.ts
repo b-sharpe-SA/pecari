@@ -6,8 +6,6 @@ export interface LoginTokenResponse {
 export interface LoginPayload {
     email: string;
     password: string;
-
-    cf_turnstile_response?: string;
 }
 
 export interface RefreshTokenPayload {

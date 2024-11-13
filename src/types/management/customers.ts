@@ -1,14 +1,17 @@
 import { type BeneficialOwner } from '../beneficial_owner';
 import { type Beneficiary } from '../beneficiary';
-import { type Customer } from '../customer';
+import { type CustomerStatus, type Customer } from '../customer';
 import { type Ticket } from '../ticket';
 import { type UploadDocumentType } from '../upload';
 import { type TermsOfUse } from './terms-of-use';
 
 export type ListCustomersOrderingOptions =
     | 'reference'
+    | '-reference'
     | 'type'
-    | 'creation_datetime';
+    | '-type'
+    | 'creation_datetime'
+    | '-creation_datetime';
 
 export interface ListCustomersQueryParams extends Record<string, any> {
     limit?: number;
@@ -16,6 +19,8 @@ export interface ListCustomersQueryParams extends Record<string, any> {
     ordering?: ListCustomersOrderingOptions;
     search?: string;
     type?: 'n' | 'l';
+    status?: CustomerStatus;
+    increased_risk?: boolean;
 }
 
 export interface UserCustomer {
@@ -89,5 +94,6 @@ export interface CustomersStatusCountResponse {
     enabled: number;
     new: number;
     disabled: number;
+    increased_risk: number;
     total: number;
 }
