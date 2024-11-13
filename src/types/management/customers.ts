@@ -1,6 +1,6 @@
 import { type BeneficialOwner } from '../beneficial_owner';
 import { type Beneficiary } from '../beneficiary';
-import { type Customer } from '../customer';
+import { type CustomerStatus, type Customer } from '../customer';
 import { type Ticket } from '../ticket';
 import { type UploadDocumentType } from '../upload';
 import { type TermsOfUse } from './terms-of-use';
@@ -16,6 +16,8 @@ export interface ListCustomersQueryParams extends Record<string, any> {
     ordering?: ListCustomersOrderingOptions;
     search?: string;
     type?: 'n' | 'l';
+    status?: CustomerStatus;
+    increased_risk?: boolean;
 }
 
 export interface UserCustomer {
