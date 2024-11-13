@@ -7,8 +7,11 @@ import { type TermsOfUse } from './terms-of-use';
 
 export type ListCustomersOrderingOptions =
     | 'reference'
+    | '-reference'
     | 'type'
-    | 'creation_datetime';
+    | '-type'
+    | 'creation_datetime'
+    | '-creation_datetime';
 
 export interface ListCustomersQueryParams extends Record<string, any> {
     limit?: number;
