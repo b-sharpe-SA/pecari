@@ -10,8 +10,10 @@
         "code:check": "tsc --skipLibCheck --noEmit && yarn run lint",
         "lint": "eslint ./src --ext=.js,.jsx,.ts,.tsx",
         "lint:fix": "eslint ./src --ext=.js,.jsx,.ts,.tsx --fix",
-        "prepare": "husky install",
-        "test": "jest"
+        "test": "jest",
+
+        "prepare": "(if [ -d '.git' ]; then husky install; fi) && tsc && tsc-alias",
+        "prepare:comment": "This script setups husky only if it's not a dependency by checking if it's in a git repo"
     },
     "dependencies": {
         "axios": "^1.2.3"
