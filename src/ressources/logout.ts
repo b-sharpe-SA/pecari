@@ -10,7 +10,7 @@ export class LogoutRessource extends InstanceRessource {
         try {
             const { data } = await this.instance.post(
                 `${PUBLIC_PATH}/logout/token/`,
-                { refreshToken }
+                { refresh: refreshToken }
             );
             return data;
         } catch (error) {
