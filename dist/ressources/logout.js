@@ -10,7 +10,7 @@ class LogoutRessource extends _helpers_1.InstanceRessource {
      */
     async invalidateToken({ refreshToken }) {
         try {
-            const { data } = await this.instance.post(`${_constants_1.PUBLIC_PATH}/logout/token/`, { refreshToken });
+            const { data } = await this.instance.post(`${_constants_1.PUBLIC_PATH}/logout/token/`, { refresh: refreshToken });
             return data;
         }
         catch (error) {
