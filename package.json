@@ -14,7 +14,8 @@
         "test": "jest"
     },
     "dependencies": {
-        "axios": "^1.2.3"
+        "axios": "^1.2.3",
+        "query-string": "^9.1.1"
     },
     "devDependencies": {
         "@types/jest": "^29.5.12",

@@ -1,4 +1,5 @@
 import { type AxiosInstance } from 'axios';
+import { type Stringifiable } from 'query-string';
 import { type CactusError, type InstanceRessourceParams } from '../types';
 export declare function handleError(error: any): CactusError;
 export declare class InstanceRessource {
@@ -13,4 +14,4 @@ export declare class InstanceRessource {
  * @param queryParams
  * @returns
  */
-export declare function concatenateQueryParams(baseUrl: string, queryParams?: Record<string, string | number | boolean>): string;
+export declare function concatenateQueryParams<TKey extends string>(baseUrl: string, queryParams?: Partial<Record<TKey, Stringifiable | Stringifiable[]>>): string;

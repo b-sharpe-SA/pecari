@@ -1,4 +1,5 @@
 import axios, { type AxiosInstance } from 'axios';
+import queryString, { type Stringifiable } from 'query-string';
 import {
     type CactusError,
     ErrorCodes,
@@ -33,25 +34,20 @@ export class InstanceRessource {
  * @param queryParams
  * @returns
  */
-export function concatenateQueryParams(
+export function concatenateQueryParams<TKey extends string>(
     baseUrl: string,
-    queryParams?: Record<string, string | number | boolean>
+    queryParams?: Partial<Record<TKey, Stringifiable | Stringifiable[]>>
 ) {
-    let url = baseUrl;
     if (queryParams == null) {
-        return url;
+        return baseUrl;
     }
+
     const cleanedQueryParams = Object.fromEntries(
         Object.entries(queryParams).filter(([_, v]) => v != null)
-    );
+    ) as typeof queryParams;
 
-    Object.keys(cleanedQueryParams).forEach((key, index) => {
-        if (cleanedQueryParams[key] !== undefined) {
-            url += `${index === 0 ? '?' : '&'}${key}=${
-                // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
-                cleanedQueryParams[key]
-            }`;
-        }
+    return queryString.stringifyUrl({
+        url: baseUrl,
+        query: cleanedQueryParams,
     });
-    return url;
 }
