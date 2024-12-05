@@ -86,6 +86,9 @@ export interface AdminRestrictedCustomer extends Customer {
     pep: boolean;
     applicant_id: string;
     realtime_rule: number;
+    trading_information_validated: boolean;
+    risk_assessment_validated: boolean;
+    contract_signature_validated: boolean;
 }
 
 export interface CustomersStatusCountResponse {
