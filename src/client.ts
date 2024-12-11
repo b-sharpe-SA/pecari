@@ -20,7 +20,6 @@ import {
     PspBankAccountRessource,
     SignupRessource,
     RateAlertRessource,
-    RateAlertLegacyRessource,
     SponsorshipRessource,
     BankAccountRessource,
     AppCompatibilityResource,
@@ -225,8 +224,6 @@ export class CactusClient {
     signup = new SignupRessource(this.instanceParams);
 
     rateAlert = new RateAlertRessource(this.instanceParams);
-
-    rateAlertLegacy = new RateAlertLegacyRessource(this.instanceParams);
 
     sponsorship = new SponsorshipRessource(this.instanceParams);
 

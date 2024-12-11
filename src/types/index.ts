@@ -15,7 +15,6 @@ export * from './update-password';
 export * from './psp-bank-account';
 export * from './signup';
 export * from './rate-alert';
-export * from './rate-alert-legacy';
 export * from './sponsorships';
 export * from './bank_account';
 export * from './app-compatibility';
