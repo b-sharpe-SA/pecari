@@ -91,7 +91,6 @@ class CactusClient {
         this.pspBankAccount = new _ressources_1.PspBankAccountRessource(this.instanceParams);
         this.signup = new _ressources_1.SignupRessource(this.instanceParams);
         this.rateAlert = new _ressources_1.RateAlertRessource(this.instanceParams);
-        this.rateAlertLegacy = new _ressources_1.RateAlertLegacyRessource(this.instanceParams);
         this.sponsorship = new _ressources_1.SponsorshipRessource(this.instanceParams);
         this.bankAccount = new _ressources_1.BankAccountRessource(this.instanceParams);
         this.appCompatibility = new _ressources_1.AppCompatibilityResource(this.instanceParams);
