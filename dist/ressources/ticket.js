@@ -5,7 +5,7 @@ const _constants_1 = require("../constants");
 const _helpers_1 = require("../helpers");
 class TicketRessource extends _helpers_1.InstanceRessource {
     getUrl(customerRef, ticketRef) {
-        return `${_constants_1.PUBLIC_PATH}/users/customer/${customerRef}/ticket/${ticketRef ?? ''}`;
+        return `${_constants_1.PUBLIC_PATH}/users/customer/${customerRef}/ticket/${ticketRef ?? ''}/`;
     }
     /**
      * List tickets for customer

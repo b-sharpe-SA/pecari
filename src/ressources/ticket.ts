@@ -13,7 +13,7 @@ import {
 
 export class TicketRessource extends InstanceRessource {
     private getUrl(customerRef: string, ticketRef?: string) {
-        return `${PUBLIC_PATH}/users/customer/${customerRef}/ticket/${ticketRef ?? ''}`;
+        return `${PUBLIC_PATH}/users/customer/${customerRef}/ticket/${ticketRef ?? ''}/`;
     }
 
     /**
