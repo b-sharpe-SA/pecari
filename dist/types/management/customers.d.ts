@@ -34,7 +34,8 @@ export declare enum ValidationFlags {
     Retry = "RETRY"
 }
 export type FieldsWithValidationFlags = 'base_info_validated' | 'identity_validated' | 'address_validated' | 'contract_signature_validated' | 'risk_assessment_validated' | 'trading_information_validated' | 'usage_information_validated';
-export interface AdminRestrictedCustomer extends Customer {
+export type SponsorCustomerInfo = Pick<AdminRestrictedCustomer, 'id' | 'first_name' | 'last_name'>;
+export interface AdminRestrictedCustomer extends Omit<Customer, 'sponsor'> {
     id: string;
     first_activation_date: string;
     identity_ok: boolean;
@@ -60,6 +61,8 @@ export interface AdminRestrictedCustomer extends Customer {
     pep: boolean;
     applicant_id: string;
     realtime_rule: number;
+    sponsor: SponsorCustomerInfo | null;
+    sponsored_customers: SponsorCustomerInfo[];
 }
 export interface CustomersStatusCountResponse {
     basic: number;

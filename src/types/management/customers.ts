@@ -54,7 +54,12 @@ export type FieldsWithValidationFlags =
     | 'trading_information_validated'
     | 'usage_information_validated';
 
-export interface AdminRestrictedCustomer extends Customer {
+export type SponsorCustomerInfo = Pick<
+    AdminRestrictedCustomer,
+    'id' | 'first_name' | 'last_name'
+>;
+
+export interface AdminRestrictedCustomer extends Omit<Customer, 'sponsor'> {
     id: string;
     first_activation_date: string;
     identity_ok: boolean;
@@ -86,6 +91,8 @@ export interface AdminRestrictedCustomer extends Customer {
     pep: boolean;
     applicant_id: string;
     realtime_rule: number;
+    sponsor: SponsorCustomerInfo | null;
+    sponsored_customers: SponsorCustomerInfo[];
 }
 
 export interface CustomersStatusCountResponse {
