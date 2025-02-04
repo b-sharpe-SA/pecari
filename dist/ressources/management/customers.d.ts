@@ -1,5 +1,5 @@
 import { InstanceRessource } from '../../helpers';
-import { type WithPagination, type ListCustomersQueryParams, type AdminRestrictedCustomer, type UploadDocumentType, type CustomersStatusCountResponse } from '../../types';
+import { type WithPagination, type ListCustomersQueryParams, type AdminRestrictedCustomer, type UploadDocumentType, type CustomersStatusCountResponse, type UpdateAdminRestrictedCustomerPayload } from '../../types';
 export declare class CustomersRessource extends InstanceRessource {
     /**
      * List users with filters
@@ -18,7 +18,7 @@ export declare class CustomersRessource extends InstanceRessource {
      * @param id
      * @returns
      */
-    update(id: string, customer: Partial<AdminRestrictedCustomer>): Promise<AdminRestrictedCustomer>;
+    update(id: string, customer: UpdateAdminRestrictedCustomerPayload): Promise<AdminRestrictedCustomer>;
     /**
      * Delete a customer by id
      * @param id

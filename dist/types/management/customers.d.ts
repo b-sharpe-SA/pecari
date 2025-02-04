@@ -73,3 +73,6 @@ export interface CustomersStatusCountResponse {
     increased_risk: number;
     total: number;
 }
+export interface UpdateAdminRestrictedCustomerPayload extends Partial<Omit<AdminRestrictedCustomer, 'id' | 'sponsor' | 'sponsored_customers'>> {
+    sponsor?: string | null;
+}

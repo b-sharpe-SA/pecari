@@ -10,6 +10,7 @@ import {
     type AdminRestrictedCustomer,
     type UploadDocumentType,
     type CustomersStatusCountResponse,
+    type UpdateAdminRestrictedCustomerPayload,
 } from '@types';
 
 const BASE_URL = `${MANAGEMENT_PATH}/customers/`;
@@ -54,7 +55,7 @@ export class CustomersRessource extends InstanceRessource {
      * @param id
      * @returns
      */
-    async update(id: string, customer: Partial<AdminRestrictedCustomer>) {
+    async update(id: string, customer: UpdateAdminRestrictedCustomerPayload) {
         try {
             const url = `${BASE_URL}${id}/`;
             const { data } = await this.instance.patch<AdminRestrictedCustomer>(
