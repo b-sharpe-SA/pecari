@@ -1,9 +1,4 @@
-import {
-    type Address,
-    type BankAccount,
-    type ClientType,
-    type Title,
-} from '@types';
+import { type Address, type BankAccount, type ClientType } from '@types';
 
 export interface ListBeneficiaryQueryParams extends Record<string, any> {
     limit?: string;
@@ -22,7 +17,6 @@ export type CreateBeneficiaryPayload = Partial<Omit<Beneficiary, 'id'>>;
 export interface Beneficiary extends Address {
     id: number;
     type: ClientType;
-    title: Title;
     first_name: string;
     last_name: string;
     company_name: string;
