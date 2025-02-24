@@ -12,6 +12,7 @@ const tickets_1 = require("./tickets");
 const password_1 = require("./password");
 const terms_of_use_1 = require("./terms-of-use");
 const vbans_1 = require("./vbans");
+const sponsors_1 = require("./sponsors");
 class ManagementRessource extends _helpers_1.InstanceRessource {
     constructor() {
         super(...arguments);
@@ -25,6 +26,7 @@ class ManagementRessource extends _helpers_1.InstanceRessource {
         this.password = new password_1.PasswordRessource(this);
         this.termsOfUse = new terms_of_use_1.TermsOfUseRessource(this);
         this.vbans = new vbans_1.VbanRessource(this);
+        this.sponsors = new sponsors_1.SponsorsRessource(this);
     }
 }
 exports.ManagementRessource = ManagementRessource;
