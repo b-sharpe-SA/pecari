@@ -5,6 +5,7 @@ import {
     handleError,
 } from '@helpers';
 import {
+    type SponsorDiscount,
     type CreateSponsorCodePayload,
     type ListSponsorsQueryParams,
     type SponsorCode,
@@ -32,7 +33,10 @@ export class SponsorsRessource extends InstanceRessource {
 
     async listDiscounts() {
         try {
-            const { data } = await this.instance.get(BASE_URL_DISCOUNTS);
+            const { data } =
+                await this.instance.get<WithPagination<SponsorDiscount>>(
+                    BASE_URL_DISCOUNTS
+                );
             return data;
         } catch (error) {
             throw handleError(error);

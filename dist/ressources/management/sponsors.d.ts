@@ -1,12 +1,12 @@
 import { InstanceRessource } from '../../helpers';
-import { type CreateSponsorCodePayload, type ListSponsorsQueryParams, type SponsorCode, type WithPagination } from '../../types';
+import { type SponsorDiscount, type CreateSponsorCodePayload, type ListSponsorsQueryParams, type SponsorCode, type WithPagination } from '../../types';
 export declare class SponsorsRessource extends InstanceRessource {
     /**
      * List sponsor codes with filters
      * @returns
      */
     list(queryParams?: ListSponsorsQueryParams): Promise<WithPagination<SponsorCode>>;
-    listDiscounts(): Promise<any>;
+    listDiscounts(): Promise<WithPagination<SponsorDiscount>>;
     /**
      * Get a sponsor code by id
      * @param id
