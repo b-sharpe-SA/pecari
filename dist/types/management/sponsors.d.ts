@@ -14,7 +14,7 @@ export interface SponsorDiscount {
     type: DiscountType;
     value: string;
 }
-export type ListSponsorsOrderingOptions = 'name' | '-name' | 'code' | '-code' | 'creation_date' | '-creation_date';
+export type ListSponsorsOrderingOptions = 'name' | '-name' | 'code' | '-code' | 'creation_datetime' | '-creation_datetime';
 export interface ListSponsorsQueryParams extends Record<string, any> {
     limit?: number;
     offset?: number;

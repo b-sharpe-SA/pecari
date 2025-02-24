@@ -22,8 +22,8 @@ export type ListSponsorsOrderingOptions =
     | '-name'
     | 'code'
     | '-code'
-    | 'creation_date'
-    | '-creation_date';
+    | 'creation_datetime'
+    | '-creation_datetime';
 
 export interface ListSponsorsQueryParams extends Record<string, any> {
     limit?: number;
