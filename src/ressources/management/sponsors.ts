@@ -5,6 +5,7 @@ import {
     handleError,
 } from '@helpers';
 import {
+    type CreateSponsorCodePayload,
     type ListSponsorsQueryParams,
     type SponsorCode,
     type WithPagination,
@@ -37,6 +38,23 @@ export class SponsorsRessource extends InstanceRessource {
         try {
             const url = `${BASE_URL}${id}/`;
             const { data } = await this.instance.get<SponsorCode>(url);
+            return data;
+        } catch (error) {
+            throw handleError(error);
+        }
+    }
+
+    /**
+     * Create a sponsor code
+     * @param payload
+     * @returns
+     */
+    async create(payload: CreateSponsorCodePayload) {
+        try {
+            const { data } = await this.instance.post<SponsorCode>(
+                BASE_URL,
+                payload
+            );
             return data;
         } catch (error) {
             throw handleError(error);

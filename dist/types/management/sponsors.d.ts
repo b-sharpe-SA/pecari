@@ -21,3 +21,4 @@ export interface ListSponsorsQueryParams extends Record<string, any> {
     ordering?: ListSponsorsOrderingOptions;
     search?: string;
 }
+export type CreateSponsorCodePayload = Pick<SponsorCode, 'name' | 'code' | 'comment'>;
