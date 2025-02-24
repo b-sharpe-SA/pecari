@@ -12,6 +12,7 @@ import {
 } from '@types';
 
 const BASE_URL = `${MANAGEMENT_PATH}/sponsors/`;
+const BASE_URL_DISCOUNTS = `${MANAGEMENT_PATH}/sponsors_discount/`;
 
 export class SponsorsRessource extends InstanceRessource {
     /**
@@ -23,6 +24,15 @@ export class SponsorsRessource extends InstanceRessource {
             const url = concatenateQueryParams(BASE_URL, queryParams);
             const { data } =
                 await this.instance.get<WithPagination<SponsorCode>>(url);
+            return data;
+        } catch (error) {
+            throw handleError(error);
+        }
+    }
+
+    async listDiscounts() {
+        try {
+            const { data } = await this.instance.get(BASE_URL_DISCOUNTS);
             return data;
         } catch (error) {
             throw handleError(error);

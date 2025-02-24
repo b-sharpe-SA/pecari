@@ -4,6 +4,7 @@ exports.SponsorsRessource = void 0;
 const _constants_1 = require("../../constants");
 const _helpers_1 = require("../../helpers");
 const BASE_URL = `${_constants_1.MANAGEMENT_PATH}/sponsors/`;
+const BASE_URL_DISCOUNTS = `${_constants_1.MANAGEMENT_PATH}/sponsors_discount/`;
 class SponsorsRessource extends _helpers_1.InstanceRessource {
     /**
      * List sponsor codes with filters
@@ -13,6 +14,15 @@ class SponsorsRessource extends _helpers_1.InstanceRessource {
         try {
             const url = (0, _helpers_1.concatenateQueryParams)(BASE_URL, queryParams);
             const { data } = await this.instance.get(url);
+            return data;
+        }
+        catch (error) {
+            throw (0, _helpers_1.handleError)(error);
+        }
+    }
+    async listDiscounts() {
+        try {
+            const { data } = await this.instance.get(BASE_URL_DISCOUNTS);
             return data;
         }
         catch (error) {

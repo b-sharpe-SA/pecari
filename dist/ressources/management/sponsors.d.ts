@@ -6,6 +6,7 @@ export declare class SponsorsRessource extends InstanceRessource {
      * @returns
      */
     list(queryParams?: ListSponsorsQueryParams): Promise<WithPagination<SponsorCode>>;
+    listDiscounts(): Promise<any>;
     /**
      * Get a sponsor code by id
      * @param id
