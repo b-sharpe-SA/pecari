@@ -74,5 +74,19 @@ class SponsorsRessource extends _helpers_1.InstanceRessource {
             throw (0, _helpers_1.handleError)(error);
         }
     }
+    /**
+     * Delete a sponsor code
+     * @param id
+     * @returns
+     */
+    async delete(id) {
+        try {
+            const url = `${BASE_URL}${id}/`;
+            await this.instance.delete(url);
+        }
+        catch (error) {
+            throw (0, _helpers_1.handleError)(error);
+        }
+    }
 }
 exports.SponsorsRessource = SponsorsRessource;

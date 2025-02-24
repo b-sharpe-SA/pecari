@@ -93,4 +93,18 @@ export class SponsorsRessource extends InstanceRessource {
             throw handleError(error);
         }
     }
+
+    /**
+     * Delete a sponsor code
+     * @param id
+     * @returns
+     */
+    async delete(id: number) {
+        try {
+            const url = `${BASE_URL}${id}/`;
+            await this.instance.delete(url);
+        } catch (error) {
+            throw handleError(error);
+        }
+    }
 }

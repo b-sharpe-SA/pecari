@@ -26,4 +26,10 @@ export declare class SponsorsRessource extends InstanceRessource {
      * @returns
      */
     update(id: number, payload: CreateSponsorCodePayload): Promise<SponsorCode>;
+    /**
+     * Delete a sponsor code
+     * @param id
+     * @returns
+     */
+    delete(id: number): Promise<void>;
 }
