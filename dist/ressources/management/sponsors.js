@@ -58,5 +58,21 @@ class SponsorsRessource extends _helpers_1.InstanceRessource {
             throw (0, _helpers_1.handleError)(error);
         }
     }
+    /**
+     * Update a sponsor code
+     * @param id
+     * @param payload
+     * @returns
+     */
+    async update(id, payload) {
+        try {
+            const url = `${BASE_URL}${id}/`;
+            const { data } = await this.instance.patch(url, payload);
+            return data;
+        }
+        catch (error) {
+            throw (0, _helpers_1.handleError)(error);
+        }
+    }
 }
 exports.SponsorsRessource = SponsorsRessource;

@@ -32,7 +32,5 @@ export interface ListSponsorsQueryParams extends Record<string, any> {
     search?: string;
 }
 
-export type CreateSponsorCodePayload = Pick<
-    SponsorCode,
-    'name' | 'code' | 'comment'
->;
+export interface CreateSponsorCodePayload
+    extends Pick<SponsorCode, 'name' | 'code' | 'comment'> {}

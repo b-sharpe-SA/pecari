@@ -74,4 +74,23 @@ export class SponsorsRessource extends InstanceRessource {
             throw handleError(error);
         }
     }
+
+    /**
+     * Update a sponsor code
+     * @param id
+     * @param payload
+     * @returns
+     */
+    async update(id: number, payload: CreateSponsorCodePayload) {
+        try {
+            const url = `${BASE_URL}${id}/`;
+            const { data } = await this.instance.patch<SponsorCode>(
+                url,
+                payload
+            );
+            return data;
+        } catch (error) {
+            throw handleError(error);
+        }
+    }
 }
