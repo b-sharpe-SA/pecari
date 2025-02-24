@@ -22,4 +22,5 @@ export interface ListSponsorsQueryParams extends Record<string, any> {
     search?: string;
 }
 export interface CreateSponsorCodePayload extends Pick<SponsorCode, 'name' | 'code' | 'comment'> {
+    discount: number[];
 }
