@@ -4,6 +4,7 @@ export interface SponsorCode {
     code: string;
     comment: string;
     discount: SponsorDiscount[];
+    creation_datetime: string;
 }
 
 export enum DiscountType {
