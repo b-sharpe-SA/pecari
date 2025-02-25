@@ -1,5 +1,5 @@
 import { InstanceRessource } from '../../helpers';
-import { type WithPagination, type ListFeesDiscountsQueryParams, type FeesDiscounts, type CreateFeesDiscountsPayload } from '../../types';
+import { type WithPagination, type ListFeesDiscountsQueryParams, type FeesDiscounts, type CreateFeesDiscountsPayload, type UpdateFeesDiscountsPayload } from '../../types';
 export declare class FeesDicountsRessource extends InstanceRessource {
     /**
      * List fees discounts
@@ -19,7 +19,7 @@ export declare class FeesDicountsRessource extends InstanceRessource {
      * @param payload
      * @returns
      */
-    update(id: string, payload: CreateFeesDiscountsPayload): Promise<FeesDiscounts>;
+    update(id: string, payload: UpdateFeesDiscountsPayload): Promise<FeesDiscounts>;
     /**
      * Delete a fees discount
      * @param id id of the fees discount

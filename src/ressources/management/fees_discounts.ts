@@ -9,6 +9,7 @@ import {
     type ListFeesDiscountsQueryParams,
     type FeesDiscounts,
     type CreateFeesDiscountsPayload,
+    type UpdateFeesDiscountsPayload,
 } from '@types';
 
 const BASE_URL = `${MANAGEMENT_PATH}/customers_fees_discounts/`;
@@ -53,7 +54,7 @@ export class FeesDicountsRessource extends InstanceRessource {
      * @param payload
      * @returns
      */
-    async update(id: string, payload: CreateFeesDiscountsPayload) {
+    async update(id: string, payload: UpdateFeesDiscountsPayload) {
         try {
             const url = `${BASE_URL}${id}/`;
             const { data } = await this.instance.patch<FeesDiscounts>(
