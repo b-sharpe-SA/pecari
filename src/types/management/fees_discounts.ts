@@ -4,7 +4,7 @@ export interface FeesDiscounts {
     perpetual: boolean;
     value_processing_fees: string;
     value_currency_fees: boolean;
-    expiration_date: string;
+    expiration_date: string | null;
     consumed: boolean;
     customer: number;
 }
