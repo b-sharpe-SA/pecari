@@ -1,5 +1,5 @@
 import { InstanceRessource } from '../../helpers';
-import { type WithPagination, type CreateMarginDiscountsPayload, type ListMarginDiscountsQueryParams, type MarginDiscounts } from '../../types';
+import { type WithPagination, type CreateMarginDiscountsPayload, type ListMarginDiscountsQueryParams, type MarginDiscounts, type UpdateMarginDiscountsPayload } from '../../types';
 export declare class MarginDicountsRessource extends InstanceRessource {
     /**
      * List fees discounts
@@ -19,7 +19,7 @@ export declare class MarginDicountsRessource extends InstanceRessource {
      * @param payload
      * @returns
      */
-    update(id: string, payload: CreateMarginDiscountsPayload): Promise<MarginDiscounts>;
+    update(id: string, payload: UpdateMarginDiscountsPayload): Promise<MarginDiscounts>;
     /**
      * Delete a fees discount
      * @param id id of the fees discount

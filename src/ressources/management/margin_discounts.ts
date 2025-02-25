@@ -9,6 +9,7 @@ import {
     type CreateMarginDiscountsPayload,
     type ListMarginDiscountsQueryParams,
     type MarginDiscounts,
+    type UpdateMarginDiscountsPayload,
 } from '@types';
 
 const BASE_URL = `${MANAGEMENT_PATH}/customers_margin_discounts/`;
@@ -53,7 +54,7 @@ export class MarginDicountsRessource extends InstanceRessource {
      * @param payload
      * @returns
      */
-    async update(id: string, payload: CreateMarginDiscountsPayload) {
+    async update(id: string, payload: UpdateMarginDiscountsPayload) {
         try {
             const url = `${BASE_URL}${id}/`;
             const { data } = await this.instance.patch<MarginDiscounts>(
