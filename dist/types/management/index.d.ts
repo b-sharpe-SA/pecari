@@ -9,3 +9,5 @@ export * from './password';
 export * from './terms-of-use';
 export * from './vban';
 export * from './sponsors';
+export * from './fees_discounts';
+export * from './margin_discounts';

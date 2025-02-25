@@ -10,6 +10,8 @@ import { PasswordRessource } from './password';
 import { TermsOfUseRessource } from './terms-of-use';
 import { VbanRessource } from './vbans';
 import { SponsorsRessource } from './sponsors';
+import { FeesDicountsRessource } from './fees_discounts';
+import { MarginDicountsRessource } from './margin_discounts';
 export declare class ManagementRessource extends InstanceRessource {
     token: TokenRessource;
     users: UsersRessource;
@@ -22,4 +24,6 @@ export declare class ManagementRessource extends InstanceRessource {
     termsOfUse: TermsOfUseRessource;
     vbans: VbanRessource;
     sponsors: SponsorsRessource;
+    feesDiscounts: FeesDicountsRessource;
+    marginDiscounts: MarginDicountsRessource;
 }

@@ -25,3 +25,5 @@ __exportStar(require("./password"), exports);
 __exportStar(require("./terms-of-use"), exports);
 __exportStar(require("./vban"), exports);
 __exportStar(require("./sponsors"), exports);
+__exportStar(require("./fees_discounts"), exports);
+__exportStar(require("./margin_discounts"), exports);

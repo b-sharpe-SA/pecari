@@ -10,6 +10,8 @@ import { PasswordRessource } from './password';
 import { TermsOfUseRessource } from './terms-of-use';
 import { VbanRessource } from './vbans';
 import { SponsorsRessource } from './sponsors';
+import { FeesDicountsRessource } from './fees_discounts';
+import { MarginDicountsRessource } from './margin_discounts';
 
 export class ManagementRessource extends InstanceRessource {
     token = new TokenRessource(this);
@@ -33,4 +35,8 @@ export class ManagementRessource extends InstanceRessource {
     vbans = new VbanRessource(this);
 
     sponsors = new SponsorsRessource(this);
+
+    feesDiscounts = new FeesDicountsRessource(this);
+
+    marginDiscounts = new MarginDicountsRessource(this);
 }
