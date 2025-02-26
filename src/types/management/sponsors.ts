@@ -30,7 +30,8 @@ export interface ListSponsorsQueryParams extends Record<string, any> {
     limit?: number;
     offset?: number;
     ordering?: ListSponsorsOrderingOptions;
-    search?: string;
+    code?: string;
+    name?: string;
 }
 
 export interface CreateSponsorCodePayload
