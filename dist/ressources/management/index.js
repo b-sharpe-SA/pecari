@@ -13,6 +13,8 @@ const password_1 = require("./password");
 const terms_of_use_1 = require("./terms-of-use");
 const vbans_1 = require("./vbans");
 const sponsors_1 = require("./sponsors");
+const fees_discounts_1 = require("./fees_discounts");
+const margin_discounts_1 = require("./margin_discounts");
 class ManagementRessource extends _helpers_1.InstanceRessource {
     constructor() {
         super(...arguments);
@@ -27,6 +29,8 @@ class ManagementRessource extends _helpers_1.InstanceRessource {
         this.termsOfUse = new terms_of_use_1.TermsOfUseRessource(this);
         this.vbans = new vbans_1.VbanRessource(this);
         this.sponsors = new sponsors_1.SponsorsRessource(this);
+        this.feesDiscounts = new fees_discounts_1.FeesDicountsRessource(this);
+        this.marginDiscounts = new margin_discounts_1.MarginDicountsRessource(this);
     }
 }
 exports.ManagementRessource = ManagementRessource;
