@@ -16,7 +16,7 @@ const BASE_URL = `${MANAGEMENT_PATH}/customers_margin_discounts/`;
 
 export class MarginDicountsRessource extends InstanceRessource {
     /**
-     * List fees discounts
+     * List margin discounts
      * @param payload query params
      * @returns
      */
@@ -32,7 +32,7 @@ export class MarginDicountsRessource extends InstanceRessource {
     }
 
     /**
-     * Create new fees discount
+     * Create new margin discount
      * @param payload
      * @returns
      */
@@ -49,7 +49,7 @@ export class MarginDicountsRessource extends InstanceRessource {
     }
 
     /**
-     * Update a fees discount
+     * Update a margin discount
      * @param id id of the fees discount
      * @param payload
      * @returns
@@ -68,7 +68,7 @@ export class MarginDicountsRessource extends InstanceRessource {
     }
 
     /**
-     * Delete a fees discount
+     * Delete a margin discount
      * @param id id of the fees discount
      * @returns
      */

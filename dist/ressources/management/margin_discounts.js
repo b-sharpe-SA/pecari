@@ -6,7 +6,7 @@ const _helpers_1 = require("../../helpers");
 const BASE_URL = `${_constants_1.MANAGEMENT_PATH}/customers_margin_discounts/`;
 class MarginDicountsRessource extends _helpers_1.InstanceRessource {
     /**
-     * List fees discounts
+     * List margin discounts
      * @param payload query params
      * @returns
      */
@@ -21,7 +21,7 @@ class MarginDicountsRessource extends _helpers_1.InstanceRessource {
         }
     }
     /**
-     * Create new fees discount
+     * Create new margin discount
      * @param payload
      * @returns
      */
@@ -35,7 +35,7 @@ class MarginDicountsRessource extends _helpers_1.InstanceRessource {
         }
     }
     /**
-     * Update a fees discount
+     * Update a margin discount
      * @param id id of the fees discount
      * @param payload
      * @returns
@@ -51,7 +51,7 @@ class MarginDicountsRessource extends _helpers_1.InstanceRessource {
         }
     }
     /**
-     * Delete a fees discount
+     * Delete a margin discount
      * @param id id of the fees discount
      * @returns
      */
