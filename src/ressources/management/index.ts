@@ -12,6 +12,7 @@ import { VbanRessource } from './vbans';
 import { SponsorsRessource } from './sponsors';
 import { FeesDicountsRessource } from './fees_discounts';
 import { MarginDicountsRessource } from './margin_discounts';
+import { CountryRiskRessource } from './country_risk';
 
 export class ManagementRessource extends InstanceRessource {
     token = new TokenRessource(this);
@@ -39,4 +40,6 @@ export class ManagementRessource extends InstanceRessource {
     feesDiscounts = new FeesDicountsRessource(this);
 
     marginDiscounts = new MarginDicountsRessource(this);
+
+    countryRisk = new CountryRiskRessource(this);
 }

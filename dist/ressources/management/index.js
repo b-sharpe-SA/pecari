@@ -15,6 +15,7 @@ const vbans_1 = require("./vbans");
 const sponsors_1 = require("./sponsors");
 const fees_discounts_1 = require("./fees_discounts");
 const margin_discounts_1 = require("./margin_discounts");
+const country_risk_1 = require("./country_risk");
 class ManagementRessource extends _helpers_1.InstanceRessource {
     constructor() {
         super(...arguments);
@@ -31,6 +32,7 @@ class ManagementRessource extends _helpers_1.InstanceRessource {
         this.sponsors = new sponsors_1.SponsorsRessource(this);
         this.feesDiscounts = new fees_discounts_1.FeesDicountsRessource(this);
         this.marginDiscounts = new margin_discounts_1.MarginDicountsRessource(this);
+        this.countryRisk = new country_risk_1.CountryRiskRessource(this);
     }
 }
 exports.ManagementRessource = ManagementRessource;
