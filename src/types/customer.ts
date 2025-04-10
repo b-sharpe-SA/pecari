@@ -46,9 +46,7 @@ export interface Customer extends Address, Utm, CustomerValidationFlags {
     default_psp_bank: number | null;
     company_email: string;
     personal_email: string;
-    personal_phone_number: string;
     mobile_phone_number: string;
-    office_phone_number: string;
     employer: string;
     position: string;
     base_info_completed: boolean;
