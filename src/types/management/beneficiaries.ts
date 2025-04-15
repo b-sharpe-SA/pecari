@@ -4,7 +4,7 @@ import { type AdminRestrictedCustomer } from './customers';
 export interface AdminRestrictedBeneficiary
     extends Omit<Beneficiary, 'customer'> {
     customer: AdminRestrictedCustomer;
-    last_update_time: string;
+    last_update_datetime: string;
     bank_display: string;
 }
 
