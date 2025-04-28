@@ -25,7 +25,7 @@ export interface Document {
     id: number;
     file: string;
     type: UploadDocumentType;
-    creation_dt: string;
+    creation_datetime: string;
 }
 export declare enum ValidationFlags {
     ToBeCompleted = "TO_BE_COMPLETED",
