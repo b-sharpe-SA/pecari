@@ -5,7 +5,7 @@ export interface PspBankAccount {
     clearing: string;
     iban: string;
     references: string;
-    qrbill: string;
+    qrbill: string | null;
     pdf: string;
     type: 'bank_account' | 'vban';
 }

@@ -63,7 +63,7 @@ export interface Ticket {
     psp_bank_account_incoming: PspBankAccountIncoming;
     psp_price: string;
     next_step: number;
-    qr_bill: string;
+    qr_bill: string | null;
     employer_name: string;
     employer_references: string;
     source_of_funds_type: SourceOfFundsType;

@@ -1,6 +1,8 @@
 export declare enum PostHogEvents {
     StartedBasicSignup = "started_basic_signup",
     CompletedBasicSignup = "completed_basic_signup",
+    StartedPasswordStep = "started_password_step",
+    CompletedPasswordStep = "completed_password_step",
     ViewedSimulator = "viewed_simulator",
     ViewedAlertList = "viewed_alert_list",
     CreatedPair = "created_pair",
@@ -16,6 +18,8 @@ export declare enum PostHogEvents {
     RequestedHelp = "requested_help",
     StartedConfirmPhone = "started_confirm_phone",
     CompletedConfirmPhone = "completed_confirm_phone",
+    StartedPhoneConfirmation = "started_phone_confirmation",
+    CompletedPhoneConfirmation = "completed_phone_confirmation",
     StartedConfirmEmail = "started_confirm_email",
     CompletedConfirmEmail = "completed_confirm_email",
     StartedConfirmIdentity = "started_confirm_identity",
@@ -56,5 +60,15 @@ export declare enum PostHogEvents {
     CompletedInvitation = "completed_invitation",
     ViewedPspUpdatedModal = "viewed_psp_updated_modal",
     StartedProgressScreen = "started_progress_screen",
-    CompletedProgressScreen = "completed_progress_screen"
+    CompletedProgressScreen = "completed_progress_screen",
+    StartedNameStep = "started_name_step",
+    CompletedNameStep = "completed_name_step",
+    StartedGenderStep = "started_gender_step",
+    CompletedGenderStep = "completed_gender_step",
+    StartedNationalityStep = "started_nationality_step",
+    CompletedNationalityStep = "completed_nationality_step",
+    StartedDateOfBirthStep = "started_date_of_birth_step",
+    CompletedDateOfBirthStep = "completed_date_of_birth_step",
+    StartedReviewStep = "started_review_step",
+    CompletedReviewStep = "completed_review_step"
 }
