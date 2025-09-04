@@ -1,4 +1,4 @@
-import { type ClientType, type Myself } from '.';
+import { type Utm, type ClientType, type Myself } from '.';
 export declare enum SignupDevice {
     Web = "web",
     Android = "android",
@@ -21,17 +21,11 @@ export type SignupPayload = Partial<{
     send_email_confirmation: boolean;
     auth_method: string;
     newsletter_optin: boolean;
-    utm_source: string;
-    utm_medium: string;
-    utm_campaign: string;
-    utm_term: string;
-    utm_content: string;
-    utm_timestamp: string;
     how_did_you_hear_about_us: string;
     sponsoring_key: string;
     signup_device: SignupDevice;
     cf_turnstile_response?: string;
-}>;
+} & Utm>;
 export interface SignupResponse extends Myself {
     access: string;
     refresh: string;

@@ -21,12 +21,15 @@ export interface Address {
     address_country: string;
 }
 export interface Utm {
-    utm_source: string;
-    utm_medium: string;
-    utm_campaign: string;
-    utm_term: string;
-    utm_content: string;
-    utm_timestamp: string;
+    utm_id?: string;
+    utm_source?: string;
+    utm_medium?: string;
+    utm_campaign?: string;
+    utm_term?: string;
+    utm_content?: string;
+    utm_timestamp?: string;
+    gclid?: string;
+    fbclid?: string;
 }
 export interface InstanceRessourceParams {
     instance: AxiosInstance;
