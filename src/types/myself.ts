@@ -8,6 +8,7 @@ export interface Myself {
     mobile_phone_number: string;
     external_user_id: string;
     external_user_id_auth_hash: string;
+    intercom_user_jwt: string;
     external_user_email_hash: string;
     has_uploaded: boolean;
     identity_ok: boolean;
