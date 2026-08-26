@@ -25,14 +25,12 @@ export class AdvancedAuthRessource extends InstanceRessource {
      */
     async verify(code: string) {
         try {
-            const { data } = await this.instance.post<LoginTokenResponse>(
+            await this.instance.post<LoginTokenResponse>(
                 `${BASE_URL}/verify/`,
                 {
                     otp_code: code,
                 }
             );
-            this.handleTokens(data.access, data.refresh);
-            return data;
         } catch (error) {
             throw handleError(error);
         }
