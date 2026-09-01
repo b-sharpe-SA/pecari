@@ -4,7 +4,8 @@ import {
     type FieldsWithValidationFlags,
     type Customer,
     type UpdateCustomerPayload,
-    type WithPagination, IUpdateCustomerAddressPayload,
+    type WithPagination,
+    type IUpdateCustomerAddressPayload,
 } from '@types';
 
 const BASE_URL = `${PUBLIC_PATH}/users/customer/`;
