@@ -4,7 +4,7 @@ import {
     type FieldsWithValidationFlags,
     type Customer,
     type UpdateCustomerPayload,
-    type WithPagination,
+    type WithPagination, IUpdateCustomerAddressPayload,
 } from '@types';
 
 const BASE_URL = `${PUBLIC_PATH}/users/customer/`;
@@ -50,6 +50,19 @@ export class CustomerRessource extends InstanceRessource {
         try {
             const { data } = await this.instance.patch<Customer>(
                 `${BASE_URL}${reference}/`,
+                { ...payload }
+            );
+            return data;
+        } catch (error) {
+            throw handleError(error);
+        }
+    }
+
+
+    async updateAddress(reference: string, payload: IUpdateCustomerAddressPayload) {
+        try {
+            const { data } = await this.instance.patch<Customer>(
+                `${BASE_URL}${reference}/address`,
                 { ...payload }
             );
             return data;
