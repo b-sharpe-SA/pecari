@@ -1,6 +1,6 @@
 {
     "name": "pecari",
-    "version": "2.6.2",
+    "version": "2.6.3",
     "description": "Javascript sdk for cactus API",
     "main": "index.js",
     "license": "MIT",

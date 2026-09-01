@@ -87,3 +87,14 @@ export interface CustomerFrontEndData extends Record<string, any> {
     currencyDocumentsList: string[];
 }
 export type UpdateCustomerPayload = Partial<Omit<Customer, 'reference'>>;
+export interface IUpdateCustomerAddressPayload extends Record<string, string> {
+    "address_line1": string;
+    "street": string;
+    "address_number": string;
+    "postcode": string;
+    "place": string;
+    "region": string;
+    "region_code": string;
+    "country": string;
+    "country_code": string;
+}

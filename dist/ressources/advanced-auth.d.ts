@@ -1,5 +1,4 @@
 import { InstanceRessource } from '../helpers';
-import { type LoginTokenResponse } from '../types';
 export declare class AdvancedAuthRessource extends InstanceRessource {
     /**
      * Send otp code to mobile
@@ -11,5 +10,5 @@ export declare class AdvancedAuthRessource extends InstanceRessource {
      * @param code
      * @returns access and refresh token
      */
-    verify(code: string): Promise<LoginTokenResponse>;
+    verify(code: string): Promise<void>;
 }
