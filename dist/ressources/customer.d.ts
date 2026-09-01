@@ -1,5 +1,5 @@
 import { InstanceRessource } from '../helpers';
-import { type FieldsWithValidationFlags, type Customer, type UpdateCustomerPayload, type WithPagination } from '../types';
+import { type FieldsWithValidationFlags, type Customer, type UpdateCustomerPayload, type WithPagination, type IUpdateCustomerAddressPayload } from '../types';
 export declare class CustomerRessource extends InstanceRessource {
     /**
      * List all customers for current user
@@ -19,6 +19,7 @@ export declare class CustomerRessource extends InstanceRessource {
      * @returns Customer
      */
     update(reference: string, payload: UpdateCustomerPayload): Promise<Customer>;
+    updateAddress(reference: string, payload: IUpdateCustomerAddressPayload): Promise<Customer>;
     /**
      * Call this endpoint to validate the flags of a customer
      * Mainly used during signup to validate a section

@@ -47,6 +47,15 @@ class CustomerRessource extends _helpers_1.InstanceRessource {
             throw (0, _helpers_1.handleError)(error);
         }
     }
+    async updateAddress(reference, payload) {
+        try {
+            const { data } = await this.instance.patch(`${BASE_URL}${reference}/address`, { ...payload });
+            return data;
+        }
+        catch (error) {
+            throw (0, _helpers_1.handleError)(error);
+        }
+    }
     /**
      * Call this endpoint to validate the flags of a customer
      * Mainly used during signup to validate a section
